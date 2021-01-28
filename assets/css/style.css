@@ -1,36 +1,47 @@
-/* Things for the wheel */
+/* Original code from the wheel */
 text {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 11px;
     pointer-events: none;
 }
 
-#chart {
+/* Positions the chart at the top left. Commented out to allow the wheel to be placed inside the proper div container -Edward*/
+/* #chart {
     position: absolute;
     width: 500px;
     height: 500px;
     top: 0;
     left: 0;
-}
+} */
 
-#question {
+/* Positions the wheel's response at the top left, slightly towards the center. Commented out to allow the response to be placed next to the wheel -Edward*/
+/* #question {
     position: absolute;
     width: 400px;
     height: 500px;
     top: 0;
     left: 520px;
-}
+} */
 
 #question h1 {
     font-size: 50px;
     font-weight: bold;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    position: absolute;
+    /* position: absolute; */ /* Commented this out to allow the text to appear inside the div -Edward*/
     padding: 0;
     margin: 0;
-    top: 50%;
+    /* Commented this out to allow the text to appeade inside the div -Edward */
+    /* top: 50%;
     -webkit-transform: translate(0, -50%);
-    transform: translate(0, -50%);
+    transform: translate(0, -50%); */
+}
+
+/* Messing with the wheel stuff */
+.chartHeightCopy {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* View 3 CSS stuff */
@@ -39,15 +50,28 @@ body {
     color:rgb(240, 183, 38);
 }
 
+#headerLogo {
+    max-width: 100%;
+    max-height: 100%;
+}
+
 #headerContainer {
     font-size: 30px;
     font-weight: bold;
     margin: 10px auto;
 }
 
-section.siteMission,
-section.screenInstructions {
+#view3 {
+    background-color: rgb(73, 7, 7);
+    border: 2px solid gold;
+    padding: 10px 0px;
+    margin: 10px auto;
+}
+
+article.siteMission,
+article.screenInstructions {
     border: dashed 2px rgb(240, 183, 38);
+    background-color: rgb(54, 8, 8);
     padding-top: .90rem;
     padding-bottom: .90rem;
 }
@@ -69,7 +93,7 @@ section.screenInstructions {
     border-radius: 5px;
     color: rgb(240, 199, 96);
     background-color: darkred;
-    padding: 10px 0px;
+    padding: 10px 5px;
     margin: auto;
 }
 

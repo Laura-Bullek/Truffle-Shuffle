@@ -46,6 +46,32 @@ var data = [
     { "label": "Question 30", "value": 1, "question": "What character symbol do I use to specify multiple CSS selectors in one code block?" } //comma
 ];
 
+// Movie Genre array to fill the wheel
+var movieGenres = [
+    { "label": "Action", "value": 28, "question": "Time to kick ass and chew bubblegum, and you're all out of bubblegum" },
+    { "label": "Adventure", "value": 12, "question": "Something witty" },
+    { "label": "Animation", "value": 16, "question": "Something witty" },
+    { "label": "Comedy", "value": 35, "question": "Here's a comedy coming your way!" },
+    { "label": "Crime", "value": 80, "question": "Something witty" },
+    { "label": "Documentary", "value": 99, "question": "Something witty" },
+    { "label": "Drama", "value": 18, "question": "Something witty" },
+    { "label": "Family", "value": 10751, "question": "Something witty" },
+    { "label": "Fantasy", "value": 14, "question": "Something witty" },
+    { "label": "History", "value": 36, "question": "Something witty" },
+    { "label": "Horror", "value": 27, "question": "Hide behind your couch, this is going to be a scary one." },
+    { "label": "Music", "value": 10402, "question": "Something witty" },
+    { "label": "Mystery", "value": 9648, "question": "Something witty" },
+    { "label": "Romance", "value": 10749, "question": "Something witty" },
+    { "label": "Sci-fi", "value": 878, "question": "Something witty about sci-fi" },
+    { "label": "TV Movie", "value": 10770, "question": "Something witty" },
+    { "label": "Thriller", "value": 53, "question": "Something witty" },
+    { "label": "War", "value": 10752, "question": "Something witty" },
+    { "label": "Western", "value": 37, "question": "Something witty about western" },
+];
+
+// Testing the wheel, changes the wheel content into the movie genre array
+data = movieGenres;
+
 
 var svg = d3.select(chartDiv)
     .append("svg")
