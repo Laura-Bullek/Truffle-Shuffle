@@ -6,24 +6,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Truffle Shuffle</title>
 
-    <!-- Links to Bootstrap, CSS and JavaScript pages -->
-    <link type="text/css" rel="stylesheet" href="./assets/css/style.css">
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Wheel functionality Javascript -->
     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8"></script>
-
 
 </head>
 
 <body>
-    <div id="chart"></div>
-    <div id="question">
-        <h1></h1>
-        <h2>Conflict?</h2>
+    <!-- Title and Header container -->
+    <div class="container centerThisDiv" id="headerContainer">
+        <div class="row">
+            <!-- Logo div -->
+            <div class="col s2" id="headerLogo">
+                <img src="https://via.placeholder.com/150x75" alt="">
+            </div>
+            <!-- Title div -->
+            <div class="col s8" id="headerTitle">This is the title</div>
+            <!-- Empty div for spacing purposes -->
+            <div class="col s2 empty"></div>
+        </div>
     </div>
 
-<h1>This is from Laura</h1>
+    <!-- Wheel Stuff -->
+    <!-- <div id="chart"></div>
+    <div id="question">
+        <h1></h1>
+    </div> -->
+
+    <!-- View 3 Container -->
+    <div class="container centerThisDiv" id="view3">
+        <!-- Sub-title Panel -->
+        <div class="row">
+            <!-- Empty div for spacing purposes -->
+            <div class="col s2 empty"></div>
+            <!-- Sub-title Header -->
+            <section class="col s8 siteMission">Now, let's choose a movie:</section>
+            <!-- Empty div for spacing purposes -->
+            <div class="col s2 empty"></div>
+        </div>
+        <!-- Instructions Panel -->
+        <div class="row">
+            <!-- Empty div for spacing purposes -->
+            <div class="col s3 empty"></div>
+            <!-- Sub-title Header -->
+            <section class="col s6 screenInstructions">Let's start with a streaming service:</section>
+            <!-- Empty div for spacing purposes -->
+            <div class="col s3 empty"></div>
+        </div>
+        <!-- Buttons Panel -->
+        <div class="row buttonPanel">
+            <!-- Button Choice 1 -->
+            <button class="col s3 button btnView3" id="view3btn1">Streaming Service 1</button>
+            <!-- Button Choice 2 -->
+            <button class="col s3 button btnView3" id="view3btn2">Streaming Service 2</button>
+            <!-- Button Choice 3 -->
+            <button class="col s3 button btnView3" id="view3btn3">Streaming Service 3</button>
+        </div>
+        <div class="row buttonPanel">
+            <!-- Button Choice 4 -->
+            <button class="col s3 button btnView3" id="view3btn4">Streaming Service 4</button>
+            <!-- Button Choice 5 -->
+            <button class="col s3 button btnView3" id="view3btn5">Streaming Service 5</button>
+            <!-- Button Choice 6 -->
+            <button class="col s3 button btnView3" id="view3btn6">Streaming Service 6</button>
+        </div>
+    </div>
+
+    <!-- Footer Panel -->
+    <div class="container centerThisDiv" id="footerContainer">This is the footer.</div>
+
+
 </body>
 
+<!-- Materialize Javascript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <!-- Custom Javascript-->
 <script type="text/javascript" src="./assets/js/javascript.js"></script>
 

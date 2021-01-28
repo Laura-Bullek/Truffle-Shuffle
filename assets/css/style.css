@@ -1,3 +1,4 @@
+/* Things for the wheel */
 text {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 11px;
@@ -30,4 +31,48 @@ text {
     top: 50%;
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
+}
+
+/* View 3 CSS stuff */
+body {
+    background-color: rgb(54, 8, 8);
+    color:rgb(240, 183, 38);
+}
+
+#headerContainer {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px auto;
+}
+
+section.siteMission,
+section.screenInstructions {
+    border: dashed 2px rgb(240, 183, 38);
+    padding-top: .90rem;
+    padding-bottom: .90rem;
+}
+
+
+.centerThisDiv {
+    text-align: center;
+    margin: auto;
+    vertical-align: middle;
+}
+
+.buttonPanel {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btnView3 {
+    border: 2px dotted rgb(240, 199, 96);
+    border-radius: 5px;
+    color: rgb(240, 199, 96);
+    background-color: darkred;
+    padding: 10px 0px;
+    margin: auto;
+}
+
+.hideMe {
+    display: none;
 }
