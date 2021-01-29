@@ -3,16 +3,22 @@
 // API key given by The Movie Database
 const theMovieAPI = "13c21541869f280af7a13cd66a18fedc";
 // The API URL for finding movies with the parameters "Genre" and "Release Year"
-const theMovieURL = "https://api.themoviedb.org/3/discover/movie?api_key=" + theMovieAPI + "&with_genres=" + movieGenreID + "&primary_release_year=" + movieReleaseYear;
+const theMovieURL = "https://api.themoviedb.org/3/discover/movie?api_key=" + theMovieAPI + "&with_genres=" + movieGenreID + "&primary_release_year=" + movieReleaseYear + "&with_watch_providers=" + movieProviderID + "&watch_region=" + movieProviderRegion;
 // The API URL for grabbing the images (Use with the "backdrop_path" and "poster_path" return data)
 const theMoviePosterURL = "https://www.themoviedb.org/t/p/w600_and_h900_bestv2" + moviePosterPath;
+
+// Important variables to keep track of
+// var movieGenreID = "This is the Genre ID."
+// var movieReleaseYear = "This is the movie's release year."
+// var movieProviderID = "This is the watch provider's ID."
+// var movieProviderRegion = "This is the user's region."
+
 
 // Example URL (Seperate parameter inputs with comma "," for "And" and pipe "|" for "Or")
 // This URL is searching for movies with the genres "Drama" and "Romance", as well as the release year being from 2010-2019
 // https://api.themoviedb.org/3/discover/movie?api_key=13c21541869f280af7a13cd66a18fedc&with_genres=18,10749&primary_release_year=2010|2011|2012|2013|2014|2015|2016|2017|2018|2019
 
-// Movie Genre IDs
-
+// Movie Genre IDs (Note: This is the official list given so there should not be any more available genres)
 // {"genres":[
 //     {"id":28,"name":"Action"},
 //     {"id":12,"name":"Adventure"},
@@ -35,6 +41,87 @@ const theMoviePosterURL = "https://www.themoviedb.org/t/p/w600_and_h900_bestv2" 
 //     {"id":37,"name":"Western"}
 // ]}
 
+// Watch Provider IDs (Note: This is not all of the available providers, this is just as much as different providers I could find using a sample request)
+// {"Providers":[
+//     {"provider_id":2,"provider_name":"Apple iTunes"},            
+//     {"provider_id":3, "provider_name":"Google Play Movies"},
+//     {"provider_id":7,"provider_name":"Vudu"},
+//     {"provider_id":8, "provider_name":"Netflix"},
+//     {"provider_id":10,"provider_name":"Amazon Video"},
+//     {"provider_id":15,"provider_name":"Hulu"},
+//     {"provider_id":20,"provider_name":"maxdome Store"},
+//     {"provider_id":29,"provider_name":"Sky Go"},
+//     {"provider_id":35,"provider_name":"Rakuten TV"},
+//     {"provider_id":40,"provider_name":"Chili"},
+//     {"provider_id":68,"provider_name":"Microsoft Store"},
+//     {"provider_id":105,"provider_name":"FandangoNOW"},
+//     {"provider_id":109,"provider_name":"Timvision"},
+//     {"provider_id":113,"provider_name":"Ivi"},
+//     {"provider_id":115,"provider_name":"Okko"},
+//     {"provider_id":119,"provider_name":"Amazon Prime Video"},
+//     {"provider_id":122,"provider_name":"Hotstar"},
+//     {"provider_id":150,"provider_name":"SwissCom"},
+//     {"provider_id":167,"provider_name":"Claro video"},
+//     {"provider_id":192,"provider_name":"YouTube"},
+//     {"provider_id":250,"provider_name":"Horizon"},
+//     {"provider_id":273,"provider_name":"Neon TV"},
+//     {"provider_id":299,"provider_name":"Sling TV"},
+//     {"provider_id":337,"provider_name":"Disney Plus"},
+//     {"provider_id":339,"provider_name":"Movistar Play"},
+//     {"provider_id":356,"provider_name":"wavve"},
+//     {"provider_id":358,"provider_name":"DIRECTV"},
+//     {"provider_id":423,"provider_name":"Blockbuster"},
+//     {"provider_id":425,"provider_name":"HBO Go"},
+// ]}
+
+// Watch Providers Region Codes (Note: This is not all of the available provider regions. This is all that I got from the sample request.)
+// {"Regions":[
+        // AR:
+        // AT:
+        // AU: Australia(?)
+        // BE:
+        // BR:
+        // CA:
+        // CH:
+        // CL:
+        // CO:
+        // CZ:
+        // DE: Germany(?)
+        // DK:
+        // EC:
+        // EE:
+        // ES: Spain(?)
+        // FI:
+        // FR: France
+        // GB:
+        // HU:
+        // ID: Indonesia(?)
+        // IE:
+        // IN: India(?)
+        // IT: Italy(?)
+        // JP: Japan
+        // KR: Korea
+        // LT:
+        // LV:
+        // MX:
+        // MY:
+        // NL:
+        // NO:
+        // NZ: New Zealand(?)
+        // PE:
+        // PH: Philippines(?)
+        // PL:
+        // PT:
+        // RO:
+        // RU:
+        // SE:
+        // SG:
+        // TH:
+        // TR:
+        // US: United States
+        // VE:
+        // ZA:
+// ]}
 
 // Example on how to read the returned information: To grab movie title (Note, "response" is your custom variable!) -> response.results[i].original_title
 // Sample Response using the below Example URL 
