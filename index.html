@@ -13,7 +13,9 @@
     <!-- Wheel functionality Javascript -->
     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8"></script>
-
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -31,15 +33,15 @@
         </div>
     </div>
 
-    <!-- View 3 Container -->
-    <div class="container centerThisDiv" id="view3">
+    <!-- Main Body Container -->
+    <div class="container centerThisDiv" id="viewOverall">
         <!-- Sub-title Panel -->
         <div class="row">
             <!-- Empty div for spacing purposes -->
             <div class="col s2 empty"></div>
             <!-- Sub-title Header -->
             <section class="col s8">
-                <article class="siteMission">Now, let's choose a movie:</article>
+                <article class="siteMission">This is the Site Mission box which also doubles as the instructions/witty comment</article>
             </section>
             <!-- Empty div for spacing purposes -->
             <div class="col s2 empty"></div>
@@ -50,64 +52,60 @@
             <div class="col s3 empty"></div>
             <!-- Sub-title Header -->
             <section class="col s6">
-                <article class="screenInstructions">Let's start with a streaming service:</article>
+                <article class="screenInstructions">This is the </article>
             </section>
             <!-- Empty div for spacing purposes -->
             <div class="col s3 empty"></div>
         </div>
 
+        <!-- Wheel Stuff -->
+        <div class="container centerThisDiv hideMe" id="wheelContainer">
+            <div class="row">
+                <div class="col l8">
+                    <div id="chart"></div>
+                </div>
+                <div class="col l4 chartHeightCopy">
+                    <div id="question">
+                        <h1></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Buttons Panel -->
         <div class="row buttonPanel">
             <!-- Button Choice 1 -->
             <section class="col s4">
                 <button class="button btnView3" id="view3btn1">Streaming Service 1</button>
-            </section> 
+            </section>
             <!-- Button Choice 2 -->
             <section class="col s4">
                 <button class="button btnView3" id="view3btn2">Streaming Service 2</button>
-            </section> 
+            </section>
             <!-- Button Choice 3 -->
             <section class="col s4">
                 <button class="button btnView3" id="view3btn3">Streaming Service 3</button>
-            </section> 
+            </section>
         </div>
         <div class="row buttonPanel">
             <!-- Button Choice 4 -->
             <section class="col s4">
                 <button class="button btnView3" id="view3btn4">Streaming Service 4</button>
-            </section> 
+            </section>
             <!-- Button Choice 5 -->
             <section class="col s4">
                 <button class="button btnView3" id="view3btn5">Streaming Service 5</button>
-            </section> 
+            </section>
             <!-- Button Choice 6 -->
             <section class="col s4">
                 <button class="button btnView3" id="view3btn6">Streaming Service 6</button>
-            </section> 
+            </section>
         </div>
-
-
 
     </div>
 
     <!-- Footer Panel -->
     <div class="container centerThisDiv" id="footerContainer">This is the footer.</div>
-    
-    <!-- Wheel Stuff -->
-    <div class="container centerThisDiv" id="wheelContainer">
-        <div class="row">
-            <div class="col l8">
-                <div id="chart"></div>
-            </div>
-            <div class="col l4 chartHeightCopy">
-                <div id="question">
-                    <h1></h1>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
 </body>
 

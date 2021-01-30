@@ -189,3 +189,16 @@ function getRandomNumbers() {
 
     return array;
 }
+
+const button1 = document.querySelector("#view3btn1")
+const button2 = document.querySelector("#view3btn2")
+
+$(button1).on("click", function () {
+    $("#wheelContainer").addClass("hideMe");
+
+});
+
+$(button2).on("click", function () {
+    $("#wheelContainer").removeClass("hideMe");
+
+});
