@@ -8,8 +8,8 @@
 
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Custom CSS -->
     <!-- Wheel functionality Javascript -->
     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8"></script>
@@ -28,86 +28,72 @@
             </div>
             <!-- Title div -->
             <div class="col s6" id="headerTitle">Truffle Shuffle</div>
-            <!-- Empty div for spacing purposes -->
-            <div class="col s3 empty"></div>
         </div>
     </div>
+    <!-- END Title and Header container -->
 
-    <!-- View 1 Container (Introduction)-->
-    <div class="container centerThisDiv hideMe" id="viewOverall">
+    <!-- Main Body Container (Sub-Title and Instructions)-->
+    <div class="container centerThisDiv" id="viewOverall">
         <!-- Sub-title Panel -->
         <div class="row">
-            <!-- Empty div for spacing purposes -->
-            <div class="col s2 empty"></div>
             <!-- Sub-title Header -->
-            <section class="col s8">
-                <article class="siteMission">This is the Site Mission box which also doubles as the instructions/witty
+            <section class="col s8 offset-s2">
+                <article class="siteMission" id="subTitleBox">This is the Site Mission box which also doubles as the instructions/witty
                     comment</article>
             </section>
-            <!-- Empty div for spacing purposes -->
-            <div class="col s2 empty"></div>
         </div>
         <!-- Instructions Panel -->
         <div class="row">
-            <!-- Empty div for spacing purposes -->
-            <div class="col s3 empty"></div>
             <!-- Sub-title Header -->
-            <section class="col s6">
-                <article class="screenInstructions">This is the instructions and other box </article>
+            <section class="col s6 offset-s3">
+                <article class="screenInstructions" id="instructionsBox">This is the instructions and other box </article>
             </section>
-            <!-- Empty div for spacing purposes -->
-            <div class="col s3 empty"></div>
         </div>
 
-        <!-- Wheel Stuff -->
-        <div class="container centerThisDiv hideMe" id="wheelContainer">
+        <!-- VIEW 1 -->
+        <div class="container centerThisDiv" id="view1">
             <div class="row">
-                <div class="col l8">
-                    <div id="chart"></div>
-                </div>
-                <div class="col l4 chartHeightCopy">
-                    <div id="question">
-                        <h1></h1>
-                    </div>
-                </div>
+                <section class="col s6 offset-s3">
+                    <button class="startButton btnView3" id="view1btn1">Start the Game!</button>
+                </section>
             </div>
         </div>
+        <!-- END VIEW 1 -->
 
-        <!-- View 2 Buttons -->
-        <div class="container centerThisDiv" id="view2">
+        <!-- VIEW 2 -->
+        <div class="container centerThisDiv hideMe" id="view2">
             <div class="row">
                 <!-- Drink Category Dropdown-->
-                <a class='dropdown-trigger btn col s4' href='#' data-target='drinkCategory'>Choose a drink by category</a>
+                <a class='dropdown-trigger btnView3 col s4' data-target='drinkCategory'>By Category</a>
                 <!-- Drink Category Items -->
                 <ul id='drinkCategory' class='dropdown-content'>
-                    <li><a class="drinkCateoryButton" id="view2btnDrink1">Hide view 2 and show view 3</a></li>
+                    <li><a class="drinkCategoryButtonText" id="view2btnDrink1">Hide view 2 and show view 3</a></li>
                     <li><a href="#!">Drink 2</a></li>
                     <li><a href="#!">Drink 3</a></li>
                 </ul>
                 <!-- Alcohol Category Dropdown-->
-                <a class='dropdown-trigger btn col s4' href='#' data-target='alcoholCategory'>Choose a drink by alcohol</a>
+                <a class='dropdown-trigger btnView3 col s4' data-target='alcoholCategory'>By Alcohol</a>
                 <!-- Alcohol Category Items -->
                 <ul id='alcoholCategory' class='dropdown-content'>
                     <li><a href="#!">Gin</a></li>
                     <li><a href="#!">Rum</a></li>
                     <li><a href="#!">Vodka</a></li>
                 </ul>
-                <section class="col s4">
-                    <button class="randomBtn" id="view2RandomBtn">Random Drink</button>
-                </section>
+                <a class="btnView3 col s4" id="view2RandomBtn">Random Drink</a>
             </div>
         </div>
+        <!-- END VIEW 2 -->
 
-        <!-- View 3 Buttons -->
+        <!-- VIEW 3 -->
         <div class="container hideMe" id="view3">
             <div class="row buttonPanel">
                 <!-- Button Choice 1 -->
                 <section class="col s4">
-                    <button class="btn" id="view3btn1">Hide Wheel</button>
+                    <button class="button btnView3" id="view3btn1">Hide View4</button>
                 </section>
                 <!-- Button Choice 2 -->
                 <section class="col s4">
-                    <button class="button btnView3" id="view3btn2">Show Wheel</button>
+                    <button class="button btnView3" id="view3btn2">Show View4</button>
                 </section>
                 <!-- Button Choice 3 -->
                 <section class="col s4">
@@ -129,49 +115,49 @@
                 </section>
             </div>
         </div>
-    </div>
-    <!--END VIEW 3-->
+        <!--END VIEW 3-->
 
-    <!--VIEW 4-->
-    <div class="container centerThisDiv" id="view4">
-        <!-- Sub-title Panel -->
-        <div class="row">
-            <!-- Empty div for spacing purposes -->
-            <div class="col s2 empty"></div>
-            <!-- Sub-title Header -->
-            <section class="col s8">
-                <article class="siteMission">Spin the Wheel for a Genre!</article>
-            </section>
-            <!-- Empty div for spacing purposes -->
-            <div class="col s2 empty"></div>
-        </div>
-        <!-- Instructions Panel -->
-        <div class="row">
-            <!-- Empty div for spacing purposes -->
-            <div class="col s3 empty"></div>
-            <!-- Empty div for spacing purposes -->
-            <div class="col s3 empty"></div>
-        </div>
-        
-        <!-- Wheel Stuff -->
-        <div class="container centerThisDiv" id="wheelContainer">
+        <!--VIEW 4-->
+        <div class="container centerThisDiv hideMe" id="view4">
+            <!-- Sub-title Panel -->
             <div class="row">
-                <div class="col l8">
-                    <div id="chart"></div>
-                </div>
-                <div class="col l4 chartHeightCopy">
-                    <div id="question">
-                        <h1></h1>
+                <!-- Empty div for spacing purposes -->
+                <div class="col s2 empty"></div>
+                <!-- Sub-title Header -->
+                <section class="col s8">
+                    <article class="siteMission">Spin the Wheel for a Genre!</article>
+                </section>
+                <!-- Empty div for spacing purposes -->
+                <div class="col s2 empty"></div>
+            </div>
+
+            <!-- Wheel Stuff -->
+            <div class="container centerThisDiv" id="wheelContainer">
+                <div class="row">
+                    <div class="col l8">
+                        <div id="chart"></div>
                     </div>
+                    <div class="col l4 chartHeightCopy">
+                        <div id="question">
+                            <h1></h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <a class="waves-effect waves-light btn-large"><i class="material-icons right"></i>Let's go select a
+                        year</a>
                 </div>
             </div>
         </div>
-        
-        <!-- Footer Panel -->
-        <div class="container centerThisDiv" id="footerContainer"><a class="waves-effect waves-light btn-large"><i class="material-icons right"></i>Let's go select a year</a></div>
+        <!--END VIEW 4-->
     </div>
-    <!--END VIEW 4-->
-    
+    <!-- END Main Body Container -->
+
+    <!-- Footer Panel -->
+    <div class="container centerThisDiv" id="footerContainer">
+        <p class="tempText">This is the footer</p>
+    </div>
+
 </body>
 
 <!-- Materialize Javascript -->

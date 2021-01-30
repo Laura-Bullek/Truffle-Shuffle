@@ -194,6 +194,20 @@ function getRandomNumbers() {
 // Materialze JS- Dropdown functionality
 $('.dropdown-trigger').dropdown();
 
+// Reference the sub-title and instructions box
+const subTitleBox = document.querySelector("#subTitleBox");
+const instructionsBox = document.querySelector("#instructionsBox");
+
+// View 1 Testing
+const view1btnStart1 = document.querySelector("#view1btn1");
+
+$(view1btn1).on("click", function () {
+    $("#view1").addClass("hideMe");
+    $("#view2").removeClass("hideMe");
+    subTitleBox.innerHTML = "View 2's subtitle box stuff"
+    instructionsBox.innerHTML = "View 2's instruction box stuff"
+});
+
 
 // View 2 Testing
 const view2btnDrink1 = document.querySelector("#view2btnDrink1");
@@ -209,13 +223,12 @@ const view3btnProvider2 = document.querySelector("#view3btn2");
 const view3btnProvider3 = document.querySelector("#view3btn3");
 
 $(view3btnProvider1).on("click", function () {
-    $("#wheelContainer").addClass("hideMe");
+    $("#view4").addClass("hideMe");
     
 });
 
 $(view3btnProvider2).on("click", function () {
-    $("#wheelContainer").removeClass("hideMe");
-    
+    $("#view4").removeClass("hideMe");
 });
 
 $(view3btnProvider3).on("click", function () {

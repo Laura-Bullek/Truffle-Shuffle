@@ -46,7 +46,12 @@ text {
 /* Materialize Overwrite */ 
 /* Changes the styling of the dropdown menu after being opened */
 .dropdown-content{
-    background-color: crimson; 
+    background-color: rgb(54, 8, 8); 
+}
+/* Changes the text within the dropdown menu */
+.dropdown-content li>span,
+.dropdown-content li>a {
+    color: rgb(240, 183, 38);
 }
 /* Changes the default button styling */
 .btn {
@@ -58,8 +63,9 @@ text {
     margin: auto;
 }
 /* View 2 CSS stuff */
-.dropdown-trigger {
-    max-width: 80%;
+/* Makes the Random Drink button change the mouse cursor into the pointer hand when over the button */
+#view2RandomBtn {
+    cursor: pointer;
 }
 
 /* View 3 CSS stuff */
