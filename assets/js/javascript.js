@@ -190,15 +190,35 @@ function getRandomNumbers() {
     return array;
 }
 
-const button1 = document.querySelector("#view3btn1")
-const button2 = document.querySelector("#view3btn2")
 
-$(button1).on("click", function () {
-    $("#wheelContainer").addClass("hideMe");
+// Materialze JS- Dropdown functionality
+$('.dropdown-trigger').dropdown();
 
+
+// View 2 Testing
+const view2btnDrink1 = document.querySelector("#view2btnDrink1");
+
+$(view2btnDrink1).on("click", function () {
+    $("#view2").addClass("hideMe");
+    $("#view3").removeClass("hideMe");
 });
 
-$(button2).on("click", function () {
-    $("#wheelContainer").removeClass("hideMe");
+// View 3 Testing
+const view3btnProvider1 = document.querySelector("#view3btn1");
+const view3btnProvider2 = document.querySelector("#view3btn2");
+const view3btnProvider3 = document.querySelector("#view3btn3");
 
+$(view3btnProvider1).on("click", function () {
+    $("#wheelContainer").addClass("hideMe");
+    
+});
+
+$(view3btnProvider2).on("click", function () {
+    $("#wheelContainer").removeClass("hideMe");
+    
+});
+
+$(view3btnProvider3).on("click", function () {
+    $("#view3").addClass("hideMe");
+    $("#view2").removeClass("hideMe");
 });
