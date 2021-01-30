@@ -43,6 +43,25 @@ text {
     justify-content: center;
 }
 
+/* Materialize Overwrite */ 
+/* Changes the styling of the dropdown menu after being opened */
+.dropdown-content{
+    background-color: crimson; 
+}
+/* Changes the default button styling */
+.btn {
+    border: 2px dotted rgb(240, 199, 96);
+    border-radius: 5px;
+    color: rgb(240, 199, 96);
+    background-color: darkred;
+    padding: 10px 5px;
+    margin: auto;
+}
+/* View 2 CSS stuff */
+.dropdown-trigger {
+    max-width: 80%;
+}
+
 /* View 3 CSS stuff */
 body {
     background-color: rgb(54, 8, 8);

@@ -13,7 +13,9 @@
     <!-- Wheel functionality Javascript -->
     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8"></script>
-
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -21,13 +23,13 @@
     <div class="container centerThisDiv" id="headerContainer">
         <div class="row">
             <!-- Logo div -->
-            <div class="col s2">
+            <div class="col s3">
                 <img id="headerLogo" src="./assets/images/TF_logo.png" alt="">
             </div>
             <!-- Title div -->
-            <div class="col s8" id="headerTitle">Truffle Shuffle</div>
+            <div class="col s6" id="headerTitle">Truffle Shuffle</div>
             <!-- Empty div for spacing purposes -->
-            <div class="col s2 empty"></div>
+            <div class="col s3 empty"></div>
         </div>
     </div>
 
@@ -39,7 +41,8 @@
             <div class="col s2 empty"></div>
             <!-- Sub-title Header -->
             <section class="col s8">
-                <article class="siteMission">Don't know what to watch?</article>
+                <article class="siteMission">This is the Site Mission box which also doubles as the instructions/witty
+                    comment</article>
             </section>
             <!-- Empty div for spacing purposes -->
             <div class="col s2 empty"></div>
@@ -50,94 +53,81 @@
             <div class="col s3 empty"></div>
             <!-- Sub-title Header -->
             <section class="col s6">
-                <article class="screenInstructions">Good!</article>
+                <article class="screenInstructions">This is the instructions and other box </article>
             </section>
             <!-- Empty div for spacing purposes -->
             <div class="col s3 empty"></div>
         </div>
 
-
-        <!-- Buttons Panel -->
-        <div class="row buttonPanel">
-            <!-- Button Choice 1 -->
-            <section class="col s4">
-                <p> </section> 
-            <!-- Button Choice 2 -->
-            <section class="col s4">
-                <br> <br>            </section> 
-            <!-- Button Choice 3 -->
-            <section class="col s4">
-                <br> <br>            </section> 
-        </div>
-        <div class="row buttonPanel">
-            <!-- Button Choice 4 -->
-            <section class="col s4">
-                <br> <br>
-            </section> 
-            <!-- Button Choice 5 -->
-            <section class="col s4">
-                <br> <br>            </section> 
-            <!-- Button Choice 6 -->
-            <section class="col s4">
-                <br> <br>            </section> 
-        </div>
-    </div>
-          
-
-    <!-- View 3 Container (Streaming Service Choices)-->
-    <div class="container centerThisDiv hideMe" id="viewOverall">
-        <!-- Sub-title Panel -->
-        <div class="row">
-            <!-- Empty div for spacing purposes -->
-            <div class="col s2 empty"></div>
-            <!-- Sub-title Header -->
-            <section class="col s8">
-                <article class="siteMission">Now, let's choose a movie:</article>
-            </section>
-            <!-- Empty div for spacing purposes -->
-            <div class="col s2 empty"></div>
-        </div>
-        <!-- Instructions Panel -->
-        <div class="row">
-            <!-- Empty div for spacing purposes -->
-            <div class="col s3 empty"></div>
-            <!-- Sub-title Header -->
-            <section class="col s6">
-                <article class="screenInstructions">Let's start with a streaming service:</article>
-            </section>
-            <!-- Empty div for spacing purposes -->
-            <div class="col s3 empty"></div>
+        <!-- Wheel Stuff -->
+        <div class="container centerThisDiv hideMe" id="wheelContainer">
+            <div class="row">
+                <div class="col l8">
+                    <div id="chart"></div>
+                </div>
+                <div class="col l4 chartHeightCopy">
+                    <div id="question">
+                        <h1></h1>
+                    </div>
+                </div>
+            </div>
         </div>
 
-
-        <!-- Buttons Panel -->
-        <div class="row buttonPanel">
-            <!-- Button Choice 1 -->
-            <section class="col s4">
-                <button class="button btnView3" id="view3btn1">Streaming Service 1</button>
-            </section> 
-            <!-- Button Choice 2 -->
-            <section class="col s4">
-                <button class="button btnView3" id="view3btn2">Streaming Service 2</button>
-            </section> 
-            <!-- Button Choice 3 -->
-            <section class="col s4">
-                <button class="button btnView3" id="view3btn3">Streaming Service 3</button>
-            </section> 
+        <!-- View 2 Buttons -->
+        <div class="container centerThisDiv" id="view2">
+            <div class="row">
+                <!-- Drink Category Dropdown-->
+                <a class='dropdown-trigger btn col s4' href='#' data-target='drinkCategory'>Choose a drink by category</a>
+                <!-- Drink Category Items -->
+                <ul id='drinkCategory' class='dropdown-content'>
+                    <li><a class="drinkCateoryButton" id="view2btnDrink1">Hide view 2 and show view 3</a></li>
+                    <li><a href="#!">Drink 2</a></li>
+                    <li><a href="#!">Drink 3</a></li>
+                </ul>
+                <!-- Alcohol Category Dropdown-->
+                <a class='dropdown-trigger btn col s4' href='#' data-target='alcoholCategory'>Choose a drink by alcohol</a>
+                <!-- Alcohol Category Items -->
+                <ul id='alcoholCategory' class='dropdown-content'>
+                    <li><a href="#!">Gin</a></li>
+                    <li><a href="#!">Rum</a></li>
+                    <li><a href="#!">Vodka</a></li>
+                </ul>
+                <section class="col s4">
+                    <button class="randomBtn" id="view2RandomBtn">Random Drink</button>
+                </section>
+            </div>
         </div>
-        <div class="row buttonPanel">
-            <!-- Button Choice 4 -->
-            <section class="col s4">
-                <button class="button btnView3" id="view3btn4">Streaming Service 4</button>
-            </section> 
-            <!-- Button Choice 5 -->
-            <section class="col s4">
-                <button class="button btnView3" id="view3btn5">Streaming Service 5</button>
-            </section> 
-            <!-- Button Choice 6 -->
-            <section class="col s4">
-                <button class="button btnView3" id="view3btn6">Streaming Service 6</button>
-            </section> 
+
+        <!-- View 3 Buttons -->
+        <div class="container hideMe" id="view3">
+            <div class="row buttonPanel">
+                <!-- Button Choice 1 -->
+                <section class="col s4">
+                    <button class="btn" id="view3btn1">Hide Wheel</button>
+                </section>
+                <!-- Button Choice 2 -->
+                <section class="col s4">
+                    <button class="button btnView3" id="view3btn2">Show Wheel</button>
+                </section>
+                <!-- Button Choice 3 -->
+                <section class="col s4">
+                    <button class="button btnView3" id="view3btn3">Go to view 2</button>
+                </section>
+            </div>
+            <div class="row buttonPanel">
+                <!-- Button Choice 4 -->
+                <section class="col s4">
+                    <button class="button btnView3" id="view3btn4">Streaming Service 4</button>
+                </section>
+                <!-- Button Choice 5 -->
+                <section class="col s4">
+                    <button class="button btnView3" id="view3btn5">Streaming Service 5</button>
+                </section>
+                <!-- Button Choice 6 -->
+                <section class="col s4">
+                    <button class="button btnView3" id="view3btn6">Streaming Service 6</button>
+                </section>
+            </div>
         </div>
     </div>
     <!--END VIEW 3-->
