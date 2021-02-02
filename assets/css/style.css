@@ -4,7 +4,7 @@ text {
     pointer-events: none;
 }
 
-/* Positions the chart at the top left. Commented out to allow the wheel to be placed inside the proper div container -Edward*/
+/* Positions the chart at the top left. Commented out to allow the wheel to be placed inside the proper div container -Edward */
 /* #chart {
     position: absolute;
     width: 500px;
