@@ -87,6 +87,7 @@ body {
 }
 
 article.siteMission,
+article.invitation,
 article.screenInstructions {
     border: dashed 2px rgb(240, 183, 38);
     background-color: rgb(54, 8, 8);
