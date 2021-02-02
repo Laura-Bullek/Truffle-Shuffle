@@ -46,7 +46,12 @@ text {
 /* Materialize Overwrite */ 
 /* Changes the styling of the dropdown menu after being opened */
 .dropdown-content{
-    background-color: crimson; 
+    background-color: rgb(54, 8, 8); 
+}
+/* Changes the text within the dropdown menu */
+.dropdown-content li>span,
+.dropdown-content li>a {
+    color: rgb(240, 183, 38);
 }
 /* Changes the default button styling */
 .btn {
@@ -58,8 +63,9 @@ text {
     margin: auto;
 }
 /* View 2 CSS stuff */
-.dropdown-trigger {
-    max-width: 80%;
+/* Makes the Random Drink button change the mouse cursor into the pointer hand when over the button */
+#view2btnRandom {
+    cursor: pointer;
 }
 
 /* View 3 CSS stuff */
@@ -86,13 +92,10 @@ body {
     margin: 10px auto;
 }
 
-article.siteMission,
-article.invitation,
-article.screenInstructions {
+.textBox {
     border: dashed 2px rgb(240, 183, 38);
     background-color: rgb(54, 8, 8);
-    padding-top: .90rem;
-    padding-bottom: .90rem;
+    padding: .5rem;
 }
 
 
@@ -107,7 +110,7 @@ article.screenInstructions {
     justify-content: space-evenly;
 }
 
-.btnView3 {
+.button {
     border: 2px dotted rgb(240, 199, 96);
     border-radius: 5px;
     color: rgb(240, 199, 96);
