@@ -32,31 +32,49 @@
     </div>
     <!-- END Title and Header container -->
 
-    <!-- Main Body Container (Sub-Title and Instructions)-->
+    <!-- Main Body Container (Dynamic text boxes present in all views)-->
     <div class="container centerThisDiv" id="viewOverall">
-        <!-- Sub-title Panel -->
+        <!-- Panel box 1 -->
         <div class="row">
-            <!-- Sub-title Header -->
+            <!-- Panel box 1 text -->
             <section class="col s8 offset-s2">
-                <article class="siteMission" id="subTitleBox">This is the Site Mission box which also doubles as the instructions/witty
-                    comment</article>
+                <article class="textBox" id="dynamicPanelTop">Welcome to the Truffle Shuffle!</article>
             </section>
         </div>
-        <!-- Instructions Panel -->
+        <!-- Panel box 2 -->
         <div class="row">
-            <!-- Sub-title Header -->
+            <!-- Panel box 2 -->
             <section class="col s6 offset-s3">
-                <article class="screenInstructions" id="instructionsBox">This is the instructions and other box </article>
+                <article class="textBox" id="dynamicPanelBottom">We invite you to live on the edge. That's right, you heard us.<br>LIVE ON THE EDGE.</article>
             </section>
         </div>
 
         <!-- VIEW 1 -->
         <div class="container centerThisDiv" id="view1">
+            <!-- Instructions Panel -->
             <div class="row">
-                <section class="col s6 offset-s3">
-                    <button class="startButton btnView3" id="view1btn1">Start the Game!</button>
-                </section>
+                <!-- Sub-title Header -->
+                <article class="textBox">
+                    <p>Are you with your family? Or even on a date?<br>
+                        Then it just so happens that is was totally fate!</p>
+
+                    <p>Have you once had a hard time choosing a movie or a drink?<br>
+                        Well sit back and relax, you've got the missing link!</p>
+
+                    <p>Click on a box, then maybe a drop down.<br>
+                        We'll choose you a drink, which could be the talk of the town!</p>
+
+                    <p>After your drink is chosen, daring to try it or not...<br>
+                        You'll spin a few times to get a movie, and you'll have to watch what you've got!</p>
+
+                    <p>Have fun with now, don't be mad.<br>
+                        Even if the movie sucks, you'll have a drink! Not so bad.</p>
+                </article>
             </div>
+            <article class="startBtn">
+                <!-- <a class="waves-effect waves-light btn-large"><i class="material-icons right"></i>Begin Here!</a> -->
+                <button class="startButton button" id="view1btn1">Begin Here!</button>
+            </article>
         </div>
         <!-- END VIEW 1 -->
 
@@ -64,22 +82,22 @@
         <div class="container centerThisDiv hideMe" id="view2">
             <div class="row">
                 <!-- Drink Category Dropdown-->
-                <a class='dropdown-trigger btnView3 col s4' data-target='drinkCategory'>By Category</a>
+                <a class='dropdown-trigger button col s4' data-target='drinkCategory'>By Category</a>
                 <!-- Drink Category Items -->
                 <ul id='drinkCategory' class='dropdown-content'>
-                    <li><a class="drinkCategoryButtonText" id="view2btnDrink1">Hide view 2 and show view 3</a></li>
-                    <li><a href="#!">Drink 2</a></li>
-                    <li><a href="#!">Drink 3</a></li>
+                    <li><a class="drinkCategoryButtonText" id="view2btnDrink1">Tropical (Test: Go to View 1</a></li>
+                    <li><a href="#!">Light</a></li>
+                    <li><a href="#!">Heavy</a></li>
                 </ul>
                 <!-- Alcohol Category Dropdown-->
-                <a class='dropdown-trigger btnView3 col s4' data-target='alcoholCategory'>By Alcohol</a>
+                <a class='dropdown-trigger button col s4' data-target='alcoholCategory'>By Alcohol</a>
                 <!-- Alcohol Category Items -->
                 <ul id='alcoholCategory' class='dropdown-content'>
                     <li><a href="#!">Gin</a></li>
                     <li><a href="#!">Rum</a></li>
                     <li><a href="#!">Vodka</a></li>
                 </ul>
-                <a class="btnView3 col s4" id="view2RandomBtn">Random Drink</a>
+                <a class="button col s4" id="view2btnRandom">Random Drink (Test: Go to View 3)</a>
             </div>
         </div>
         <!-- END VIEW 2 -->
@@ -89,36 +107,36 @@
             <div class="row buttonPanel">
                 <!-- Button Choice 1 -->
                 <section class="col s4">
-                    <button class="button btnView3" id="view3btn1">Hide View4</button>
+                    <button class="button button" id="view3btn1">Hide View4</button>
                 </section>
                 <!-- Button Choice 2 -->
                 <section class="col s4">
-                    <button class="button btnView3" id="view3btn2">Show View4</button>
+                    <button class="button button" id="view3btn2">Show View4</button>
                 </section>
                 <!-- Button Choice 3 -->
                 <section class="col s4">
-                    <button class="button btnView3" id="view3btn3">Go to view 2</button>
+                    <button class="button button" id="view3btn3">Go to view 2</button>
                 </section>
             </div>
             <div class="row buttonPanel">
                 <!-- Button Choice 4 -->
                 <section class="col s4">
-                    <button class="button btnView3" id="view3btn4">Streaming Service 4</button>
+                    <button class="button button" id="view3btn4">Streaming Service 4</button>
                 </section>
                 <!-- Button Choice 5 -->
                 <section class="col s4">
-                    <button class="button btnView3" id="view3btn5">Streaming Service 5</button>
+                    <button class="button button" id="view3btn5">Streaming Service 5</button>
                 </section>
                 <!-- Button Choice 6 -->
                 <section class="col s4">
-                    <button class="button btnView3" id="view3btn6">Streaming Service 6</button>
+                    <button class="button button" id="view3btn6">Streaming Service 6</button>
                 </section>
             </div>
         </div>
         <!--END VIEW 3-->
 
         <!--VIEW 4-->
-        <div class="container centerThisDiv hideMe" id="view4">
+        <div class="container centerThisDiv  hideMe" id="view4">
             <!-- Sub-title Panel -->
             <div class="row">
                 <!-- Empty div for spacing purposes -->
@@ -130,9 +148,70 @@
                 <!-- Empty div for spacing purposes -->
                 <div class="col s2 empty"></div>
             </div>
+            <!-- Instructions Panel -->
+            <div class="row">
+                <!-- Empty div for spacing purposes -->
+                <div class="col s3 empty"></div>
+                <!-- Empty div for spacing purposes -->
+                <div class="col s3 empty"></div>
+            </div>
 
             <!-- Wheel Stuff -->
             <div class="container centerThisDiv" id="wheelContainer">
+                <div class="row">
+                    <!-- Empty div for spacing purposes -->
+                    <div class="col s2 empty"></div>
+                    <!-- Sub-title Header -->
+                    <section class="col s8">
+                        <article class="siteMission">Spin the Wheel for a Genre!</article>
+                    </section>
+                    <!-- Empty div for spacing purposes -->
+                    <div class="col s2 empty"></div>
+                </div>
+
+                <!-- Wheel Stuff -->
+                <div class="container centerThisDiv" id="wheelContainer">
+                    <div class="row">
+                        <div class="col l8">
+                            <div id="chart"></div>
+                        </div>
+                        <div class="col l4 chartHeightCopy">
+                            <div id="question">
+                                <h1></h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <a class="waves-effect waves-light btn-large"><i class="material-icons right"></i>Let's go
+                            select a
+                            year</a>
+                    </div>
+                </div>
+            </div>
+            <!--END VIEW 4-->
+        </div>
+        <!--END VIEW 4-->
+
+        <!--VIEW 5-->
+        <div class="container centerThisDiv hideMe" id="view5">
+            <div class="row">
+                <!-- Empty div -->
+                <div class="col s2 empty"></div>
+                <section class="col s8">
+                    <article class="siteMission">Spin the Wheel to Pick a Year!</article>
+                </section>
+                <!-- Empty div -->
+                <div class="col s2 empty"></div>
+            </div>
+            <div class="row">
+                <!-- Empty div -->
+                <div class="col s3 empty"></div>
+                <!-- Empty div -->
+                <div class="col s3 empty"></div>
+            </div>
+
+            <!-- Wheel Stuff -->
+            <div class="container" id="wheelContainer">
                 <div class="row">
                     <div class="col l8">
                         <div id="chart"></div>
@@ -143,20 +222,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <a class="waves-effect waves-light btn-large"><i class="material-icons right"></i>Let's go select a
-                        year</a>
-                </div>
             </div>
+            <!-- Footer Panel -->
+            <div class="container centerThisDiv" id="footerContainer"><a class="waves-effect waves-light btn-large"><i
+                        class="material-icons right"></i>And the Movie is....</a></div>
         </div>
-        <!--END VIEW 4-->
-    </div>
-    <!-- END Main Body Container -->
-
-    <!-- Footer Panel -->
-    <div class="container centerThisDiv" id="footerContainer">
-        <p class="tempText">This is the footer</p>
-    </div>
+        <!--END VIEW 5-->
 
 </body>
 

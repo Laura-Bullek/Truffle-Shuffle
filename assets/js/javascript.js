@@ -195,8 +195,8 @@ function getRandomNumbers() {
 $('.dropdown-trigger').dropdown();
 
 // Reference the sub-title and instructions box
-const subTitleBox = document.querySelector("#subTitleBox");
-const instructionsBox = document.querySelector("#instructionsBox");
+const dynamicPanelTop = document.querySelector("#dynamicPanelTop");
+const dynamicPanelBottom = document.querySelector("#dynamicPanelBottom");
 
 // View 1 Testing
 const view1btnStart1 = document.querySelector("#view1btn1");
@@ -204,17 +204,26 @@ const view1btnStart1 = document.querySelector("#view1btn1");
 $(view1btn1).on("click", function () {
     $("#view1").addClass("hideMe");
     $("#view2").removeClass("hideMe");
-    subTitleBox.innerHTML = "View 2's subtitle box stuff"
-    instructionsBox.innerHTML = "View 2's instruction box stuff"
+    dynamicPanelTop.innerHTML = "View 2's top panel stuff";
+    dynamicPanelBottom.innerHTML = "View 2's bottom panel stuff";
 });
 
 
 // View 2 Testing
 const view2btnDrink1 = document.querySelector("#view2btnDrink1");
+const view2btnRandom = document.querySelector("#view2btnRandom")
 
 $(view2btnDrink1).on("click", function () {
     $("#view2").addClass("hideMe");
+    $("#view1").removeClass("hideMe");
+    dynamicPanelTop.innerHTML = "Welcome to the Truffle Shuffle!";
+    dynamicPanelBottom.innerHTML = "We invite you to live on the edge. That's right, you heard us.<br>LIVE ON THE EDGE.";
+});
+$(view2btnRandom).on("click", function () {
+    $("#view2").addClass("hideMe");
     $("#view3").removeClass("hideMe");
+    dynamicPanelTop.innerHTML = "View 3's top panel stuff";
+    dynamicPanelBottom.innerHTML = "View 3's bottom panel stuff";
 });
 
 // View 3 Testing

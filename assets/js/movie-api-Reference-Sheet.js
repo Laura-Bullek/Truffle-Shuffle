@@ -168,3 +168,25 @@ const theMoviePosterURL = "https://www.themoviedb.org/t/p/w600_and_h900_bestv2" 
 // "total_pages":212,
 // "total_results":4235
 // }
+
+
+// let cocktailCall = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
+//     $.ajax({
+//         url: cocktailCall,
+//         method: "GET"
+//     }).then(function (cocktail) {
+//         console.log(cocktail);
+//         console.log("Drink name: " + cocktail.drinks[0].strDrink);
+//         console.log("Glass needed: " + cocktail.drinks[0].strGlass);
+//         console.log("Drink image is at: " + cocktail.drinks[0].strDrinkThumb);
+//         console.log("Ingredient 1: " + cocktail.drinks[0].strIngredient1);
+//         console.log("Ingredient 2: " + cocktail.drinks[0].strIngredient1);
+//         console.log("Ingredient 3: " + cocktail.drinks[0].strIngredient1);
+//         console.log("Ingredient 4: " + cocktail.drinks[0].strIngredient1);
+//         console.log("Instructions: " + cocktail.drinks[0].strInstructions);
+//         console.log("First Measurement: " + cocktail.drinks[0].strMeasure1);
+//         console.log("Second Measurement: " + cocktail.drinks[0].strMeasure2);
+//         console.log("Third Measurement: " + cocktail.drinks[0].strMeasure3);
+//         console.log("Forth Measurement: " + cocktail.drinks[0].strMeasure4);
+//     })
+// })

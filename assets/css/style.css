@@ -64,7 +64,7 @@ text {
 }
 /* View 2 CSS stuff */
 /* Makes the Random Drink button change the mouse cursor into the pointer hand when over the button */
-#view2RandomBtn {
+#view2btnRandom {
     cursor: pointer;
 }
 
@@ -92,12 +92,10 @@ body {
     margin: 10px auto;
 }
 
-article.siteMission,
-article.screenInstructions {
+.textBox {
     border: dashed 2px rgb(240, 183, 38);
     background-color: rgb(54, 8, 8);
-    padding-top: .90rem;
-    padding-bottom: .90rem;
+    padding: .5rem;
 }
 
 
@@ -112,7 +110,7 @@ article.screenInstructions {
     justify-content: space-evenly;
 }
 
-.btnView3 {
+.button {
     border: 2px dotted rgb(240, 199, 96);
     border-radius: 5px;
     color: rgb(240, 199, 96);
