@@ -43,12 +43,12 @@ let theMoviePosterURL = "https://www.themoviedb.org/t/p/w600_and_h900_bestv2" + 
 
 // Watch Provider IDs (Note: This is not all of the available providers, this is just as much as different providers I could find using a sample request)
 // {"Providers":[
-//     {"provider_id":2,"provider_name":"Apple iTunes"},            
+//     {"provider_id":2,"provider_name":"Apple iTunes"}, *-------
 //     {"provider_id":3, "provider_name":"Google Play Movies"},
 //     {"provider_id":7,"provider_name":"Vudu"},
-//     {"provider_id":8, "provider_name":"Netflix"},
+//     {"provider_id":8, "provider_name":"Netflix"}, *-----------
 //     {"provider_id":10,"provider_name":"Amazon Video"},
-//     {"provider_id":15,"provider_name":"Hulu"},
+//     {"provider_id":15,"provider_name":"Hulu"}, *------------
 //     {"provider_id":20,"provider_name":"maxdome Store"},
 //     {"provider_id":29,"provider_name":"Sky Go"},
 //     {"provider_id":35,"provider_name":"Rakuten TV"},
@@ -58,7 +58,7 @@ let theMoviePosterURL = "https://www.themoviedb.org/t/p/w600_and_h900_bestv2" + 
 //     {"provider_id":109,"provider_name":"Timvision"},
 //     {"provider_id":113,"provider_name":"Ivi"},
 //     {"provider_id":115,"provider_name":"Okko"},
-//     {"provider_id":119,"provider_name":"Amazon Prime Video"},
+//     {"provider_id":119,"provider_name":"Amazon Prime Video"}, *------------
 //     {"provider_id":122,"provider_name":"Hotstar"},
 //     {"provider_id":150,"provider_name":"SwissCom"},
 //     {"provider_id":167,"provider_name":"Claro video"},
@@ -66,12 +66,12 @@ let theMoviePosterURL = "https://www.themoviedb.org/t/p/w600_and_h900_bestv2" + 
 //     {"provider_id":250,"provider_name":"Horizon"},
 //     {"provider_id":273,"provider_name":"Neon TV"},
 //     {"provider_id":299,"provider_name":"Sling TV"},
-//     {"provider_id":337,"provider_name":"Disney Plus"},
+//     {"provider_id":337,"provider_name":"Disney Plus"}, *-----------
 //     {"provider_id":339,"provider_name":"Movistar Play"},
 //     {"provider_id":356,"provider_name":"wavve"},
 //     {"provider_id":358,"provider_name":"DIRECTV"},
 //     {"provider_id":423,"provider_name":"Blockbuster"},
-//     {"provider_id":425,"provider_name":"HBO Go"},
+//     {"provider_id":425,"provider_name":"HBO Go"}, *--------
 // ]}
 
 // Watch Providers Region Codes (Note: This is not all of the available provider regions. This is all that I got from the sample request.)
