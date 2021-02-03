@@ -64,7 +64,7 @@ text {
 }
 /* View 2 CSS stuff */
 /* Makes the Random Drink button change the mouse cursor into the pointer hand when over the button */
-#view2btnRandom {
+#view2BtnRandom {
     cursor: pointer;
 }
 

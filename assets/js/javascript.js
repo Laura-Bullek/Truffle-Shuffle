@@ -1,10 +1,20 @@
 // References to wheel
+const view2aChart = document.querySelector("#view2aChart");
+const view2aQuestion = document.querySelector("#view2aQuestion");
 const view4Chart = document.querySelector("#view4Chart");
 const view4Question = document.querySelector("#view4Question");
 const view5Chart = document.querySelector("#view5Chart");
 const view5Question = document.querySelector("#view5Question");
 
 // Data for the wheel
+    // Genre ("label": "Genre", "value": Genre ID, "question": "Commentary" )
+var view2aData = [
+    { "label": "Actiona", "value": 1, "question": "Some witty response about Actiona" },
+    { "label": "Action2a", "value": 1, "question": "Some witty response about Action2a" },
+    { "label": "Action3a", "value": 1, "question": "Some witty response about Action3a" },
+    { "label": "Action4a", "value": 1, "question": "Some witty response about Action4a" },
+    { "label": "Romancea", "value": 1, "question": "Some witty response about Romancea" }
+];
     // Genre ("label": "Genre", "value": Genre ID, "question": "Commentary" )
 var view4Data = [
     { "label": "Action", "value": 1, "question": "Some witty response about Action" },
@@ -185,73 +195,83 @@ $('.dropdown-trigger').dropdown();
 // Personal Reminder on Javascript functionality -Edward
 // const dynamicPanelBottom = document.querySelector("#dynamicPanelBottom");
 // dynamicPanelBottom.innerHTML = "Change text";
-// $(view5btnWheel).on("click", function () {
+// $(view5BtnWheel).on("click", function () {
 //     $("#view5").addClass("hideMe");
 //     $("#view6").removeClass("hideMe");
 // });
 
 // View 1 Testing
-const view1btnStart1 = document.querySelector("#view1btn1");
+const view1BtnStart = document.querySelector("#view1BtnStart");
 
-$(view1btn1).on("click", function () {
+$(view1BtnStart).on("click", function () {
+    // Hides View 1 and displays View 2
     $("#view1").addClass("hideMe");
     $("#view2").removeClass("hideMe");
 });
 
 
 // View 2 Testing
-const view2btnDrink1 = document.querySelector("#view2btnDrink1");
-const view2btnAlcohol1 = document.querySelector("#view2btnAlcohol1");
-const view2btnRandom = document.querySelector("#view2btnRandom")
+const view2BtnDrinkTropical = document.querySelector("#view2BtnTropical");
+const view2BtnAlcoholGin = document.querySelector("#view2BtnAlcoholGin");
+const view2BtnRandom = document.querySelector("#view2BtnRandom")
 
-$(view2btnDrink1).on("click", function () {
+$(view2BtnDrinkTropical).on("click", function () {
     $("#view2").addClass("hideMe");
-    $("#view1").removeClass("hideMe");
+    $("#view2a").removeClass("hideMe");
+    callWheel(view2aChart,view2aQuestion,view2aData);
+
 });
-$(view2btnAlcohol1).on("click", function () {
+$(view2BtnAlcohol1Gin).on("click", function () {
     $("#view2").addClass("hideMe");
     $("#view3").removeClass("hideMe");
 });
-$(view2btnRandom).on("click", function () {
+$(view2BtnRandom).on("click", function () {
     $("#view2").addClass("hideMe");
     $("#view4").removeClass("hideMe");
     callWheel(view4Chart,view4Question,view4Data);
 });
 
-// View 3 Testing
-const view3btnProvider1 = document.querySelector("#view3btn1");
-const view3btnProvider2 = document.querySelector("#view3btn2");
-const view3btnProvider3 = document.querySelector("#view3btn3");
+// View 2a Testing
+const view2aBtnWheel = document.querySelector("#view2aBtnWheel");
 
-// $(view3btnProvider1).on("click", function () {
+$(view2aBtnWheel).on("click", function () {
+    $("#view2").addClass("hideMe");
+    $("#view3").removeClass("hideMe");
+});
+
+// View 3 Testing
+const view3BtnProvider1 = document.querySelector("#view3Btn1");
+const view3BtnProvider2 = document.querySelector("#view3Btn2");
+const view3BtnProvider3 = document.querySelector("#view3Btn3");
+
+// $(view3BtnProvider1).on("click", function () {
 //     $("#view4").addClass("hideMe");
 
 // });
 
-// $(view3btnProvider2).on("click", function () {
+// $(view3BtnProvider2).on("click", function () {
 //     $("#view4").removeClass("hideMe");
 // });
 
-$(view3btnProvider3).on("click", function () {
+$(view3BtnProvider3).on("click", function () {
     $("#view3").addClass("hideMe");
     $("#view4").removeClass("hideMe");
     callWheel(view4Chart,view4Question,view4Data);
 });
 
 // View 4 Testing
-const view4btnWheel = document.querySelector("#view4btnWheel");
+const view4BtnWheel = document.querySelector("#view4BtnWheel");
 
-$(view4btnWheel).on("click", function () {
+$(view4BtnWheel).on("click", function () {
     $("#view4").addClass("hideMe");
     $("#view5").removeClass("hideMe");
     callWheel(view5Chart,view5Question,view5Data);
-
 });
 
 // View 5 Testing
-const view5btnWheel = document.querySelector("#view5btnWheel");
+const view5BtnWheel = document.querySelector("#view5BtnWheel");
 
-$(view5btnWheel).on("click", function () {
+$(view5BtnWheel).on("click", function () {
     $("#view5").addClass("hideMe");
     $("#view6").removeClass("hideMe");
 });
