@@ -8,10 +8,17 @@ const view5Question = document.querySelector("#view5Question");
     // Genre ("label": "Genre", "value": Genre ID, "question": "Commentary" )
 var view4Data = [
     { "label": "Action", "value": 1, "question": "Some witty response about Action" },
-    { "label": "Action2", "value": 1, "question": "Some witty response about Action2" },
-    { "label": "Action3", "value": 1, "question": "Some witty response about Action3" },
-    { "label": "Action4", "value": 1, "question": "Some witty response about Action4" },
-    { "label": "Romance", "value": 1, "question": "Some witty response about Romance" }
+    { "label": "Adventure", "value": 1, "question": "Some witty response about Action2" },
+    { "label": "Comedy", "value": 1, "question": "Some witty response about Action3" },
+    { "label": "Crime", "value": 1, "question": "Some witty response about Action4" },
+    { "label": "Drama", "value": 1, "question": "Some witty response about Romance" },
+    { "label": "Family", "value": 1, "question": "Some witty response about Romance" },
+    { "label": "History", "value": 1, "question": "Some witty response about Romance" },
+    { "label": "Horror", "value": 1, "question": "Some witty response about Romance" },
+    { "label": "Mystery", "value": 1, "question": "Some witty response about Romance" },
+    { "label": "Romance", "value": 1, "question": "Some witty response about Romance" },
+    { "label": "Science Fiction", "value": 1, "question": "Some witty response about Romance" },
+    { "label": "Thriller", "value": 1, "question": "Some witty response about Romance" }
 ];
     // Release Year ("label": "ReleaseYear", "value": ReleaseYear, "question": "Commentary" )
 var view5Data = [
