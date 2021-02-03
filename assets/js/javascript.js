@@ -7,20 +7,26 @@ const view5Question = document.querySelector("#view5Question");
 // Data for the wheel
     // Genre ("label": "Genre", "value": Genre ID, "question": "Commentary" )
 var view4Data = [
-    { "label": "Action", "value": 1, "question": "Some witty response about Action" },
-    { "label": "Action2", "value": 1, "question": "Some witty response about Action2" },
-    { "label": "Action3", "value": 1, "question": "Some witty response about Action3" },
-    { "label": "Action4", "value": 1, "question": "Some witty response about Action4" },
-    { "label": "Romance", "value": 1, "question": "Some witty response about Romance" }
+    { "label": "Action", "value": 1, "question": "GET TO THE CHOPPA! You landed on an action movie!" },
+    { "label": "Adventure", "value": 1, "question": "One does not simply walk into Mordor. You landed on an adventure movie!" },
+    { "label": "Comedy", "value": 1, "question": "It's the f*cking Catalina Wine Mixer. You landed on a comedy movie!" },
+    { "label": "Crime", "value": 1, "question": "Leave the gun. Take the cannoli. You landed on a crime movie!" },
+    { "label": "Drama", "value": 1, "question": "Yo, Adrian! You landed on a drama!" },
+    { "label": "Family", "value": 1, "question": "Just keep swimming, just keep swimming. You landed on a family movie!" },
+    { "label": "Horror", "value": 1, "question": "Do you want to play a game? You landed on a horror movie!" },
+    { "label": "Mystery", "value": 1, "question": "YOU CAN'T HANDLE THE TRUTH! You landed on mystery!" },
+    { "label": "Romance", "value": 1, "question": "You had me at hello. You landed on a romance movie!" },
+    { "label": "SciFi", "value": 1, "question": "Leeloo Dallas Multipass. You landed on SciFi!" },
+    { "label": "Thriller", "value": 1, "question": "HERE'S JOHNNY! You landed on a thriller movie!" }
 ];
     // Release Year ("label": "ReleaseYear", "value": ReleaseYear, "question": "Commentary" )
 var view5Data = [
-    { "label": "Year 1", "value": 1, "question": "Some witty response about Year 1" },
-    { "label": "Year 2", "value": 1, "question": "Some witty response about Year 2" },
-    { "label": "Year 3", "value": 1, "question": "Some witty response about Year 3" },
-    { "label": "Year 4", "value": 1, "question": "Some witty response about Year 4" },
-    { "label": "Year 5", "value": 1, "question": "Some witty response about Year 5" },
-    { "label": "Year 6", "value": 1, "question": "Some witty response about Year 6" }
+    { "label": "The 1970s", "value": 1, "question": "Ready for the 70s? Oh yes, you know you are." },
+    { "label": "The 1980s", "value": 1, "question": "Ready for the 80s? Oh yes, you know you are." },
+    { "label": "The 1990s", "value": 1, "question": "Ready for the 90s? Oh yes, you know you are." },
+    { "label": "The 2000s", "value": 1, "question": "Ready for the 00s? Oh yes, you know you are." },
+    { "label": "The 2010s", "value": 1, "question": "Ready for the 2010s? Oh yes, you know you are." },
+    { "label": "Most Recent", "value": 1, "question": "Ready for the most recent stuff? Oh yes, you know you are." }
 ];
 
 // Wheel function
@@ -222,17 +228,41 @@ $(view2btnRandom).on("click", function () {
 const view3btnProvider1 = document.querySelector("#view3btn1");
 const view3btnProvider2 = document.querySelector("#view3btn2");
 const view3btnProvider3 = document.querySelector("#view3btn3");
+const view3btnProvider4 = document.querySelector("#view3btn4")
+const view3btnProvider5 = document.querySelector("#view3btn5")
+const view3btnProvider6 = document.querySelector("#view3btn6")
 
-// $(view3btnProvider1).on("click", function () {
-//     $("#view4").addClass("hideMe");
+$(view3btnProvider1).on("click", function () {
+    $("#view3").addClass("hideMe");
+    $("#view4").removeClass("hideMe");
+    callWheel(view4Chart,view4Question,view4Data);
+});
 
-// });
-
-// $(view3btnProvider2).on("click", function () {
-//     $("#view4").removeClass("hideMe");
-// });
+$(view3btnProvider2).on("click", function () {
+    $("#view3").addClass("hideMe");
+    $("#view4").removeClass("hideMe");
+    callWheel(view4Chart,view4Question,view4Data);
+});
 
 $(view3btnProvider3).on("click", function () {
+    $("#view3").addClass("hideMe");
+    $("#view4").removeClass("hideMe");
+    callWheel(view4Chart,view4Question,view4Data);
+});
+
+$(view3btnProvider4).on("click", function () {
+    $("#view3").addClass("hideMe");
+    $("#view4").removeClass("hideMe");
+    callWheel(view4Chart,view4Question,view4Data);
+});
+
+$(view3btnProvider5).on("click", function () {
+    $("#view3").addClass("hideMe");
+    $("#view4").removeClass("hideMe");
+    callWheel(view4Chart,view4Question,view4Data);
+});
+
+$(view3btnProvider6).on("click", function () {
     $("#view3").addClass("hideMe");
     $("#view4").removeClass("hideMe");
     callWheel(view4Chart,view4Question,view4Data);
@@ -255,3 +285,4 @@ $(view5btnWheel).on("click", function () {
     $("#view5").addClass("hideMe");
     $("#view6").removeClass("hideMe");
 });
+
