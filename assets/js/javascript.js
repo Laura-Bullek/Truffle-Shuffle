@@ -222,17 +222,41 @@ $(view2btnRandom).on("click", function () {
 const view3btnProvider1 = document.querySelector("#view3btn1");
 const view3btnProvider2 = document.querySelector("#view3btn2");
 const view3btnProvider3 = document.querySelector("#view3btn3");
+const view3btnProvider4 = document.querySelector("#view3btn4")
+const view3btnProvider5 = document.querySelector("#view3btn5")
+const view3btnProvider6 = document.querySelector("#view3btn6")
 
-// $(view3btnProvider1).on("click", function () {
-//     $("#view4").addClass("hideMe");
+$(view3btnProvider1).on("click", function () {
+    $("#view3").addClass("hideMe");
+    $("#view4").removeClass("hideMe");
+    callWheel(view4Chart,view4Question,view4Data);
+});
 
-// });
-
-// $(view3btnProvider2).on("click", function () {
-//     $("#view4").removeClass("hideMe");
-// });
+$(view3btnProvider2).on("click", function () {
+    $("#view3").addClass("hideMe");
+    $("#view4").removeClass("hideMe");
+    callWheel(view4Chart,view4Question,view4Data);
+});
 
 $(view3btnProvider3).on("click", function () {
+    $("#view3").addClass("hideMe");
+    $("#view4").removeClass("hideMe");
+    callWheel(view4Chart,view4Question,view4Data);
+});
+
+$(view3btnProvider4).on("click", function () {
+    $("#view3").addClass("hideMe");
+    $("#view4").removeClass("hideMe");
+    callWheel(view4Chart,view4Question,view4Data);
+});
+
+$(view3btnProvider5).on("click", function () {
+    $("#view3").addClass("hideMe");
+    $("#view4").removeClass("hideMe");
+    callWheel(view4Chart,view4Question,view4Data);
+});
+
+$(view3btnProvider6).on("click", function () {
     $("#view3").addClass("hideMe");
     $("#view4").removeClass("hideMe");
     callWheel(view4Chart,view4Question,view4Data);
@@ -255,3 +279,4 @@ $(view5btnWheel).on("click", function () {
     $("#view5").addClass("hideMe");
     $("#view6").removeClass("hideMe");
 });
+
