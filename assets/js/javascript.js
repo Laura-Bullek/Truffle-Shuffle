@@ -7,18 +7,17 @@ const view5Question = document.querySelector("#view5Question");
 // Data for the wheel
     // Genre ("label": "Genre", "value": Genre ID, "question": "Commentary" )
 var view4Data = [
-    { "label": "Action", "value": 1, "question": "Some witty response about Action" },
-    { "label": "Adventure", "value": 1, "question": "Some witty response about Action2" },
-    { "label": "Comedy", "value": 1, "question": "Some witty response about Action3" },
-    { "label": "Crime", "value": 1, "question": "Some witty response about Action4" },
-    { "label": "Drama", "value": 1, "question": "Some witty response about Romance" },
-    { "label": "Family", "value": 1, "question": "Some witty response about Romance" },
-    { "label": "History", "value": 1, "question": "Some witty response about Romance" },
-    { "label": "Horror", "value": 1, "question": "Some witty response about Romance" },
-    { "label": "Mystery", "value": 1, "question": "Some witty response about Romance" },
-    { "label": "Romance", "value": 1, "question": "Some witty response about Romance" },
-    { "label": "Science Fiction", "value": 1, "question": "Some witty response about Romance" },
-    { "label": "Thriller", "value": 1, "question": "Some witty response about Romance" }
+    { "label": "Action", "value": 1, "question": "GET TO THE CHOPPA! You landed on an action movie!" },
+    { "label": "Adventure", "value": 1, "question": "One does not simply walk into Mordor. You landed on an adventure movie!" },
+    { "label": "Comedy", "value": 1, "question": "It's the f*cking Catalina Wine Mixer. You landed on a comedy movie!" },
+    { "label": "Crime", "value": 1, "question": "Leave the gun. Take the cannoli. You landed on a crime movie!" },
+    { "label": "Drama", "value": 1, "question": "Yo, Adrian! You landed on a drama!" },
+    { "label": "Family", "value": 1, "question": "Just keep swimming, just keep swimming. You landed on a family movie!" },
+    { "label": "Horror", "value": 1, "question": "Do you want to play a game? You landed on a horror movie!" },
+    { "label": "Mystery", "value": 1, "question": "YOU CAN'T HANDLE THE TRUTH! You landed on mystery!" },
+    { "label": "Romance", "value": 1, "question": "You had me at hello. You landed on a romance movie!" },
+    { "label": "SciFi", "value": 1, "question": "Leeloo Dallas Multipass. You landed on SciFi!" },
+    { "label": "Thriller", "value": 1, "question": "HERE'S JOHNNY! You landed on a thriller movie!" }
 ];
     // Release Year ("label": "ReleaseYear", "value": ReleaseYear, "question": "Commentary" )
 var view5Data = [
