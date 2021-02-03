@@ -17,20 +17,26 @@ var view2aData = [
 ];
     // Genre ("label": "Genre", "value": Genre ID, "question": "Commentary" )
 var view4Data = [
-    { "label": "Action", "value": 1, "question": "Some witty response about Action" },
-    { "label": "Action2", "value": 1, "question": "Some witty response about Action2" },
-    { "label": "Action3", "value": 1, "question": "Some witty response about Action3" },
-    { "label": "Action4", "value": 1, "question": "Some witty response about Action4" },
-    { "label": "Romance", "value": 1, "question": "Some witty response about Romance" }
+    { "label": "Action", "value": 28, "question": "GET TO THE CHOPPA! You landed on an action movie!" },
+    { "label": "Adventure", "value": 12, "question": "One does not simply walk into Mordor. You landed on an adventure movie!" },
+    { "label": "Comedy", "value": 35, "question": "It's the f*cking Catalina Wine Mixer. You landed on a comedy movie!" },
+    { "label": "Crime", "value": 80, "question": "Leave the gun. Take the cannoli. You landed on a crime movie!" },
+    { "label": "Drama", "value": 18, "question": "Yo, Adrian! You landed on a drama!" },
+    { "label": "Family", "value": 10751, "question": "Just keep swimming, just keep swimming. You landed on a family movie!" },
+    { "label": "Horror", "value": 27, "question": "Do you want to play a game? You landed on a horror movie!" },
+    { "label": "Mystery", "value": 9648, "question": "YOU CAN'T HANDLE THE TRUTH! You landed on mystery!" },
+    { "label": "Romance", "value": 10749, "question": "You had me at hello. You landed on a romance movie!" },
+    { "label": "SciFi", "value": 878, "question": "Leeloo Dallas Multipass. You landed on SciFi!" },
+    { "label": "Thriller", "value": 53, "question": "HERE'S JOHNNY! You landed on a thriller movie!" }
 ];
     // Release Year ("label": "ReleaseYear", "value": ReleaseYear, "question": "Commentary" )
 var view5Data = [
-    { "label": "Year 1", "value": 1, "question": "Some witty response about Year 1" },
-    { "label": "Year 2", "value": 1, "question": "Some witty response about Year 2" },
-    { "label": "Year 3", "value": 1, "question": "Some witty response about Year 3" },
-    { "label": "Year 4", "value": 1, "question": "Some witty response about Year 4" },
-    { "label": "Year 5", "value": 1, "question": "Some witty response about Year 5" },
-    { "label": "Year 6", "value": 1, "question": "Some witty response about Year 6" }
+    { "label": "The 1970s", "value": "1970|1971|1972|1973|1974|1975|1976|1977|1978|1979", "question": "Ready for the 70s? Oh yes, you know you are." },
+    { "label": "The 1980s", "value": "1980|1981|1982|1983|1984|1985|1986|1987|1988|1989", "question": "Ready for the 80s? Oh yes, you know you are." },
+    { "label": "The 1990s", "value": "1990|1991|1992|1993|1994|1995|1996|1997|1998|1999", "question": "Ready for the 90s? Oh yes, you know you are." },
+    { "label": "The 2000s", "value": "2000|2001|2002|2003|2004|2005|2006|2007|2008|2009", "question": "Ready for the 00s? Oh yes, you know you are." },
+    { "label": "The 2010s", "value": "2010|2011|2012|2013|2014|2015|2016|2017|2018|2019", "question": "Ready for the 2010s? Oh yes, you know you are." },
+    { "label": "Most Recent", "value": "2020|2021", "question": "Ready for the most recent stuff? Oh yes, you know you are." }
 ];
 
 // Wheel function
@@ -135,6 +141,7 @@ function callWheel(chartDiv, questionDiv, data) {
                     .text(data[picked].question);
 
                 oldrotation = rotation;
+                
 
                 container.on("click", spin);
             });
@@ -211,7 +218,7 @@ $(view1BtnStart).on("click", function () {
 
 
 // View 2 Testing
-const view2BtnDrinkTropical = document.querySelector("#view2BtnTropical");
+const view2BtnDrinkTropical = document.querySelector("#view2BtnDrinkTropical");
 const view2BtnAlcoholGin = document.querySelector("#view2BtnAlcoholGin");
 const view2BtnRandom = document.querySelector("#view2BtnRandom")
 
@@ -221,7 +228,7 @@ $(view2BtnDrinkTropical).on("click", function () {
     callWheel(view2aChart,view2aQuestion,view2aData);
 
 });
-$(view2BtnAlcohol1Gin).on("click", function () {
+$(view2BtnAlcoholGin).on("click", function () {
     $("#view2").addClass("hideMe");
     $("#view3").removeClass("hideMe");
 });
@@ -235,7 +242,7 @@ $(view2BtnRandom).on("click", function () {
 const view2aBtnWheel = document.querySelector("#view2aBtnWheel");
 
 $(view2aBtnWheel).on("click", function () {
-    $("#view2").addClass("hideMe");
+    $("#view2a").addClass("hideMe");
     $("#view3").removeClass("hideMe");
 });
 
@@ -243,17 +250,41 @@ $(view2aBtnWheel).on("click", function () {
 const view3BtnProvider1 = document.querySelector("#view3Btn1");
 const view3BtnProvider2 = document.querySelector("#view3Btn2");
 const view3BtnProvider3 = document.querySelector("#view3Btn3");
+const view3BtnProvider4 = document.querySelector("#view3Btn4")
+const view3BtnProvider5 = document.querySelector("#view3Btn5")
+const view3BtnProvider6 = document.querySelector("#view3Btn6")
 
-// $(view3BtnProvider1).on("click", function () {
-//     $("#view4").addClass("hideMe");
+$(view3BtnProvider1).on("click", function () {
+    $("#view3").addClass("hideMe");
+    $("#view4").removeClass("hideMe");
+    callWheel(view4Chart,view4Question,view4Data);
+});
 
-// });
-
-// $(view3BtnProvider2).on("click", function () {
-//     $("#view4").removeClass("hideMe");
-// });
+$(view3BtnProvider2).on("click", function () {
+    $("#view3").addClass("hideMe");
+    $("#view4").removeClass("hideMe");
+    callWheel(view4Chart,view4Question,view4Data);
+});
 
 $(view3BtnProvider3).on("click", function () {
+    $("#view3").addClass("hideMe");
+    $("#view4").removeClass("hideMe");
+    callWheel(view4Chart,view4Question,view4Data);
+});
+
+$(view3BtnProvider4).on("click", function () {
+    $("#view3").addClass("hideMe");
+    $("#view4").removeClass("hideMe");
+    callWheel(view4Chart,view4Question,view4Data);
+});
+
+$(view3BtnProvider5).on("click", function () {
+    $("#view3").addClass("hideMe");
+    $("#view4").removeClass("hideMe");
+    callWheel(view4Chart,view4Question,view4Data);
+});
+
+$(view3BtnProvider6).on("click", function () {
     $("#view3").addClass("hideMe");
     $("#view4").removeClass("hideMe");
     callWheel(view4Chart,view4Question,view4Data);
@@ -275,3 +306,4 @@ $(view5BtnWheel).on("click", function () {
     $("#view5").addClass("hideMe");
     $("#view6").removeClass("hideMe");
 });
+

@@ -70,8 +70,10 @@ text {
 
 /* View 3 CSS stuff */
 body {
-    background-color: rgb(54, 8, 8);
+    background-color: rgb(54, 8, 8);  
     color:rgb(240, 183, 38);
+
+
 }
 
 #headerLogo {
@@ -121,4 +123,17 @@ body {
 
 .hideMe {
     display: none;
+}
+
+.streamingServiceLogos {
+    height: 50px;
+    width: 50px;
+    background-color: white;
+}
+
+#view4Question, h1{
+    font-size: 30px;
+    padding: 25px;
+    width: 200px;
+    float: left;
 }

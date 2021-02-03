@@ -21,14 +21,8 @@
 <body>
     <!-- Title and Header container -->
     <div class="container centerThisDiv" id="headerContainer">
-        <div class="row">
-            <!-- Logo div -->
-            <div class="col s3">
-                <img id="headerLogo" src="./assets/images/TF_logo.png" alt="">
-            </div>
-            <!-- Title div -->
-            <div class="col s6" id="headerTitle">Truffle Shuffle</div>
-        </div>
+        <!-- Title -->
+        <div class="row" id="headerTitle">Truffle Shuffle</div>
     </div>
     <!-- END Title and Header container -->
 
@@ -106,7 +100,7 @@
                 <a class='dropdown-trigger button col s4' data-target='alcoholCategory'>By Alcohol</a>
                 <!-- Alcohol Category Items -->
                 <ul id='alcoholCategory' class='dropdown-content'>
-                    <li><a class="drinkCategoryButtonText" id="view2BtnAlcoholGin">Gin(Test: Go to View 3)</a></li>
+                    <li><a class="drinkCategoryButtonText" id="view2BtnAlcoholGin">Gin (Test: Go to View 3)</a></li>
                     <li><a class="drinkCategoryButtonText" id="view2BtnAlcoholRum">Rum</a></li>
                     <li><a class="drinkCategoryButtonText" id="view2BtnAlcoholVodka">Vodka</a></li>
                     <li><a class="drinkCategoryButtonText" id="view2BtnAlcoholWhiskey">Whiskey</a></li>
@@ -125,7 +119,7 @@
                 <div id="view2aQuestion"><h1></h1></div>
                 <!-- Button -->
                 <div class="row">
-                    <button class="startButton button" id="view2aBtnWheel">Lets choose a movie! (Test: Go to view 3)</button>
+                    <button class="button" id="view2aBtnWheel">Lets choose a movie! (Test: Go to view 3)</button>
                 </div>
             </div>
         </div>
@@ -136,44 +130,47 @@
             <div class="row">
                 <!-- Panel box 1 text -->
                 <section class="col s8 offset-s2">
-                    <article class="textBox">View 3 stuff</article>
+                    <article class="textBox">
+                        <p>Did you get a drink? Have you tried it before?<br>
+                            Now let's choose a movie. What are you waiting for?!</p>
+                    </article>
                 </section>
             </div>
             <!-- Panel box 2 (Smaller) -->
             <div class="row">
                 <!-- Panel box 2 -->
                 <section class="col s6 offset-s3">
-                    <article class="textBox"> Another view 3 stuff</article>
+                    <article class="textBox">
+                        <p>Choose a streaming service from down below,<br>
+                            then sit back, relax, there's more Truffle Shuffle to go!</p>
+                    </article>
                 </section>
             </div>
-            <!-- Row of Buttons 1 -->
+            <!-- Row of Buttons -->
             <div class="row buttonPanel">
                 <!-- Button Choice 1 -->
-                <section class="col s4">
-                    <button class="button" id="view3Btn1">Streaming Service 1</button>
+                <section class="col">
+                    <button class="button" id="view3Btn1"><img class="streamingServiceLogos" src="./assets/images/Netflix_logo.png" alt="Netflix Logo"></button>
                 </section>
                 <!-- Button Choice 2 -->
-                <section class="col s4">
-                    <button class="button" id="view3Btn2">Streaming Service 2</button>
+                <section class="col">
+                    <button class="button" id="view3Btn2"><img class="streamingServiceLogos" src="./assets/images/Hulu_logo.png" alt="Hulu Logo"></button>
                 </section>
                 <!-- Button Choice 3 -->
-                <section class="col s4">
-                    <button class="button" id="view3Btn3">Go to view 4</button>
+                <section class="col">
+                    <button class="button" id="view3Btn3"><img class="streamingServiceLogos" src="./assets/images/Amazon_logo.png" alt="Amazon Prime Video Logo"></button>
                 </section>
-            </div>
-            <!-- Row of Buttons 2 -->
-            <div class="row buttonPanel">
                 <!-- Button Choice 4 -->
-                <section class="col s4">
-                    <button class="button" id="view3Btn4">Streaming Service 4</button>
+                <section class="col">
+                    <button class="button" id="view3Btn4"><img class="streamingServiceLogos" src="./assets/images/AppleTV_logo.png"alt="Apple TV Logo"></button>
                 </section>
                 <!-- Button Choice 5 -->
-                <section class="col s4">
-                    <button class="button" id="view3Btn5">Streaming Service 5</button>
+                <section class="col">
+                    <button class="button" id="view3Btn5"><img class="streamingServiceLogos" src="./assets/images/HBO_logo.png" alt="HBO Go Logo"></button>
                 </section>
                 <!-- Button Choice 6 -->
-                <section class="col s4">
-                    <button class="button" id="view3Btn6">Streaming Service 6</button>
+                <section class="col">
+                    <button class="button" id="view3Btn6"><img class="streamingServiceLogos" src="./assets/images/Disney_logo.png" alt="Disney Plus Logo"></button>
                 </section>
             </div>
         </div>
@@ -195,7 +192,7 @@
                 </div>
                 <!-- Button -->
                 <div class="row">
-                    <button class="startButton button" id="view4BtnWheel">Let's go select a year! (Test: Go to view 5)</button>
+                    <button class="button" id="view4BtnWheel">Let's go select a year! (Test: Go to view 5)</button>
                 </div>
             </div>
         </div>
@@ -217,7 +214,7 @@
                 </div>
                 <!-- Button -->
                 <div class="row">
-                    <button class="startButton button" id="view5BtnWheel">And the Movie is... (Test: Go to view 6)</button>
+                    <button class="button" id="view5BtnWheel">And the Movie is... (Test: Go to view 6)</button>
                 </div>
             </div>
         </div>
@@ -233,14 +230,14 @@
                 </section>
             </div>
             <!-- Movie and Drink Output Panel -->
-            <div class="row" style="justify-content: space-evenly;">
+            <div class="row">
                 <!-- Movie Image to be displayed here -->
-                <div class="col m4 offset-m1" id="selectedMovie" style="border: 1px solid gold;">
-                    <img src="https://via.placeholder.com/350">
+                <div class="col m4 offset-m1" id="selectedMovie">
+                    <img class="imageBox" src="https://via.placeholder.com/768x1024">
                 </div>
                 <!-- Drink Image to be displayed here -->
-                <div class="col m4 offset-m2" id="selectedDrink" style="border: 1px solid gold;">
-                    <img src="https://via.placeholder.com/350">
+                <div class="col m4 offset-m2" id="selectedDrink">
+                    <img class="imageBox" src="https://via.placeholder.com/350">
                 </div>
             </div>
             <!-- Panel box 2 (Larger)-->
@@ -256,6 +253,15 @@
 
     </div>
     <!-- END Main Body Container -->
+
+    <!-- Footer Container -->
+    <div class="container centerThisDiv" id="footer">
+        <!-- Logo div -->
+        <div class="row">
+            <img id="headerLogo" src="./assets/images/TF_logo.png" alt="Truffle Shuffle Logo">
+        </div>
+    </div>
+    <!-- END Footer Container -->
 
 </body>
 
