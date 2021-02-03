@@ -122,3 +122,9 @@ body {
 .hideMe {
     display: none;
 }
+
+.streamingServiceLogos {
+    height: 50px;
+    width: 50px;
+    background-color: white;
+}
