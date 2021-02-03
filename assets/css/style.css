@@ -129,3 +129,9 @@ body {
     background-color: white;
 }
 
+#view4Question, h1{
+    font-size: 30px;
+    padding: 25px;
+    width: 200px;
+    float: left;
+}
