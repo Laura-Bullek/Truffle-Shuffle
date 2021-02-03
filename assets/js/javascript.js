@@ -21,12 +21,12 @@ var view4Data = [
 ];
     // Release Year ("label": "ReleaseYear", "value": ReleaseYear, "question": "Commentary" )
 var view5Data = [
-    { "label": "Year 1", "value": 1, "question": "Some witty response about Year 1" },
-    { "label": "Year 2", "value": 1, "question": "Some witty response about Year 2" },
-    { "label": "Year 3", "value": 1, "question": "Some witty response about Year 3" },
-    { "label": "Year 4", "value": 1, "question": "Some witty response about Year 4" },
-    { "label": "Year 5", "value": 1, "question": "Some witty response about Year 5" },
-    { "label": "Year 6", "value": 1, "question": "Some witty response about Year 6" }
+    { "label": "The 1970s", "value": 1, "question": "Ready for the 70s? Oh yes, you know you are." },
+    { "label": "The 1980s", "value": 1, "question": "Ready for the 80s? Oh yes, you know you are." },
+    { "label": "The 1990s", "value": 1, "question": "Ready for the 90s? Oh yes, you know you are." },
+    { "label": "The 2000s", "value": 1, "question": "Ready for the 00s? Oh yes, you know you are." },
+    { "label": "The 2010s", "value": 1, "question": "Ready for the 2010s? Oh yes, you know you are." },
+    { "label": "Most Recent", "value": 1, "question": "Ready for the most recent stuff? Oh yes, you know you are." }
 ];
 
 // Wheel function
