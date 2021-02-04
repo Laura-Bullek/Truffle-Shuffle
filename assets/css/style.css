@@ -4,7 +4,7 @@ text {
     pointer-events: none;
 }
 
-/* Positions the chart at the top left. Commented out to allow the wheel to be placed inside the proper div container -Edward*/
+/* Positions the chart at the top left. Commented out to allow the wheel to be placed inside the proper div container -Edward */
 /* #chart {
     position: absolute;
     width: 500px;
@@ -43,10 +43,37 @@ text {
     justify-content: center;
 }
 
+/* Materialize Overwrite */ 
+/* Changes the styling of the dropdown menu after being opened */
+.dropdown-content{
+    background-color: rgb(54, 8, 8); 
+}
+/* Changes the text within the dropdown menu */
+.dropdown-content li>span,
+.dropdown-content li>a {
+    color: rgb(240, 183, 38);
+}
+/* Changes the default button styling */
+.btn {
+    border: 2px dotted rgb(240, 199, 96);
+    border-radius: 5px;
+    color: rgb(240, 199, 96);
+    background-color: darkred;
+    padding: 10px 5px;
+    margin: auto;
+}
+/* View 2 CSS stuff */
+/* Makes the Random Drink button change the mouse cursor into the pointer hand when over the button */
+#view2btnRandom {
+    cursor: pointer;
+}
+
 /* View 3 CSS stuff */
 body {
-    background-color: rgb(54, 8, 8);
+    background-color: rgb(54, 8, 8);  
     color:rgb(240, 183, 38);
+
+
 }
 
 #headerLogo {
@@ -60,19 +87,17 @@ body {
     margin: 10px auto;
 }
 
-#view3 {
+#viewOverall {
     background-color: rgb(73, 7, 7);
     border: 2px solid gold;
     padding: 10px 0px;
     margin: 10px auto;
 }
 
-article.siteMission,
-article.screenInstructions {
+.textBox {
     border: dashed 2px rgb(240, 183, 38);
     background-color: rgb(54, 8, 8);
-    padding-top: .90rem;
-    padding-bottom: .90rem;
+    padding: .5rem;
 }
 
 
@@ -87,7 +112,7 @@ article.screenInstructions {
     justify-content: space-evenly;
 }
 
-.btnView3 {
+.button {
     border: 2px dotted rgb(240, 199, 96);
     border-radius: 5px;
     color: rgb(240, 199, 96);
@@ -98,4 +123,18 @@ article.screenInstructions {
 
 .hideMe {
     display: none;
+}
+
+.streamingServiceLogos {
+    height: 50px;
+    width: 50px;
+    background-color: white;
+}
+
+#view4Question, h1{
+    font-size: 30px;
+    padding: 25px;
+    width: 300px;
+    float: left;
+    border-color:  rgb(240, 199, 96);
 }
