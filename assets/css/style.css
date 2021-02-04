@@ -75,17 +75,16 @@ div.container {
 body {
     /* background-color: rgb(54, 8, 8);   */
     color:rgb(240, 183, 38);
+    position: relative;
+    min-height: 100vh;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 #headerLogo {
     max-width: 100%;
     max-height: 100%;
-}
-
-#headerContainer {
-    font-size: 30px;
-    font-weight: bold;
-    margin: 10px auto;
+    height: 10rem;
 }
 
 #headerContainer,
@@ -170,6 +169,4 @@ html {
     bottom: 0px;
     background-color: rgb(73, 7, 7);
     border: 2px solid gold;
-    padding: 0px;
-    margin-bottom: 0px;
-  }
+}

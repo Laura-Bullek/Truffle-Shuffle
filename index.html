@@ -22,12 +22,46 @@
     <!-- Title and Header container -->
     <div class="container centerThisDiv" id="headerContainer">
         <!-- Title -->
-        <img id="headerLogo" src="./assets/images/TF_logo.png" alt="Truffle Shuffle Logo">
+        <img id="headerLogo" src="./assets/images/Tshuffle.gif" alt="Truffle Shuffle Logo">
     </div>
     <!-- END Title and Header container -->
 
-    <!-- Main Body Container (Dynamic text boxes present in all views)-->
+    <!-- Main Body Container -->
     <div class="container centerThisDiv" id="viewOverall">
+
+        <!-- VIEW 0: Return Screen -->
+        <div class="container centerThisDiv hideMe" id="view0">
+            <!-- Panel box 1 (Larger)-->
+            <div class="row">
+                <!-- Panel box 1 text -->
+                <section class="col s8 offset-s2">
+                    <article class="textBox">Welcome back to Truffle Shuffle!</article>
+                </section>
+            </div>
+            <!-- Panel box 2 (Smaller) -->
+            <div class="row">
+                <!-- Panel box 2 -->
+                <section class="col s6 offset-s3">
+                    <article class="textBox" id="returnMessage">How was your *drink*? Did you enjoy *movie*?</article>
+                </section>
+            </div>
+            <!-- Movie and Drink Output Panel -->
+            <div class="row">
+                <!-- Movie Image to be displayed here -->
+                <div class="col m4 offset-m1" id="lastMovie">
+                    <img class="imageBox" src="https://via.placeholder.com/768x1024">
+                </div>
+                <!-- Drink Image to be displayed here -->
+                <div class="col m4 offset-m2" id=lastDrink">
+                    <img class="imageBox" src="https://via.placeholder.com/350">
+                </div>
+            </div>
+            <!-- Re-Start Button -->
+            <section class="buttonBox">
+                <button class="button" id="view0BtnStart">Another Truffle Shuffle!</button>
+            </section>
+        </div>
+        <!-- END VIEW 0 -->
 
         <!-- VIEW 1: Start Screen -->
         <div class="container centerThisDiv" id="view1">
@@ -91,16 +125,8 @@
                 </section>
             </div>
             <div class="row">
-                <!-- Drink Category Dropdown-->
-                <a class='dropdown-trigger button col s4' data-target='drinkCategory'>By Category</a>
-                <!-- Drink Category Items -->
-                <ul id='drinkCategory' class='dropdown-content'>
-                    <li><a class="drinkCategoryButtonText" id="view2BtnDrinkTropical">Tropical (Test: Go to View 2a)</a></li>
-                    <li><a class="drinkCategoryButtonText" id="view2BtnDrinkHeavy">Heavy</a></li>
-                    <li><a class="drinkCategoryButtonText" id="view2BtnDrinkLight">Light</a></li>
-                </ul>
                 <!-- Alcohol Category Dropdown-->
-                <a class='dropdown-trigger button col s4' data-target='alcoholCategory'>By Alcohol</a>
+                <a class='dropdown-trigger button col s6' data-target='alcoholCategory'>By Alcohol</a>
                 <!-- Alcohol Category Items -->
                 <ul id='alcoholCategory' class='dropdown-content'>
                     <li><a class="drinkCategoryButtonText" id="view2BtnAlcoholGin">Gin (Test: Go to View 3)</a></li>
@@ -109,7 +135,7 @@
                     <li><a class="drinkCategoryButtonText" id="view2BtnAlcoholWhiskey">Whiskey</a></li>
                 </ul>
                 <!-- Random Drink Button -->
-                <a class="button col s4" id="view2BtnRandom">Random Drink (Test: Go to View 4)</a>
+                <a class="button col s6" id="view2BtnRandom">Random Drink (Test: Go to View 4)</a>
             </div>
         </div>
         <!-- END VIEW 2 -->
@@ -149,30 +175,33 @@
                     </article>
                 </section>
             </div>
-            <!-- Row of Buttons -->
-            <div class="row buttonPanel">
+            <!-- Row of Buttons 1 -->
+            <div class="row">
                 <!-- Button Choice 1 -->
-                <section class="col">
+                <section class="col s4">
                     <button class="button" id="view3Btn1"><img class="streamingServiceLogos" src="./assets/images/Netflix_logo.png" alt="Netflix Logo"></button>
                 </section>
                 <!-- Button Choice 2 -->
-                <section class="col">
+                <section class="col s4">
                     <button class="button" id="view3Btn2"><img class="streamingServiceLogos" src="./assets/images/Hulu_logo.png" alt="Hulu Logo"></button>
                 </section>
                 <!-- Button Choice 3 -->
-                <section class="col">
+                <section class="col s4">
                     <button class="button" id="view3Btn3"><img class="streamingServiceLogos" src="./assets/images/Amazon_logo.png" alt="Amazon Prime Video Logo"></button>
                 </section>
+            </div>
+            <!-- Row of Buttons 2 -->
+            <div class="row">
                 <!-- Button Choice 4 -->
-                <section class="col">
+                <section class="col s4">
                     <button class="button" id="view3Btn4"><img class="streamingServiceLogos" src="./assets/images/AppleTV_logo.png"alt="Apple TV Logo"></button>
                 </section>
                 <!-- Button Choice 5 -->
-                <section class="col">
+                <section class="col s4">
                     <button class="button" id="view3Btn5"><img class="streamingServiceLogos" src="./assets/images/HBO_logo.png" alt="HBO Go Logo"></button>
                 </section>
                 <!-- Button Choice 6 -->
-                <section class="col">
+                <section class="col s4">
                     <button class="button" id="view3Btn6"><img class="streamingServiceLogos" src="./assets/images/Disney_logo.png" alt="Disney Plus Logo"></button>
                 </section>
             </div>
@@ -187,7 +216,7 @@
                     <div class="col l8">
                         <div id="view4Chart"></div>
                     </div>
-                    <div class="col l4 chartHeightCopy">
+                    <div class="col l4">
                         <div id="view4Question">
                             <h1></h1>
                         </div>
@@ -209,7 +238,7 @@
                     <div class="col l8">
                         <div id="view5Chart"></div>
                     </div>
-                    <div class="col l4 chartHeightCopy">
+                    <div class="col l4">
                         <div id="view5Question">
                             <h1></h1>
                         </div>
@@ -257,13 +286,8 @@
     </div>
     <!-- END Main Body Container -->
 
-    <!-- Footer Container -->
-    <div class="container centerThisDiv" id="footer">
-        <!-- Logo div -->
-        <div class="row">
-            <div class="row" id="footerTitle">Truffle Shuffle</div>
-        </div>
-    </div>
+    <!-- Footer -->
+    <div class="centerThisDiv" id="footer">Made by Group 1: Truffle Shuffle.</div>
     <!-- END Footer Container -->
 
 </body>

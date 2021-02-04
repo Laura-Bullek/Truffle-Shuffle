@@ -62,7 +62,7 @@ var rumData = [
     { "label": "Pina Colada" , "value": 1,}, 
     { "label": "Dark and Stormy", "value": 1,},
     { "label": "Mojito", "value": 1,},
-    { "label":  "Bahama Mama", "value": 1,},
+    { "label": "Bahama Mama", "value": 1,},
     { "label": "Sunset Rum Punch", "value": 1,},
     { "label": "Blue Motorcycle", "value": 1,},
     { "label": "Mai Tai", "value": 1,},
