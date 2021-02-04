@@ -301,9 +301,9 @@ $(view2aBtnWheel).on("click", function () {
 const view3BtnProvider1 = document.querySelector("#view3Btn1");
 const view3BtnProvider2 = document.querySelector("#view3Btn2");
 const view3BtnProvider3 = document.querySelector("#view3Btn3");
-const view3BtnProvider4 = document.querySelector("#view3Btn4")
-const view3BtnProvider5 = document.querySelector("#view3Btn5")
-const view3BtnProvider6 = document.querySelector("#view3Btn6")
+const view3BtnProvider4 = document.querySelector("#view3Btn4");
+const view3BtnProvider5 = document.querySelector("#view3Btn5");
+const view3BtnProvider6 = document.querySelector("#view3Btn6");
 
 $(view3BtnProvider1).on("click", function () {
     $("#view3").addClass("hideMe");
