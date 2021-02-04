@@ -256,13 +256,4 @@ const theMoviePosterURL = "https://www.themoviedb.org/t/p/w600_and_h900_bestv2" 
         //     console.log(noBooze);
         //     let drinkId = parseInt(noBooze.drinks[0].idDrink);
         //     console.log(drinkId);
-        
-        //     let drinkById = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + drinkId
-
-        //     $.ajax({
-        //         url: drinkById,
-        //         method: "GET"
-        //     }).then(function(newDrink) {
-        //         console.log(newDrink);
-        //     })
         // })
