@@ -247,13 +247,11 @@ const theMoviePosterURL = "https://www.themoviedb.org/t/p/w600_and_h900_bestv2" 
 
 //
         // let booze = "Users selected alcohol type";
-        // let mocktail = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + booze;
+        // let drinkByName = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + booze;
         
         // $.ajax({
-        //     url: mocktail,
+        //     url: drinkByName,
         //     method: "GET"
-        // }).then(function (noBooze) {
-        //     console.log(noBooze);
-        //     let drinkId = parseInt(noBooze.drinks[0].idDrink);
-        //     console.log(drinkId);
+        // }).then(function (drink) {
+        //     console.log(drink);
         // })
