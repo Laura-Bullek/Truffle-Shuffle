@@ -29,42 +29,8 @@
     <!-- Main Body Container -->
     <div class="container centerThisDiv" id="viewOverall">
 
-        <!-- VIEW 0: Return Screen -->
-        <div class="container centerThisDiv hideMe" id="view0">
-            <!-- Panel box 1 (Larger)-->
-            <div class="row">
-                <!-- Panel box 1 text -->
-                <section class="col s8 offset-s2">
-                    <article class="textBox">Welcome back to Truffle Shuffle!</article>
-                </section>
-            </div>
-            <!-- Panel box 2 (Smaller) -->
-            <div class="row">
-                <!-- Panel box 2 -->
-                <section class="col s6 offset-s3">
-                    <article class="textBox" id="returnMessage">How was your *drink*? Did you enjoy *movie*?</article>
-                </section>
-            </div>
-            <!-- Movie and Drink Output Panel -->
-            <div class="row">
-                <!-- Movie Image to be displayed here -->
-                <div class="col m4 offset-m1" id="lastMovie">
-                    <img class="imageBox" src="https://via.placeholder.com/768x1024">
-                </div>
-                <!-- Drink Image to be displayed here -->
-                <div class="col m4 offset-m2" id="lastDrink">
-                    <img class="imageBox" src="https://via.placeholder.com/350">
-                </div>
-            </div>
-            <!-- Re-Start Button -->
-            <section class="buttonBox">
-                <button class="button" id="view0BtnStart">Another Truffle Shuffle!</button>
-            </section>
-        </div>
-        <!-- END VIEW 0 -->
-
-        <!-- VIEW 1: Start Screen -->
-        <div class="container centerThisDiv" id="view1">
+        <!-- VIEW 1A: Start Screen -->
+        <div class="container centerThisDiv" id="view1a">
             <!-- Panel box 1 (Larger)-->
             <div class="row">
                 <!-- Panel box 1 text -->
@@ -100,12 +66,46 @@
             </div>
             <!-- Start Button -->
             <section class="buttonBox">
-                <button class="button" id="view1BtnStart">Begin Here!</button>
+                <button class="button" id="view1aBtnStart">Begin Here!</button>
             </section>
         </div>
-        <!-- END VIEW 1 -->
+        <!-- END VIEW 1A -->
 
-        <!-- VIEW 2: Choose your beverage -->
+        <!-- VIEW 1B: Returning User Start Screen -->
+        <div class="container centerThisDiv hideMe" id="view1b">
+            <!-- Panel box 1 (Larger)-->
+            <div class="row">
+                <!-- Panel box 1 text -->
+                <section class="col s8 offset-s2">
+                    <article class="textBox">Welcome back to Truffle Shuffle!</article>
+                </section>
+            </div>
+            <!-- Panel box 2 (Smaller) -->
+            <div class="row">
+                <!-- Panel box 2 -->
+                <section class="col s6 offset-s3">
+                    <article class="textBox" id="returnMessage">How was your *drink*? Did you enjoy *movie*?</article>
+                </section>
+            </div>
+            <!-- Movie and Drink Output Panel -->
+            <div class="row">
+                <!-- Movie Image to be displayed here -->
+                <div class="col m4 offset-m1" id="lastMovie">
+                    <img class="imageBox" src="https://via.placeholder.com/768x1024" alt="Image of the chosen movie">
+                </div>
+                <!-- Drink Image to be displayed here -->
+                <div class="col m4 offset-m2" id="lastDrink">
+                    <img class="imageBox" src="https://via.placeholder.com/350" alt="Image opf the chosen drink">
+                </div>
+            </div>
+            <!-- Re-Start Button -->
+            <section class="buttonBox">
+                <button class="button" id="view1bBtnStart">Another Truffle Shuffle!</button>
+            </section>
+        </div>
+        <!-- END VIEW 1B -->
+
+        <!-- VIEW 2: Choose your Beverage Type -->
         <div class="container centerThisDiv hideMe" id="view2">
             <!-- Panel box 1 (Larger)-->
             <div class="row">
@@ -129,10 +129,9 @@
                 <a class='dropdown-trigger button col s6' data-target='alcoholCategory'>By Alcohol</a>
                 <!-- Alcohol Category Items -->
                 <ul id='alcoholCategory' class='dropdown-content'>
-                    <li><a class="drinkCategoryButtonText" id="view2BtnAlcoholGin">Gin (Test: Go to View 3)</a></li>
-                    <li><a class="drinkCategoryButtonText" id="view2BtnAlcoholRum">Rum</a></li>
-                    <li><a class="drinkCategoryButtonText" id="view2BtnAlcoholVodka">Vodka</a></li>
-                    <li><a class="drinkCategoryButtonText" id="view2BtnAlcoholWhiskey">Whiskey</a></li>
+                    <li><a class="drinkCategoryButtonText" id="view2BtnRum">Rum</a></li>
+                    <li><a class="drinkCategoryButtonText" id="view2BtnVodka">Vodka</a></li>
+                    <li><a class="drinkCategoryButtonText" id="view2BtnWhiskey">Whiskey</a></li>
                 </ul>
                 <!-- Random Drink Button -->
                 <a class="button col s6" id="view2BtnRandom">Random Drink (Test: Go to View 4)</a>
@@ -140,21 +139,60 @@
         </div>
         <!-- END VIEW 2 -->
 
-        <!-- VIEW 2a: Spin the Alcohol Category -->
+        <!-- VIEW 2A: Spin the Rum Wheel -->
         <div class="container centerThisDiv hideMe" id="view2a">
             <!-- Wheel Stuff -->
             <div class="container" id="wheelContainer">
                 <div id="view2aChart"></div>
-                <div id="view2aQuestion"><h1></h1></div>
+                <div class="wheelResponse" id="view2aQuestion">
+                    <div></div>
+                </div>
                 <!-- Button -->
                 <div class="row">
-                    <button class="button" id="view2aBtnWheel">Lets choose a movie! (Test: Go to view 3)</button>
+                    <button class="button hideMe" id="view2aBtnWheel">Lets choose a movie! (Test: Go to view 3)</button>
                 </div>
             </div>
         </div>
+        <!-- END VIEW 2A -->
 
-        <!-- VIEW 3 -->
-        <div class="container hideMe" id="view3">
+        <!-- VIEW 2B: Spin the Vodka Wheel -->
+        <div class="container centerThisDiv hideMe" id="view2a">
+            <!-- Wheel Stuff -->
+            <div class="container" id="wheelContainer">
+                <div id="view2bChart"></div>
+                <div class="wheelResponse" id="view2bQuestion">
+                    <div></div>
+                </div>
+                <!-- Button -->
+                <div class="row">
+                    <button class="button hideMe" id="view2bBtnWheel">Lets choose a movie! (Test: Go to view 3)</button>
+                </div>
+            </div>
+        </div>
+        <!-- END VIEW 2B -->
+
+        <!-- VIEW 2C: Spin the Whiskey Wheel -->
+        <div class="container centerThisDiv hideMe" id="view2a">
+            <!-- Wheel Stuff -->
+            <div class="container" id="wheelContainer">
+                <div id="view2cChart"></div>
+                <div class="wheelResponse" id="view2cQuestion">
+                    <div class="container centerThisDiv"></div>
+                </div>
+                <!-- Button -->
+                <div class="row">
+                    <button class="button hideMe" id="view2cBtnWheel">Lets choose a movie! (Test: Go to view 3)</button>
+                </div>
+            </div>
+        </div>
+        <!-- END VIEW 2C -->
+
+        <!-- VIEW 2D: View the Random Drink -->
+
+        <!-- END VIEW 2D -->
+
+        <!-- VIEW 3: Choose your Watch Provider -->
+        <div class="container centerThisDiv hideMe" id="view3">
             <!-- Panel box 1 (Larger)-->
             <div class="row">
                 <!-- Panel box 1 text -->
@@ -179,80 +217,79 @@
             <div class="row">
                 <!-- Button Choice 1 -->
                 <section class="col s4">
-                    <button class="button" id="view3Btn1"><img class="streamingServiceLogos" src="./assets/images/Netflix_logo.png" alt="Netflix Logo"></button>
+                    <button class="button" id="view3Btn1"><img class="streamingServiceLogos"
+                            src="./assets/images/Netflix_logo.png" alt="Netflix Logo"></button>
                 </section>
                 <!-- Button Choice 2 -->
                 <section class="col s4">
-                    <button class="button" id="view3Btn2"><img class="streamingServiceLogos" src="./assets/images/Hulu_logo.png" alt="Hulu Logo"></button>
+                    <button class="button" id="view3Btn2"><img class="streamingServiceLogos"
+                            src="./assets/images/Hulu_logo.png" alt="Hulu Logo"></button>
                 </section>
                 <!-- Button Choice 3 -->
                 <section class="col s4">
-                    <button class="button" id="view3Btn3"><img class="streamingServiceLogos" src="./assets/images/Amazon_logo.png" alt="Amazon Prime Video Logo"></button>
+                    <button class="button" id="view3Btn3"><img class="streamingServiceLogos"
+                            src="./assets/images/Amazon_logo.png" alt="Amazon Prime Video Logo"></button>
                 </section>
             </div>
             <!-- Row of Buttons 2 -->
             <div class="row">
                 <!-- Button Choice 4 -->
                 <section class="col s4">
-                    <button class="button" id="view3Btn4"><img class="streamingServiceLogos" src="./assets/images/AppleTV_logo.png"alt="Apple TV Logo"></button>
+                    <button class="button" id="view3Btn4"><img class="streamingServiceLogos"
+                            src="./assets/images/AppleTV_logo.png" alt="Apple TV Logo"></button>
                 </section>
                 <!-- Button Choice 5 -->
                 <section class="col s4">
-                    <button class="button" id="view3Btn5"><img class="streamingServiceLogos" src="./assets/images/HBO_logo.png" alt="HBO Go Logo"></button>
+                    <button class="button" id="view3Btn5"><img class="streamingServiceLogos"
+                            src="./assets/images/HBO_logo.png" alt="HBO Go Logo"></button>
                 </section>
                 <!-- Button Choice 6 -->
                 <section class="col s4">
-                    <button class="button" id="view3Btn6"><img class="streamingServiceLogos" src="./assets/images/Disney_logo.png" alt="Disney Plus Logo"></button>
+                    <button class="button" id="view3Btn6"><img class="streamingServiceLogos"
+                            src="./assets/images/Disney_logo.png" alt="Disney Plus Logo"></button>
                 </section>
             </div>
         </div>
-        <!--END VIEW 3-->
+        <!-- END VIEW 3 -->
 
-        <!--VIEW 4-->
+        <!-- VIEW 4: Spin the Movie Genre Wheel -->
         <div class="container centerThisDiv hideMe" id="view4">
             <!-- Wheel Stuff -->
             <div class="container" id="wheelContainer">
                 <div class="row">
-                    <div class="col l8">
-                        <div id="view4Chart"></div>
-                    </div>
-                    <div class="col l4">
-                        <div id="view4Question">
-                            <h1></h1>
-                        </div>
+                    <div id="view4Chart"></div>
+                    <div class="wheelResponse" id="view4Question">
+                        <p></p>
                     </div>
                 </div>
                 <!-- Button -->
                 <div class="row">
-                    <button class="button" id="view4BtnWheel">Let's go select a year! (Test: Go to view 5)</button>
+                    <button class="button hideMe" id="view4BtnWheel">Let's go select a year! (Test: Go to view
+                        5)</button>
                 </div>
             </div>
         </div>
-        <!--END VIEW 4-->
+        <!-- END VIEW 4 -->
 
-        <!--VIEW 5-->
+        <!-- VIEW 5: Spin the Movie Year Wheel -->
         <div class="container centerThisDiv hideMe" id="view5">
             <!-- Wheel Stuff -->
             <div class="container" id="wheelContainer">
                 <div class="row">
-                    <div class="col l8">
-                        <div id="view5Chart"></div>
-                    </div>
-                    <div class="col l4">
-                        <div id="view5Question">
-                            <h1></h1>
-                        </div>
+                    <div id="view5Chart"></div>
+                    <div class="wheelResponse" id="view5Question">
+                        <p></p>
                     </div>
                 </div>
                 <!-- Button -->
                 <div class="row">
-                    <button class="button" id="view5BtnWheel">And the Movie is... (Test: Go to view 6)</button>
+                    <button class="button hideMe" id="view5BtnWheel">And the Movie is... (Test: Go to view 6)</button>
                 </div>
             </div>
         </div>
-        <!--END VIEW 5-->
+        <!-- END VIEW 5 -->
 
-        <!-- VIEW 6 -->
+        <!-- VIEW 6: Display the Results -->
         <div class="container centerThisDiv hideMe" id="view6">
             <!-- Panel box 1 (Larger)-->
             <div class="row">
@@ -281,9 +318,10 @@
             </div>
         </div>
         <!-- END VIEW 6 -->
-
     </div>
     <!-- END Main Body Container -->
+
+    <div id="tempBoxStorage"></div>
 
     <!-- Footer -->
     <div class="centerThisDiv" id="footer">Made by Group 1: Truffle Shuffle.</div>
