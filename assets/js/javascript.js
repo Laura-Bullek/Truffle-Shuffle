@@ -160,6 +160,7 @@ function callWheel(chartDiv, questionDiv, data, view) {
             console.log("done");
             container.on("click", null);
             return;
+
         }
 
         var ps = 360 / data.length,
@@ -200,6 +201,10 @@ function callWheel(chartDiv, questionDiv, data, view) {
                     console.log("Hello, view 4");
                 }
                 console.log(view);
+                // // Removing hideMe so users can click on the view4 button to continue to view5    
+                // $("#view4btnWheel").removeClass("hideMe");
+                // // Removing hideMe so users can click on the view5 button to continue to view6    
+                // $("#view5btnWheel").removeClass("hideMe");
 
 
                 container.on("click", spin);
@@ -233,9 +238,15 @@ function callWheel(chartDiv, questionDiv, data, view) {
         var i = d3.interpolate(oldrotation % 360, rotation);
         return function (t) {
             return "rotate(" + i(t) + ")";
+            
         };
+        
     }
+    // // Hiding view 4 button so users can't continue without pressing "shuffle" **Laura
+    // $("#view4btnWheel").addClass("hideMe");
 
+    // // Hiding view 5 button so users can't continue without pressing "shuffle" **Laura
+    // $("#view5btnWheel").addClass("hideMe");
 
     function getRandomNumbers() {
         var array = new Uint16Array(1000);
@@ -358,6 +369,8 @@ $(view4BtnWheel).on("click", function () {
     $("#view5").removeClass("hideMe");
     callWheel(view5Chart,view5Question,view5Data);
 });
+
+
 
 // View 5 Testing
 const view5BtnWheel = document.querySelector("#view5BtnWheel");
