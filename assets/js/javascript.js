@@ -38,6 +38,62 @@ var view5Data = [
     { "label": "Most Recent", "value": "2020|2021", "question": "Ready for the most recent stuff? Oh yes, you know you are." }
 ];
 
+var vodkaData = [
+    { "label": "Bloody Mary", "value": 1,}, 
+    { "label": "Blue Hawaii", "value": 1,},
+    { "label": "Bushwacker", "value": 1,},
+    { "label": "Sea Breeze", "value": 1,},
+    { "label": "Black Russian", "value": 1,},
+    { "label": "Hand Grenade", "value": 1,},
+    { "label": "U-Boat", "value": 1,},
+    { "label": "Creamsicle", "value": 1,},
+    { "label": "Polar Bear" , "value": 1,},
+    { "label": "Grasshopper", "value": 1,},
+    { "label": "Hummer", "value": 1,},
+    { "label": "Kamikaze" , "value": 1,},
+    { "label": "Cosmopolitan", "value": 1,},
+    { "label": "Lemon Drop Martini", "value": 1,},
+    { "label": "Harvey Wallbanger", "value": 1,},
+    { "label": "Peach Fuzz", "value": 1,},
+    { "label": "Pina Coolada", "value": 1,},
+];
+
+var rumData = [
+    { "label": "Pina Colada" , "value": 1,}, 
+    { "label": "Dark and Stormy", "value": 1,},
+    { "label": "Mojito", "value": 1,},
+    { "label":  "Bahama Mama", "value": 1,},
+    { "label": "Sunset Rum Punch", "value": 1,},
+    { "label": "Blue Motorcycle", "value": 1,},
+    { "label": "Mai Tai", "value": 1,},
+    { "label": "Cherry Bomb", "value": 1,},
+    { "label": "Bikini Martini" , "value": 1,},
+    { "label": "Sex with an Alligator", "value": 1,},
+    { "label": "Hurricane" , "value": 1,},
+    { "label": "Pinapple Breeze", "value": 1,},
+    { "label": "New Orleans Hurricane" , "value": 1 },
+    { "label": "Caribbean Breeze" , "value": 1 },
+    { "label": "Zombie", "value": 1,},
+];
+
+var whiskeyData = [
+    { "label": "Whiskey Sour", "value": 1,}, 
+    { "label": "Manhattan", "value": 1,},
+    { "label": "Rob Roy", "value": 1, },
+    { "label": "Old Fashioned", "value": 1,},
+    { "label": "Hot Toddy", "value": 1, },
+    { "label": "whiskey Sidecar", "value": 1, },
+    { "label": "Irish Coffee" , "value": 1,},
+    { "label": "Rusty Nail", "value": 1, },
+    { "label": "Liquid Valium", "value": 1,},
+    { "label": "Captains Cannonball", "value": 1,},
+    { "label": "Red Snapper", "value": 1,},
+    { "label": "Tennessee Tea", "value": 1,},
+    { "label": "Mint Julep", "value": 1,},
+    { "label": "Irish Whisper", "value": 1,},
+    { "label": "Friday Night Special", "value": 1,},
+];
+
 // Wheel function
 function callWheel(chartDiv, questionDiv, data, view) {
     var padding = { top: 20, right: 40, bottom: 0, left: 0 },
@@ -74,7 +130,6 @@ function callWheel(chartDiv, questionDiv, data, view) {
         .enter()
         .append("g")
         .attr("class", "slice");
-
 
     arcs.append("path")
         .attr("fill", function (d, i) { return color(i); })
