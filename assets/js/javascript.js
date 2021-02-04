@@ -150,7 +150,7 @@ $(document).ready(function () {
         $(view2).addClass("hideMe");
         $(view2d).removeClass("hideMe");
         // Grab a random drink
-        
+        getDrinkRandom();
         // Populate view 2d with the details of the random drink
     });
     
@@ -166,7 +166,7 @@ $(document).ready(function () {
 
     // View 3: Choose your Watch Provider 
     // All of the Watch Provider Buttons
-    const view3Btn = document.querySelector(".view3Btn");
+    const view3Btn = document.querySelectorAll(".view3Btn");
     // View 3's buttons click handler
     $(view3Btn).on("click", function() {
         // Reference to itself
@@ -245,8 +245,32 @@ $(document).ready(function () {
             url: cocktailCall,
             method: "GET"
         }).then(function (cocktail) {
+            // Save the information obtained from the API
             getDrinkInformation(cocktail, data);
+            // Loads the information on screen
             populateQuestion(questionDiv, data, view);
+        })
+    
+    }
+    // Call Cocktail API for a random drink
+    function getDrinkRandom() {
+        var view2dDiv = document.querySelector("#view2dQuestion");
+        // URL to the Cocktail API
+        let cocktailRandom = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
+        $.ajax({
+            url: cocktailRandom,
+            method: "GET"
+        }).then(function (cocktail) {
+            // Create data format for a random drink
+            var randomDrinkData = [
+                { "label": cocktail.drinks[0].strDrink, "value": cocktail.drinks[0].idDrink, "question": "" },
+            ];
+            // Save the information obtained from the API
+            getDrinkInformation(cocktail, randomDrinkData[0]);
+            // Loads the information on screen
+            populateQuestion(view2dDiv, randomDrinkData[0], "2");
+            // Display the button continue button
+            $(view2BtnConfirm.parentNode).removeClass("hideMe");
         })
     }
 
