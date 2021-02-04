@@ -70,10 +70,8 @@ text {
 
 /* View 3 CSS stuff */
 body {
-    background-color: rgb(54, 8, 8);  
+    /* background-color: rgb(54, 8, 8);   */
     color:rgb(240, 183, 38);
-
-
 }
 
 #headerLogo {
@@ -152,3 +150,17 @@ body {
     max-height: 100%;
     vertical-align: middle;
 }
+
+/* Entire Page- Used for full page Background */
+html {
+    background: rgb(127,177,186) url(../images/MovieTheatre_Background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0px;
+  }

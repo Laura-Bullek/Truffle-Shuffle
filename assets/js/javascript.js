@@ -16,17 +16,17 @@ var view2aData = [
 ];
     // Genre ("label": "Genre", "value": Genre ID, "question": "Commentary", "filmChoice": "choice" )
 var view4Data = [
-    { "label": "Action", "value": 1, "question": "\"GET TO THE CHOPPA!\", You landed on an action movie!"},
-    { "label": "Adventure", "value": 1, "question": "\"One does not simply walk into Mordor.\" \n You landed on an adventure movie!" },
-    { "label": "Comedy", "value": 1, "question": "\"It's the f*cking Catalina Wine Mixer.\" \n You landed on a comedy movie!" },
-    { "label": "Crime", "value": 1, "question": "\"Leave the gun. Take the cannoli.\" \n You landed on a crime movie!" },
-    { "label": "Drama", "value": 1, "question": "\"Yo, Adrian!\" \n You landed on a drama!" },
-    { "label": "Family", "value": 1, "question": "\"Just keep swimming, just keep swimming.\" \n You landed on a family movie!" },
-    { "label": "Horror", "value": 1, "question": "\"Do you want to play a game?\" \n You landed on a horror movie!" },
-    { "label": "Mystery", "value": 1, "question": "\"YOU CAN'T HANDLE THE TRUTH!\" \n You landed on mystery!" },
-    { "label": "Romance", "value": 1, "question": "\"You had me at hello.\" \n You landed on a romance movie!" },
-    { "label": "SciFi", "value": 1, "question": "\"Leeloo Dallas Multipass.\"  \n You landed on SciFi!" },
-    { "label": "Thriller", "value": 1, "question": "\"HERE'S JOHNNY!\" \n You landed on a thriller movie!" }
+    { "label": "Action", "value": 28, "question": "\"GET TO THE CHOPPA!\", You landed on an action movie!"},
+    { "label": "Adventure", "value": 12, "question": "\"One does not simply walk into Mordor.\" \n You landed on an adventure movie!" },
+    { "label": "Comedy", "value": 35, "question": "\"It's the f*cking Catalina Wine Mixer.\" \n You landed on a comedy movie!" },
+    { "label": "Crime", "value": 80, "question": "\"Leave the gun. Take the cannoli.\" \n You landed on a crime movie!" },
+    { "label": "Drama", "value": 18, "question": "\"Yo, Adrian!\" \n You landed on a drama!" },
+    { "label": "Family", "value": 10751, "question": "\"Just keep swimming, just keep swimming.\" \n You landed on a family movie!" },
+    { "label": "Horror", "value": 27, "question": "\"Do you want to play a game?\" \n You landed on a horror movie!" },
+    { "label": "Mystery", "value": 9648, "question": "\"YOU CAN'T HANDLE THE TRUTH!\" \n You landed on mystery!" },
+    { "label": "Romance", "value": 10749, "question": "\"You had me at hello.\" \n You landed on a romance movie!" },
+    { "label": "SciFi", "value": 878, "question": "\"Leeloo Dallas Multipass.\"  \n You landed on SciFi!" },
+    { "label": "Thriller", "value": 53, "question": "\"HERE'S JOHNNY!\" \n You landed on a thriller movie!" }
 ];
     // Release Year ("label": "ReleaseYear", "value": ReleaseYear, "question": "Commentary" )
 var view5Data = [
@@ -39,7 +39,7 @@ var view5Data = [
 ];
 
 // Wheel function
-function callWheel(chartDiv, questionDiv, data) {
+function callWheel(chartDiv, questionDiv, data, view) {
     var padding = { top: 20, right: 40, bottom: 0, left: 0 },
         w = 300 - padding.left - padding.right,
         h = 300 - padding.top - padding.bottom,
@@ -141,6 +141,11 @@ function callWheel(chartDiv, questionDiv, data) {
 
                 oldrotation = rotation;
 
+                if (view == 4) {
+                    console.log("Hello, view 4");
+                }
+                console.log(view);
+
 
                 container.on("click", spin);
             });
@@ -234,7 +239,7 @@ $(view2BtnAlcoholGin).on("click", function () {
 $(view2BtnRandom).on("click", function () {
     $("#view2").addClass("hideMe");
     $("#view4").removeClass("hideMe");
-    callWheel(view4Chart,view4Question,view4Data);
+    callWheel(view4Chart,view4Question,view4Data, 4);
 });
 
 // View 2a Testing
@@ -245,7 +250,8 @@ $(view2aBtnWheel).on("click", function () {
     $("#view3").removeClass("hideMe");
 });
 
-// View 3 Testing
+// View 3 Testing 
+// Clean up task- Change the const variable to a single selector pointed towards view3Btn. Then in HTML, add a value tag. Use a switch statement to change what var movieWatchProviderID is.
 const view3BtnProvider1 = document.querySelector("#view3Btn1");
 const view3BtnProvider2 = document.querySelector("#view3Btn2");
 const view3BtnProvider3 = document.querySelector("#view3Btn3");
@@ -256,37 +262,37 @@ const view3BtnProvider6 = document.querySelector("#view3Btn6")
 $(view3BtnProvider1).on("click", function () {
     $("#view3").addClass("hideMe");
     $("#view4").removeClass("hideMe");
-    callWheel(view4Chart,view4Question,view4Data);
+    callWheel(view4Chart,view4Question,view4Data, 4);
 });
 
 $(view3BtnProvider2).on("click", function () {
     $("#view3").addClass("hideMe");
     $("#view4").removeClass("hideMe");
-    callWheel(view4Chart,view4Question,view4Data);
+    callWheel(view4Chart,view4Question,view4Data, 4);
 });
 
 $(view3BtnProvider3).on("click", function () {
     $("#view3").addClass("hideMe");
     $("#view4").removeClass("hideMe");
-    callWheel(view4Chart,view4Question,view4Data);
+    callWheel(view4Chart,view4Question,view4Data, 4);
 });
 
 $(view3BtnProvider4).on("click", function () {
     $("#view3").addClass("hideMe");
     $("#view4").removeClass("hideMe");
-    callWheel(view4Chart,view4Question,view4Data);
+    callWheel(view4Chart,view4Question,view4Data, 4);
 });
 
 $(view3BtnProvider5).on("click", function () {
     $("#view3").addClass("hideMe");
     $("#view4").removeClass("hideMe");
-    callWheel(view4Chart,view4Question,view4Data);
+    callWheel(view4Chart,view4Question,view4Data, 4);
 });
 
 $(view3BtnProvider6).on("click", function () {
     $("#view3").addClass("hideMe");
     $("#view4").removeClass("hideMe");
-    callWheel(view4Chart,view4Question,view4Data);
+    callWheel(view4Chart,view4Question,view4Data, 4);
 });
 
 // View 4 Testing
