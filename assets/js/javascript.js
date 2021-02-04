@@ -6,41 +6,41 @@ $(document).ready(function () {
     var view2aData = [
         { "label": "Pina Colada", "value": 17207, "question": "" },
         { "label": "Dark and Stormy", "value": 17211, "question": "" },
-        { "label": "Mojito", "value": 1, "question": "" },
-        { "label": "Bahama Mama", "value": 1, "question": "" },
-        { "label": "Rum Punch", "value": 1, "question": "" },
-        { "label": "Mai Tai", "value": 1, "question": "" },
-        { "label": "Hurricane", "value": 1, "question": "" },
-        { "label": "Zombie", "value": 1, "question": "" },
-        { "label": "Daiquiri", "value": 1, "question": "" },
+        // { "label": "Mojito", "value": 1, "question": "" },
+        // { "label": "Bahama Mama", "value": 1, "question": "" },
+        // { "label": "Rum Punch", "value": 1, "question": "" },
+        // { "label": "Mai Tai", "value": 1, "question": "" },
+        // { "label": "Hurricane", "value": 1, "question": "" },
+        // { "label": "Zombie", "value": 1, "question": "" },
+        // { "label": "Daiquiri", "value": 1, "question": "" },
     ];
     // View 2B: Vodka Wheel
-    const view2bChart = document.querySelector("#view2aChart");
-    const view2bQuestion = document.querySelector("#view2aQuestion");
+    const view2bChart = document.querySelector("#view2bChart");
+    const view2bQuestion = document.querySelector("#view2bQuestion");
     var view2bData = [
         { "label": "Bloody Mary", "value": 11113, "question": "" },
         { "label": "Bushwacker", "value": 14588, "question": "" },
         { "label": "Sea Breeze", "value": 13377, "question": "" },
-        { "label": "Black Russian", "value": 1, "question": "" },
-        { "label": "Grasshopper", "value": 1, "question": "" },
-        { "label": "Kamikaze", "value": 1, "question": "" },
-        { "label": "Cosmopolitan", "value": 1,  "question": "" },
-        { "label": "Lemon Drop", "value": 1, "question": "" },
-        { "label": "Harvey Wallbanger", "value": 1, "question": "" },
+        // { "label": "Black Russian", "value": 1, "question": "" },
+        // { "label": "Grasshopper", "value": 1, "question": "" },
+        // { "label": "Kamikaze", "value": 1, "question": "" },
+        // { "label": "Cosmopolitan", "value": 1,  "question": "" },
+        // { "label": "Lemon Drop", "value": 1, "question": "" },
+        // { "label": "Harvey Wallbanger", "value": 1, "question": "" },
     ];
     // View 2C: Whiskey Wheel
-    const view2cChart = document.querySelector("#view2aChart");
-    const view2cQuestion = document.querySelector("#view2aQuestion");
+    const view2cChart = document.querySelector("#view2cChart");
+    const view2cQuestion = document.querySelector("#view2cQuestion");
     var view2cData = [
         { "label": "Whiskey Sour", "value": 11004, "question": "" },
         { "label": "Manhattan", "value": 11008, "question": "" },
-        { "label": "Rob Roy", "value": 1, "question": "" },
-        { "label": "Old Fashioned", "value": 1, "question": "" },
-        { "label": "Irish Coffee", "value": 1, "question": "" },
-        { "label": "Rusty Nail", "value": 1, "question": "" },
-        { "label": "Red Snapper", "value": 1, "question": "" },
-        { "label": "Mint Julep", "value": 1, "question": "" },
-        { "label": "Sazerac", "value": 1, "question": "" },
+        // { "label": "Rob Roy", "value": 1, "question": "" },
+        // { "label": "Old Fashioned", "value": 1, "question": "" },
+        // { "label": "Irish Coffee", "value": 1, "question": "" },
+        // { "label": "Rusty Nail", "value": 1, "question": "" },
+        // { "label": "Red Snapper", "value": 1, "question": "" },
+        // { "label": "Mint Julep", "value": 1, "question": "" },
+        // { "label": "Sazerac", "value": 1, "question": "" },
     ];
     // View 4: Movie Genre Wheel
     const view4Chart = document.querySelector("#view4Chart");
@@ -70,78 +70,175 @@ $(document).ready(function () {
         { "label": "Most Recent", "value": "2020|2021", "question": "Ready for the most recent stuff? <br> Oh yes, you know you are." }
     ];
 
+// References to all of the different views
+    const view1a = document.querySelector("#view1a");
+    const view1b = document.querySelector("#view1b");
+    const view2 = document.querySelector("#view2");
+    const view2Star = document.querySelector("#view2Star");
+    const view2a = document.querySelector("#view2a");
+    const view2b = document.querySelector("#view2b");
+    const view2c = document.querySelector("#view2c");
+    const view2d = document.querySelector("#view2d");
+    const view3 = document.querySelector("#view3");
+    const view4 = document.querySelector("#view4");
+    const view5 = document.querySelector("#view5");
+    const view6 = document.querySelector("#view6");
+
+// Variables for the movie API
+    let movieProviderID = "";
+    let movieGenreID = "";
+    let movieReleaseYear = "";
+    // API key given by The Movie Database
+    const theMovieAPI = "13c21541869f280af7a13cd66a18fedc";
+
 // Button Functionality for each view
     // View 1A: Start Screen
+    // Start app button
     const view1aBtnStart = document.querySelector("#view1aBtnStart");
-    // Brings user to view 2: Choose a beverage type
+    // View 1A's button click handler
     $(view1aBtnStart).on("click", function () {
         // Hides View 1 and displays View 2
-        $("#view1a").addClass("hideMe");
-        $("#view2").removeClass("hideMe");
+        $(view1a).addClass("hideMe");
+        $(view2).removeClass("hideMe");
     });
 
     // View 1B: Returning User Start Screen
+    // Start app button
     const view1bBtnStart = document.querySelector("#view1bBtnStart");
-    // Brings user to view 2: Choose a beverage type
+    // View 1B's button click handler
     $(view1bBtnStart).on("click", function () {
         // Hides View 1 and displays View 2
-        $("#view1b").addClass("hideMe");
-        $("#view2").removeClass("hideMe");
+        $(view1b).addClass("hideMe");
+        $(view2).removeClass("hideMe");
     });
 
     // View 2: Choose a Beverage Type Screen
     // By Rum Button
     const view2BtnRum = document.querySelector("#view2BtnRum");
-    // Hides view 2 and goes to view 2a
+    // View 2's Rum button click handler
     $(view2BtnRum).on("click", function () {
-        $("#view2").addClass("hideMe");
-        $("#view2a").removeClass("hideMe");
         // Populates the wheel with view 2a data
-        callWheel(view2aChart, view2aQuestion, view2aData, "2a");
+        callWheel(view2aChart, view2aQuestion, view2aData, "2");
+        // Hides view 2 and goes to view 2a
+        $(view2).addClass("hideMe");
+        $(view2a).removeClass("hideMe");
     });
     // By Vodka Button
     const view2BtnVodka = document.querySelector("#view2BtnVodka");
-    // Hides view 2 and goes to view 2b
+    // View 2's Vodka button click handler
     $(view2BtnVodka).on("click", function () {
-        $("#view2").addClass("hideMe");
-        $("#view2b").removeClass("hideMe");
         // Populates the wheel with view 2b data
-        callWheel(view2bChart, view2bQuestion, view2bData, "2b");
+        callWheel(view2bChart, view2bQuestion, view2bData, "2");
+        // Hides view 2 and goes to view 2b
+        $(view2).addClass("hideMe");
+        $(view2b).removeClass("hideMe");
     });
     // By Whiskey Button
     const view2BtnWhiskey = document.querySelector("#view2BtnWhiskey");
-    // Hides view 2 and goes to view 2c
+    // View 2's Whiskey button click handler
     $(view2BtnWhiskey).on("click", function () {
-        $("#view2").addClass("hideMe");
-        $("#view2c").removeClass("hideMe");
         // Populates the wheel with view 2c data
-        callWheel(view2cChart, view2cQuestion, view2cData, "2c");
+        callWheel(view2cChart, view2cQuestion, view2cData, "2");
+        // Hides view 2 and goes to view 2c
+        $(view2).addClass("hideMe");
+        $(view2c).removeClass("hideMe");
     });
     // Random Cocktail Button
     const view2BtnRandom = document.querySelector("#view2BtnRandom")
     // Hides view 2 and goes to view 2d
     $(view2BtnRandom).on("click", function () {
-        $("#view2").addClass("hideMe");
-        $("#view2d").removeClass("hideMe");
+        $(view2).addClass("hideMe");
+        $(view2d).removeClass("hideMe");
         // Grab a random drink
-
+        
         // Populate view 2d with the details of the random drink
     });
+    
+    // View 2*: Get your Beverage Screen (Wheel)
+    // Move on to next view Button
+    const view2BtnConfirm = document.querySelector("#view2BtnConfirm");
+    // View 2*'s button click handler
+    $(view2BtnConfirm).on("click", function () {
+        // Hides view 2* and goes to view 3.
+        $(view2Star).addClass("hideMe");
+        $(view3).removeClass("hideMe");
+    });
 
-    // View 2a-d: Confirm your beverage
-    const view2aBtnWheel = document.querySelector("#view2aBtnWheel");
-    // $(view2aBtnWheel).on("click", function () {
-
-    // });
-
-    const view2bBtnWheel = document.querySelector("#view2bBtnWheel");
-    const view2cBtnWheel = document.querySelector("#view2cBtnWheel");
-    const view4BtnWheel = document.querySelector("#view4BtnWheel");
-    const view5BtnWheel = document.querySelector("#view5BtnWheel");
-
+    // View 3: Choose your Watch Provider 
+    // All of the Watch Provider Buttons
+    const view3Btn = document.querySelector(".view3Btn");
+    // View 3's buttons click handler
+    $(view3Btn).on("click", function() {
+        // Reference to itself
+        var _this = $(this);
+        // Get information on which button was clicked
+        var providerClicked = _this.attr("value");
+        switch (providerClicked) {
+            case '1':
+                // Set ID to Netflix
+                movieProviderID = 8;
+                break;
+            case '2':
+                // Set ID to Hulu
+                movieProviderID = 15;
+                break;
+            case '3':
+                // Set ID to Amazon Prime
+                movieProviderID =119;
+                break;
+            case '4':
+                // Set ID to Apple TV
+                movieProviderID = 2;
+                break;
+            case '5':
+                // Set ID to HBO Go
+                movieProviderID = 425;
+                break;
+            case '6':
+                // Set ID to Disney Plus
+                movieProviderID = 337;
+                break;
+        }
+        // Populates the Wheel with view 4 data
+        callWheel(view4Chart, view4Question, view4Data, "4");
+        // Hide view 3 and goes to view 4
+        $(view3).addClass("hideMe");
+        $(view4).removeClass("hideMe");
+    });
+    
+    // View 4: Spin for Movie Genre Screen (Wheel)
+    // Move on to next view button
+    const view4BtnConfirm = document.querySelector("#view4BtnConfirm");
+    // View 4's button click handler
+    $(view4BtnConfirm).on("click", function() {
+        // Populates the Wheel with view 5 data
+        callWheel(view5Chart, view5Question, view5Data, "5");
+        // Hides view 4 and goes to view 5
+        $(view4).addClass("hideMe");
+        $(view5).removeClass("hideMe");
+    });
+    
+    // View 5: Spin for Movie Release Year Screen (Wheel)
+    // Move on to next view button
+    const view5BtnConfirm = document.querySelector("#view5BtnConfirm");
+    const selectedDrink = document.querySelector("#selectedDrink");
+    const selectedMovie = document.querySelector("#selectedMovie");
+    // View 5's button click handler
+    $(view5BtnConfirm).on("click", function() {
+        // Updates Movie image in view 6
+        selectedMovie.src = movieImageURL;
+        selectedMovie.alt = movieImageAlt;
+        // Updates Cockatail image in view 6
+        selectedDrink.src = cocktailImageURL;
+        selectedDrink.alt = cocktailImageAlt;
+        // Hides view 5 and goes to view 6
+        $(view5).addClass("hideMe");
+        $(view6).removeClass("hideMe");
+    });
+    
 // Functions
     // Call Cocktail API based on ID found in the data set
-    function getDrink(questionDiv, data) {
+    function getDrink(questionDiv, data, view) {
         // URL to the Cocktail API
         let cocktailCall = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + data.value;
         $.ajax({
@@ -149,10 +246,11 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (cocktail) {
             getDrinkInformation(cocktail, data);
-            populateQuestion(questionDiv, data);
+            populateQuestion(questionDiv, data, view);
         })
     }
 
+    // Grabs the drink information and updates the data array 
     function getDrinkInformation(cocktail, data) {
         // Shorten the array index
         var cocktailDrink = cocktail.drinks[0];
@@ -172,82 +270,50 @@ $(document).ready(function () {
         }
         // Populates the question field of the object with the HTML containing the necessary information
         data.question = `<div class="row header">${cocktailDrink.strDrink}</div><div class="row questionsBody"><img src="${cocktailDrink.strDrinkThumb}" alt="Image of ${cocktailDrink.strDrink}" class="cocktailImage"><article id="drinkInstructions"><li>Grab your ${cocktailDrink.strGlass}!</li>${instructionsList}</article></div>`;
-        console.log(data.question);
+        // Saves the cocktail image
+        cocktailImageURL = cocktailDrink.strDrinkThumb;
+        // Saves the cocktail alt information
+        cocktailImageAlt = `Image of ${cocktailDrink.strDrink}`;
     }
-    function populateQuestion(questionDiv, data){
+
+    function getMovie() {
+        // URL to the Movie Database
+        let theMovieURL = "https://api.themoviedb.org/3/discover/movie?api_key=" + theMovieAPI + "&with_genres=" + movieGenreID + "&primary_release_year=" + movieReleaseYear + "&with_watch_providers=" + movieProviderID;
+        $.ajax({
+            url: theMovieURL,
+            method: "GET"
+        }).then(function (movieResponse){
+            // Get the length of the reponse result's array
+            var movieListLength = movieResponse.results.length;
+            // Generate a random index based on the length of the result array
+            var randomIndex = Math.floor(Math.random() * (movieListLength) + 1);
+            // Shorten the movie response path
+            var chosenMovie = movieResponse.results[randomIndex];
+            // Store the movie ID into local storage
+            localStorage.setItem("lastMovie", chosenMovie.id);
+            movieImageURL = "https://www.themoviedb.org/t/p/w600_and_h900_bestv2" + chosenMovie.poster_path;
+            movieImageAlt = `Poster of ${chosenMovie.title}`;
+        })
+    }
+
+    // Populates the questions panel with the data given
+    function populateQuestion(questionDiv, data, view){
         d3.select(questionDiv.children[0])
         .html(data.question);
+        // Store variable based on which view wheel was spun
+        switch (view) {
+            case '2':
+                localStorage.setItem("lastDrink", JSON.stringify(data.value));
+                break;
+            case '4':
+                movieGenreID = data.value;
+                break;
+            case '5':
+                movieReleaseYear = data.value;
+                getMovie();
+                break;
+        }
     }
-
-    // function getDrink(drink) {
-    //     getDrinkInformation(drink.value);
-    //     var drinkInformationPanel = $(returnStorageBox).html;
-    //     return drinkInformationPanel;
-    // }
-
-    // // View 2a Testing
-    // $(view2aBtnWheel).on("click", function () {
-    //     $("#view2a").addClass("hideMe");
-    //     $("#view3").removeClass("hideMe");
-    // });
-
-    // // View 3 Testing 
-    // // Clean up task- Change the const variable to a single selector pointed towards view3Btn. Then in HTML, add a value tag. Use a switch statement to change what var movieWatchProviderID is.
-    // const view3BtnProvider1 = document.querySelector("#view3Btn1");
-    // const view3BtnProvider2 = document.querySelector("#view3Btn2");
-    // const view3BtnProvider3 = document.querySelector("#view3Btn3");
-    // const view3BtnProvider4 = document.querySelector("#view3Btn4");
-    // const view3BtnProvider5 = document.querySelector("#view3Btn5");
-    // const view3BtnProvider6 = document.querySelector("#view3Btn6");
-
-    // $(view3BtnProvider1).on("click", function () {
-    //     $("#view3").addClass("hideMe");
-    //     $("#view4").removeClass("hideMe");
-    //     callWheel(view4Chart, view4Question, view4Data, 4);
-    // });
-
-    // $(view3BtnProvider2).on("click", function () {
-    //     $("#view3").addClass("hideMe");
-    //     $("#view4").removeClass("hideMe");
-    //     callWheel(view4Chart, view4Question, view4Data, 4);
-    // });
-
-    // $(view3BtnProvider3).on("click", function () {
-    //     $("#view3").addClass("hideMe");
-    //     $("#view4").removeClass("hideMe");
-    //     callWheel(view4Chart, view4Question, view4Data, 4);
-    // });
-
-    // $(view3BtnProvider4).on("click", function () {
-    //     $("#view3").addClass("hideMe");
-    //     $("#view4").removeClass("hideMe");
-    //     callWheel(view4Chart, view4Question, view4Data, 4);
-    // });
-
-    // $(view3BtnProvider5).on("click", function () {
-    //     $("#view3").addClass("hideMe");
-    //     $("#view4").removeClass("hideMe");
-    //     callWheel(view4Chart, view4Question, view4Data, 4);
-    // });
-
-    // $(view3BtnProvider6).on("click", function () {
-    //     $("#view3").addClass("hideMe");
-    //     $("#view4").removeClass("hideMe");
-    //     callWheel(view4Chart, view4Question, view4Data, 4);
-    // });
-
-    // // View 4 Testing
-    // $(view4BtnWheel).on("click", function () {
-    //     $("#view4").addClass("hideMe");
-    //     $("#view5").removeClass("hideMe");
-    //     callWheel(view5Chart, view5Question, view5Data);
-    // });
-
-    // // View 5 Testing
-    // $(view5BtnWheel).on("click", function () {
-    //     $("#view5").addClass("hideMe");
-    //     $("#view6").removeClass("hideMe");
-    // });
 
 // Materialze JS- Dropdown functionality
     $('.dropdown-trigger').dropdown();
@@ -344,10 +410,10 @@ $(document).ready(function () {
                 .attrTween("transform", rotTween)
                 .each("end", function () {
                     if (data[picked].question == "") {
-                        getDrink(questionDiv, data[picked]);
+                        getDrink(questionDiv, data[picked], view);
                     }
                     else {
-                        populateQuestion(questionDiv, data[picked]);
+                        populateQuestion(questionDiv, data[picked], view);
                     }
 
                     //mark question as seen
@@ -358,20 +424,14 @@ $(document).ready(function () {
 
                     // Show the button based on which button was just spun
                     switch (view) {
-                        case '2a':
-                            $(view2aBtnWheel).removeClass("hideMe");
-                            break;
-                        case '2b':
-                            $(view2bBtnWheel).removeClass("hideMe");
-                            break;
-                        case '2c':
-                            $(view2cBtnWheel).removeClass("hideMe");
+                        case '2':
+                            $(view2BtnConfirm.parentNode).removeClass("hideMe");
                             break;
                         case '4':
-                            $(view4BtnWheel).removeClass("hideMe");
+                            $(view4BtnConfirm).removeClass("hideMe");
                             break;
                         case '5':
-                            $(view5BtnWheel).removeClass("hideMe");
+                            $(view5BtnConfirm).removeClass("hideMe");
                             break;
                     }
 
@@ -430,12 +490,3 @@ $(document).ready(function () {
     // End of Wheel Function
 
 }); //End of Script
-
-
-// Personal Reminder on Javascript functionality -Edward
-// const dynamicPanelBottom = document.querySelector("#dynamicPanelBottom");
-// dynamicPanelBottom.innerHTML = "Change text";
-// $(view5BtnWheel).on("click", function () {
-//     $("#view5").addClass("hideMe");
-//     $("#view6").removeClass("hideMe");
-// });

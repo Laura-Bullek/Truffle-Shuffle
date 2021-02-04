@@ -138,58 +138,49 @@
             </div>
         </div>
         <!-- END VIEW 2 -->
-
-        <!-- VIEW 2A: Spin the Rum Wheel -->
-        <div class="container centerThisDiv hideMe" id="view2a">
-            <!-- Wheel Stuff -->
-            <div class="container" id="wheelContainer">
-                <div id="view2aChart"></div>
-                <div class="wheelResponse" id="view2aQuestion">
-                    <div></div>
-                </div>
-                <!-- Button -->
-                <div class="row">
-                    <button class="button hideMe" id="view2aBtnWheel">Lets choose a movie! (Test: Go to view 3)</button>
+        <!-- VIEW 2*: Container for all View 2* -->
+        <div class="container centerThisDiv" id="view2Star">
+            <!-- VIEW 2A: Spin the Rum Wheel -->
+            <div class="container hideMe" id="view2a">
+                <!-- Wheel Stuff -->
+                <div class="container" id="wheelContainer">
+                    <div id="view2aChart"></div>
+                    <div class="wheelResponse" id="view2aQuestion">
+                        <div></div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- END VIEW 2A -->
-
-        <!-- VIEW 2B: Spin the Vodka Wheel -->
-        <div class="container centerThisDiv hideMe" id="view2a">
-            <!-- Wheel Stuff -->
-            <div class="container" id="wheelContainer">
-                <div id="view2bChart"></div>
-                <div class="wheelResponse" id="view2bQuestion">
-                    <div></div>
-                </div>
-                <!-- Button -->
-                <div class="row">
-                    <button class="button hideMe" id="view2bBtnWheel">Lets choose a movie! (Test: Go to view 3)</button>
+            <!-- END VIEW 2A -->
+            <!-- VIEW 2B: Spin the Vodka Wheel -->
+            <div class="container hideMe" id="view2b">
+                <!-- Wheel Stuff -->
+                <div class="container" id="wheelContainer">
+                    <div id="view2bChart"></div>
+                    <div class="wheelResponse" id="view2bQuestion">
+                        <div></div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- END VIEW 2B -->
-
-        <!-- VIEW 2C: Spin the Whiskey Wheel -->
-        <div class="container centerThisDiv hideMe" id="view2a">
-            <!-- Wheel Stuff -->
-            <div class="container" id="wheelContainer">
-                <div id="view2cChart"></div>
-                <div class="wheelResponse" id="view2cQuestion">
-                    <div class="container centerThisDiv"></div>
-                </div>
-                <!-- Button -->
-                <div class="row">
-                    <button class="button hideMe" id="view2cBtnWheel">Lets choose a movie! (Test: Go to view 3)</button>
+            <!-- END VIEW 2B -->
+            <!-- VIEW 2C: Spin the Whiskey Wheel -->
+            <div class="container hideMe" id="view2c">
+                <!-- Wheel Stuff -->
+                <div class="container" id="wheelContainer">
+                    <div id="view2cChart"></div>
+                    <div class="wheelResponse" id="view2cQuestion">
+                        <div></div>
+                    </div>
                 </div>
             </div>
+            <!-- END VIEW 2C -->
+            <!-- VIEW 2D: View the Random Drink -->
+    
+            <!-- END VIEW 2D -->
+            <!-- Confirm Drink Button -->
+            <div class="row hideMe">
+                <button class="button" id="view2BtnConfirm">Lets choose a movie! (Test: Go to view 3)</button>
+            </div>
         </div>
-        <!-- END VIEW 2C -->
-
-        <!-- VIEW 2D: View the Random Drink -->
-
-        <!-- END VIEW 2D -->
 
         <!-- VIEW 3: Choose your Watch Provider -->
         <div class="container centerThisDiv hideMe" id="view3">
@@ -217,17 +208,17 @@
             <div class="row">
                 <!-- Button Choice 1 -->
                 <section class="col s4">
-                    <button class="button" id="view3Btn1"><img class="streamingServiceLogos"
+                    <button class="button view3Btn" id="view3Btn1" value="1"><img class="streamingServiceLogos"
                             src="./assets/images/Netflix_logo.png" alt="Netflix Logo"></button>
                 </section>
                 <!-- Button Choice 2 -->
                 <section class="col s4">
-                    <button class="button" id="view3Btn2"><img class="streamingServiceLogos"
+                    <button class="button view3Btn" id="view3Btn2" value="2"><img class="streamingServiceLogos"
                             src="./assets/images/Hulu_logo.png" alt="Hulu Logo"></button>
                 </section>
                 <!-- Button Choice 3 -->
                 <section class="col s4">
-                    <button class="button" id="view3Btn3"><img class="streamingServiceLogos"
+                    <button class="button view3Btn" id="view3Btn3" value="3"><img class="streamingServiceLogos"
                             src="./assets/images/Amazon_logo.png" alt="Amazon Prime Video Logo"></button>
                 </section>
             </div>
@@ -235,17 +226,17 @@
             <div class="row">
                 <!-- Button Choice 4 -->
                 <section class="col s4">
-                    <button class="button" id="view3Btn4"><img class="streamingServiceLogos"
+                    <button class="button view3Btn" id="view3Btn4" value="4"><img class="streamingServiceLogos"
                             src="./assets/images/AppleTV_logo.png" alt="Apple TV Logo"></button>
                 </section>
                 <!-- Button Choice 5 -->
                 <section class="col s4">
-                    <button class="button" id="view3Btn5"><img class="streamingServiceLogos"
+                    <button class="button view3Btn" id="view3Btn5" value="5"><img class="streamingServiceLogos"
                             src="./assets/images/HBO_logo.png" alt="HBO Go Logo"></button>
                 </section>
                 <!-- Button Choice 6 -->
                 <section class="col s4">
-                    <button class="button" id="view3Btn6"><img class="streamingServiceLogos"
+                    <button class="button view3Btn" id="view3Btn6" value="6"><img class="streamingServiceLogos"
                             src="./assets/images/Disney_logo.png" alt="Disney Plus Logo"></button>
                 </section>
             </div>
@@ -264,7 +255,7 @@
                 </div>
                 <!-- Button -->
                 <div class="row">
-                    <button class="button hideMe" id="view4BtnWheel">Let's go select a year! (Test: Go to view
+                    <button class="button hideMe" id="view4BtnConfirm">Let's go select a year! (Test: Go to view
                         5)</button>
                 </div>
             </div>
@@ -283,7 +274,7 @@
                 </div>
                 <!-- Button -->
                 <div class="row">
-                    <button class="button hideMe" id="view5BtnWheel">And the Movie is... (Test: Go to view 6)</button>
+                    <button class="button hideMe" id="view5BtnConfirm">And the Movie is... (Test: Go to view 6)</button>
                 </div>
             </div>
         </div>
@@ -301,12 +292,12 @@
             <!-- Movie and Drink Output Panel -->
             <div class="row">
                 <!-- Movie Image to be displayed here -->
-                <div class="col m4 offset-m1" id="selectedMovie">
-                    <img class="imageBox" src="https://via.placeholder.com/768x1024">
+                <div class="col m4 offset-m1">
+                    <img class="imageBox" id="selectedMovie" src="https://via.placeholder.com/768x1024">
                 </div>
                 <!-- Drink Image to be displayed here -->
-                <div class="col m4 offset-m2" id="selectedDrink">
-                    <img class="imageBox" src="https://via.placeholder.com/350">
+                <div class="col m4 offset-m2">
+                    <img class="imageBox" id="selectedDrink" src="https://via.placeholder.com/350">
                 </div>
             </div>
             <!-- Panel box 2 (Larger)-->
