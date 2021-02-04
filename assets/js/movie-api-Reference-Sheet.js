@@ -169,24 +169,89 @@ const theMoviePosterURL = "https://www.themoviedb.org/t/p/w600_and_h900_bestv2" 
 // "total_results":4235
 // }
 
+// //RANDOM DRINK CALL
+// let randomDrink = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
+//         $.ajax({
+//             url: randomDrink,
+//             method: "GET"
+//         }).then(function (cocktail) {
 
-// let cocktailCall = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
-//     $.ajax({
-//         url: cocktailCall,
-//         method: "GET"
-//     }).then(function (cocktail) {
-//         console.log(cocktail);
-//         console.log("Drink name: " + cocktail.drinks[0].strDrink);
-//         console.log("Glass needed: " + cocktail.drinks[0].strGlass);
-//         console.log("Drink image is at: " + cocktail.drinks[0].strDrinkThumb);
-//         console.log("Ingredient 1: " + cocktail.drinks[0].strIngredient1);
-//         console.log("Ingredient 2: " + cocktail.drinks[0].strIngredient1);
-//         console.log("Ingredient 3: " + cocktail.drinks[0].strIngredient1);
-//         console.log("Ingredient 4: " + cocktail.drinks[0].strIngredient1);
-//         console.log("Instructions: " + cocktail.drinks[0].strInstructions);
-//         console.log("First Measurement: " + cocktail.drinks[0].strMeasure1);
-//         console.log("Second Measurement: " + cocktail.drinks[0].strMeasure2);
-//         console.log("Third Measurement: " + cocktail.drinks[0].strMeasure3);
-//         console.log("Forth Measurement: " + cocktail.drinks[0].strMeasure4);
-//     })
-// })
+//             //The retruned object
+//             console.log(cocktail);
+
+//             //Drink name
+//             console.log("Drink name: " + cocktail.drinks[0].strDrink);
+
+//             //Drink glass
+//             console.log("Glass needed: " + cocktail.drinks[0].strGlass);
+
+//             //Drink image
+//             console.log("Drink image is at: " + cocktail.drinks[0].strDrinkThumb);
+
+//             //All needed ingredients
+//             console.log("Ingredient 1: " + cocktail.drinks[0].strIngredient1);
+//             console.log("Ingredient 2: " + cocktail.drinks[0].strIngredient2);
+//             console.log("Ingredient 3: " + cocktail.drinks[0].strIngredient3);
+//             console.log("Ingredient 4: " + cocktail.drinks[0].strIngredient4);
+//             console.log("Ingredient 5: " + cocktail.drinks[0].strIngredient5);
+//             console.log("Ingredient 6: " + cocktail.drinks[0].strIngredient6);
+//             console.log("Ingredient 7: " + cocktail.drinks[0].strIngredient7);
+//             console.log("Ingredient 8: " + cocktail.drinks[0].strIngredient8);
+//             console.log("Ingredient 9: " + cocktail.drinks[0].strIngredient9);
+//             console.log("Ingredient 10: " + cocktail.drinks[0].strIngredient10);
+//             console.log("Ingredient 10: " + cocktail.drinks[0].strIngredient11);
+//             console.log("Ingredient 10: " + cocktail.drinks[0].strIngredient12);
+//             console.log("Ingredient 10: " + cocktail.drinks[0].strIngredient13);
+//             console.log("Ingredient 10: " + cocktail.drinks[0].strIngredient14);
+//             console.log("Ingredient 10: " + cocktail.drinks[0].strIngredient15);
+
+//             //Measurements for each ingredient
+//             console.log("1st Measurement: " + cocktail.drinks[0].strMeasure1);
+//             console.log("2nd Measurement: " + cocktail.drinks[0].strMeasure2);
+//             console.log("3rd Measurement: " + cocktail.drinks[0].strMeasure3);
+//             console.log("4th Measurement: " + cocktail.drinks[0].strMeasure4);
+//             console.log("5th Measurement: " + cocktail.drinks[0].strMeasure5);
+//             console.log("6th Measurement: " + cocktail.drinks[0].strMeasure6);
+//             console.log("7th Measurement: " + cocktail.drinks[0].strMeasure7);
+//             console.log("8th Measurement: " + cocktail.drinks[0].strMeasure8);
+//             console.log("9th Measurement: " + cocktail.drinks[0].strMeasure9);
+//             console.log("10th Measurement: " + cocktail.drinks[0].strMeasure10);
+//             console.log("11th Measurement: " + cocktail.drinks[0].strMeasure11);
+//             console.log("12th Measurement: " + cocktail.drinks[0].strMeasure12);
+//             console.log("13th Measurement: " + cocktail.drinks[0].strMeasure13);
+//             console.log("14th Measurement: " + cocktail.drinks[0].strMeasure14);
+//             console.log("15th Measurement: " + cocktail.drinks[0].strMeasure15);
+
+//             //Building recipe -- Includes measurement plus ingredient
+//             console.log(cocktail.drinks[0].strMeasure1 + cocktail.drinks[0].strIngredient1);
+//             console.log(cocktail.drinks[0].strMeasure2 + cocktail.drinks[0].strIngredient2);
+//             console.log(cocktail.drinks[0].strMeasure3 + cocktail.drinks[0].strIngredient3);
+//             console.log(cocktail.drinks[0].strMeasure4 + cocktail.drinks[0].strIngredient4);
+//             console.log(cocktail.drinks[0].strMeasure5 + cocktail.drinks[0].strIngredient5);
+//             console.log(cocktail.drinks[0].strMeasure6 + cocktail.drinks[0].strIngredient6);
+//             console.log(cocktail.drinks[0].strMeasure7 + cocktail.drinks[0].strIngredient7);
+//             console.log(cocktail.drinks[0].strMeasure8 + cocktail.drinks[0].strIngredient8);
+//             console.log(cocktail.drinks[0].strMeasure9 + cocktail.drinks[0].strIngredient9);
+//             console.log(cocktail.drinks[0].strMeasure10 + cocktail.drinks[0].strIngredient10);
+//             console.log(cocktail.drinks[0].strMeasure11 + cocktail.drinks[0].strIngredient11);
+//             console.log(cocktail.drinks[0].strMeasure12 + cocktail.drinks[0].strIngredient12);
+//             console.log(cocktail.drinks[0].strMeasure13 + cocktail.drinks[0].strIngredient13);
+//             console.log(cocktail.drinks[0].strMeasure14 + cocktail.drinks[0].strIngredient14);
+//             console.log(cocktail.drinks[0].strMeasure15 + cocktail.drinks[0].strIngredient15);
+
+//             //Instructions to make the drink
+//             console.log("Instructions: " + cocktail.drinks[0].strInstructions);
+
+//         })
+
+
+//
+        // let booze = "Users selected alcohol type";
+        // let drinkByName = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + booze;
+        
+        // $.ajax({
+        //     url: drinkByName,
+        //     method: "GET"
+        // }).then(function (drink) {
+        //     console.log(drink);
+        // })
