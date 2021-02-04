@@ -473,9 +473,7 @@ $(document).ready(function () {
             container.on("click", null);
 
             //all slices have been seen, all done
-            console.log("OldPick: " + oldpick.length, "Data length: " + data.length);
             if (oldpick.length == data.length) {
-                console.log("done");
                 container.on("click", null);
                 return;
             }
@@ -570,7 +568,6 @@ $(document).ready(function () {
 
             if (window.hasOwnProperty("crypto") && typeof window.crypto.getRandomValues === "function") {
                 window.crypto.getRandomValues(array);
-                console.log("works");
             } else {
                 //no support for crypto, get crappy random numbers
                 for (var i = 0; i < 1000; i++) {
