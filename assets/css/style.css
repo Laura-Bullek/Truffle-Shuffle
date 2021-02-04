@@ -62,6 +62,9 @@ text {
     padding: 10px;
     margin: auto;
 }
+div.container {
+    max-width: 100%;
+}
 /* View 2 CSS stuff */
 /* Makes the Random Drink button change the mouse cursor into the pointer hand when over the button */
 #view2BtnRandom {
@@ -85,6 +88,7 @@ body {
     margin: 10px auto;
 }
 
+#headerContainer,
 #viewOverall {
     background-color: rgb(73, 7, 7);
     border: 2px solid gold;
@@ -161,6 +165,11 @@ html {
 }
 
 #footer {
+    width: 100%;
     position: absolute;
     bottom: 0px;
+    background-color: rgb(73, 7, 7);
+    border: 2px solid gold;
+    padding: 0px;
+    margin-bottom: 0px;
   }
