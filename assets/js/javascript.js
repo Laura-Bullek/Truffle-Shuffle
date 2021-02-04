@@ -103,6 +103,9 @@ $(document).ready(function () {
     });
 
     // View 1B: Returning User Start Screen
+    // Reference to images
+    const lastMovie = document.querySelector("#lastMovie");
+    const lastDrink = document.querySelector("#lastDrink");
     // Start app button
     const view1bBtnStart = document.querySelector("#view1bBtnStart");
     // View 1B's button click handler
@@ -237,6 +240,25 @@ $(document).ready(function () {
     });
     
 // Functions
+    // Check for save data and load appropriate page
+    function loadSaveData(){
+        // Grab the local storage data
+        var storedMovie = JSON.parse(localStorage.getItem("lastMovie"));
+        var storedDrink = JSON.parse(localStorage.getItem("lastDrink"));
+        // Check if stored data is empty or non-existent
+        if (!storedMovie || !storedDrink || storedMovie == "" || storedDrink == "") {
+            return;
+        }
+        else {
+            // Populate the contents of view 1b based on previous drink/movie
+            getDrinkOld(storedDrink);
+            getMovieOld(storedMovie);
+            // Hide view 1a and show 1b
+            $(view1a).addClass("hideMe");
+            $(view1b).removeClass("hideMe");
+        }
+    }
+
     // Call Cocktail API based on ID found in the data set
     function getDrink(questionDiv, data, view) {
         // URL to the Cocktail API
@@ -273,6 +295,16 @@ $(document).ready(function () {
             $(view2BtnConfirm.parentNode).removeClass("hideMe");
         })
     }
+    // Call Cocktail API for information on old drink
+    function getDrinkOld(cocktailID){
+        let cocktailOldURL = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + cocktailID;
+        $.ajax({
+            url: cocktailOldURL,
+            method: "GET"
+        }).then(function (cocktail) {
+            updateView1b(cocktail, "drink");
+        })
+    }
 
     // Grabs the drink information and updates the data array 
     function getDrinkInformation(cocktail, data) {
@@ -294,7 +326,7 @@ $(document).ready(function () {
         }
         // Populates the question field of the object with the HTML containing the necessary information
         data.question = `<div class="row header">${cocktailDrink.strDrink}</div><div class="row questionsBody"><img src="${cocktailDrink.strDrinkThumb}" alt="Image of ${cocktailDrink.strDrink}" class="cocktailImage"><article id="drinkInstructions"><li>Grab your ${cocktailDrink.strGlass}!</li>${instructionsList}</article></div>`;
-        // Saves the cocktail image
+        // Saves the cocktail image url
         cocktailImageURL = cocktailDrink.strDrinkThumb;
         // Saves the cocktail alt information
         cocktailImageAlt = `Image of ${cocktailDrink.strDrink}`;
@@ -315,8 +347,20 @@ $(document).ready(function () {
             var chosenMovie = movieResponse.results[randomIndex];
             // Store the movie ID into local storage
             localStorage.setItem("lastMovie", chosenMovie.id);
+            // Saves the movie image url
             movieImageURL = "https://www.themoviedb.org/t/p/w600_and_h900_bestv2" + chosenMovie.poster_path;
+            // Saves the movie alt information
             movieImageAlt = `Poster of ${chosenMovie.title}`;
+        })
+    }
+    // Call Cocktail API for information on old drink
+    function getMovieOld(movieID){
+        let movieOldURL = "https://api.themoviedb.org/3/movie/" + movieID + "?api_key=" + theMovieAPI;
+        $.ajax({
+            url: movieOldURL,
+            method: "GET"
+        }).then(function (chosenMovie){
+            updateView1b(chosenMovie, "movie");
         })
     }
 
@@ -335,6 +379,22 @@ $(document).ready(function () {
             case '5':
                 movieReleaseYear = data.value;
                 getMovie();
+                break;
+        }
+    }
+
+    function updateView1b(data,category) {
+        // Checks which category to update
+        switch (category) {
+            // Change movie image
+            case 'movie':
+                lastMovie.src = "https://www.themoviedb.org/t/p/w600_and_h900_bestv2" + data.poster_path;
+                lastMovie.alt = `Poster of ${data.title}`;
+                break;
+            // Change drink image
+            case 'drink':
+                lastDrink.src = data.drinks[0].strDrinkThumb;
+                lastDrink.alt = `Image of ${data.drinks[0].strDrink}`;
                 break;
         }
     }
@@ -512,5 +572,11 @@ $(document).ready(function () {
         }
     }
     // End of Wheel Function
+
+    function init(){
+        loadSaveData();
+    }
+
+    init();
 
 }); //End of Script
