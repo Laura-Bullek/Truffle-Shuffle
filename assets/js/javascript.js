@@ -122,7 +122,6 @@ function callWheel(chartDiv, questionDiv, data) {
         .append("g")
         .attr("class", "slice");
 
-
     arcs.append("path")
         .attr("fill", function (d, i) { return color(i); })
         .attr("d", function (d) { return arc(d); });
