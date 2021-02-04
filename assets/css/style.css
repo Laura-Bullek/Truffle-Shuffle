@@ -142,6 +142,13 @@ div.container {
     max-height: 400px;
 }
 
-ol {
+li {
     list-style: none;
+}
+
+.questionsBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
