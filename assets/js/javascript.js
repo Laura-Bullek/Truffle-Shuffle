@@ -3,6 +3,11 @@ const view4Chart = document.querySelector("#view4Chart");
 const view4Question = document.querySelector("#view4Question");
 const view5Chart = document.querySelector("#view5Chart");
 const view5Question = document.querySelector("#view5Question");
+const vodkaChart = document.querySelector("#vodkaChart");
+const rumChart = document.querySelector("#rumChart");
+const whiskeyChart = document.querySelector("#whiskeyChart");
+
+
 
 // Data for the wheel
     // Genre ("label": "Genre", "value": Genre ID, "question": "Commentary", "filmChoice": "choice" )
