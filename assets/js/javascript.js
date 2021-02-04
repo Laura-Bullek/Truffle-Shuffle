@@ -1,205 +1,344 @@
+// References to wheel
+const view4Chart = document.querySelector("#view4Chart");
+const view4Question = document.querySelector("#view4Question");
+const view5Chart = document.querySelector("#view5Chart");
+const view5Question = document.querySelector("#view5Question");
 
-//http://osric.com/bingo-card-generator/?title=HTML+and+CSS+BINGO!&words=padding%2Cfont-family%2Ccolor%2Cfont-weight%2Cfont-size%2Cbackground-color%2Cnesting%2Cbottom%2Csans-serif%2Cperiod%2Cpound+sign%2C%EF%B9%A4body%EF%B9%A5%2C%EF%B9%A4ul%EF%B9%A5%2C%EF%B9%A4h1%EF%B9%A5%2Cmargin%2C%3C++%3E%2C{+}%2C%EF%B9%A4p%EF%B9%A5%2C%EF%B9%A4!DOCTYPE+html%EF%B9%A5%2C%EF%B9%A4head%EF%B9%A5%2Ccolon%2C%EF%B9%A4style%EF%B9%A5%2C.html%2CHTML%2CCSS%2CJavaScript%2Cborder&freespace=true&freespaceValue=Web+Design+Master&freespaceRandom=false&width=5&height=5&number=35#results
-
-var data = [
-    { "label": "Question 1", "value": 1, "question": "What CSS property is used for specifying the area between the content and its border?" }, // padding
-    { "label": "Question 2", "value": 1, "question": "What CSS property is used for changing the font?" }, //font-family
-    { "label": "Question 3", "value": 1, "question": "What CSS property is used for changing the color of text?" }, //color
-    { "label": "Question 4", "value": 1, "question": "What CSS property is used for changing the boldness of text?" }, //font-weight
-    { "label": "Question 5", "value": 1, "question": "What CSS property is used for changing the size of text?" }, //font-size
-    { "label": "Question 6", "value": 1, "question": "What CSS property is used for changing the background color of a box?" }, //background-color
-    { "label": "Question 7", "value": 1, "question": "Which word is used for specifying an HTML tag that is inside another tag?" }, //nesting
-    { "label": "Question 8", "value": 1, "question": "Which side of the box is the third number in: margin:1px 1px 1px 1px; ?" }, //bottom
-    { "label": "Question 9", "value": 1, "question": "What are the fonts that don't have serifs at the ends of letters called?" }, //sans-serif
-    { "label": "Question 10", "value": 1, "question": "With CSS selectors, what character prefix should one use to specify a class?" }, //period
-    { "label": "Question 11", "value": 1, "question": "With CSS selectors, what character prefix should one use to specify an ID?" }, //pound sign
-    { "label": "Question 12", "value": 1, "question": "In an HTML document, which tag holds all of the content people see?" }, //<body>
-    { "label": "Question 13", "value": 1, "question": "In an HTML document, which tag indicates an unordered list?" }, //<ul>
-    { "label": "Question 14", "value": 1, "question": "In an HTML document, which tag indicates the most important heading of your document?" }, //<h1>
-    { "label": "Question 15", "value": 1, "question": "What CSS property is used for specifying the area outside a box?" }, //margin
-    { "label": "Question 16", "value": 1, "question": "What type of bracket is used for HTML tags?" }, //< >
-    { "label": "Question 17", "value": 1, "question": "What type of bracket is used for CSS rules?" }, // { }
-    { "label": "Question 18", "value": 1, "question": "Which HTML tag is used for specifying a paragraph?" }, //<p>
-    { "label": "Question 19", "value": 1, "question": "What should always be the very first line of code in your HTML?" }, //<!DOCTYPE html>
-    { "label": "Question 20", "value": 1, "question": "What HTML tag holds all of the metadata tags for your page?" }, //<head>
-    { "label": "Question 21", "value": 1, "question": "In CSS, what character separates a property from a value?" }, // colon
-    { "label": "Question 22", "value": 1, "question": "What HTML tag holds all of your CSS code?" }, // <style>
-    { "label": "Question 23", "value": 1, "question": "What file extension should you use for your web pages?" }, // .html
-    { "label": "Question 24", "value": 1, "question": "Which coding language is used for marking up content and structure on a web page?" }, // HTML
-    { "label": "Question 25", "value": 1, "question": "Which coding language is used for specifying the design of a web page?" }, // CSS
-    { "label": "Question 26", "value": 1, "question": "Which coding language is used for adding functionality to a web page?" }, // JavaScript
-    { "label": "Question 27", "value": 1, "question": "What CSS property is used for making the edges of a box visible?" }, // border
-    { "label": "Question 28", "value": 1, "question": "What character symbol is used at the end of each CSS statement?" },//semi-colon
-    { "label": "Question 29", "value": 1, "question": "By default, how wide is a <div> box?" }, //100%
-    { "label": "Question 30", "value": 1, "question": "What character symbol do I use to specify multiple CSS selectors in one code block?" } //comma
+// Data for the wheel
+    // Genre ("label": "Genre", "value": Genre ID, "question": "Commentary", "filmChoice": "choice" )
+var view4Data = [
+    { "label": "Action", "value": 1, "question": "\"GET TO THE CHOPPA!\", You landed on an action movie!"},
+    { "label": "Adventure", "value": 1, "question": "\"One does not simply walk into Mordor.\" \n You landed on an adventure movie!" },
+    { "label": "Comedy", "value": 1, "question": "\"It's the f*cking Catalina Wine Mixer.\" \n You landed on a comedy movie!" },
+    { "label": "Crime", "value": 1, "question": "\"Leave the gun. Take the cannoli.\" \n You landed on a crime movie!" },
+    { "label": "Drama", "value": 1, "question": "\"Yo, Adrian!\" \n You landed on a drama!" },
+    { "label": "Family", "value": 1, "question": "\"Just keep swimming, just keep swimming.\" \n You landed on a family movie!" },
+    { "label": "Horror", "value": 1, "question": "\"Do you want to play a game?\" \n You landed on a horror movie!" },
+    { "label": "Mystery", "value": 1, "question": "\"YOU CAN'T HANDLE THE TRUTH!\" \n You landed on mystery!" },
+    { "label": "Romance", "value": 1, "question": "\"You had me at hello.\" \n You landed on a romance movie!" },
+    { "label": "SciFi", "value": 1, "question": "\"Leeloo Dallas Multipass.\"  \n You landed on SciFi!" },
+    { "label": "Thriller", "value": 1, "question": "\"HERE'S JOHNNY!\" \n You landed on a thriller movie!" }
+];
+    // Release Year ("label": "ReleaseYear", "value": ReleaseYear, "question": "Commentary" )
+var view5Data = [
+    { "label": "The 1970s", "value": 1, "question": "Ready for the 70s? Oh yes, you know you are." },
+    { "label": "The 1980s", "value": 1, "question": "Ready for the 80s? Oh yes, you know you are." },
+    { "label": "The 1990s", "value": 1, "question": "Ready for the 90s? Oh yes, you know you are." },
+    { "label": "The 2000s", "value": 1, "question": "Ready for the 00s? Oh yes, you know you are." },
+    { "label": "The 2010s", "value": 1, "question": "Ready for the 2010s? Oh yes, you know you are." },
+    { "label": "Most Recent", "value": 1, "question": "Ready for the most recent stuff? Oh yes, you know you are." }
 ];
 
-// Movie Genre array to fill the wheel
-var movieGenres = [
-    { "label": "Action", "value": 28, "question": "Time to kick ass and chew bubblegum, and you're all out of bubblegum" },
-    { "label": "Adventure", "value": 12, "question": "Something witty" },
-    { "label": "Animation", "value": 16, "question": "Something witty" },
-    { "label": "Comedy", "value": 35, "question": "Here's a comedy coming your way!" },
-    { "label": "Crime", "value": 80, "question": "Something witty" },
-    { "label": "Documentary", "value": 99, "question": "Something witty" },
-    { "label": "Drama", "value": 18, "question": "Something witty" },
-    { "label": "Family", "value": 10751, "question": "Something witty" },
-    { "label": "Fantasy", "value": 14, "question": "Something witty" },
-    { "label": "History", "value": 36, "question": "Something witty" },
-    { "label": "Horror", "value": 27, "question": "Hide behind your couch, this is going to be a scary one." },
-    { "label": "Music", "value": 10402, "question": "Something witty" },
-    { "label": "Mystery", "value": 9648, "question": "Something witty" },
-    { "label": "Romance", "value": 10749, "question": "Something witty" },
-    { "label": "Sci-fi", "value": 878, "question": "Something witty about sci-fi" },
-    { "label": "TV Movie", "value": 10770, "question": "Something witty" },
-    { "label": "Thriller", "value": 53, "question": "Something witty" },
-    { "label": "War", "value": 10752, "question": "Something witty" },
-    { "label": "Western", "value": 37, "question": "Something witty about western" },
+var vodkaData = [
+    { "label": "Bloody Mary", "value": 1,}, 
+    { "label": "Blue Hawaii", "value": 1,},
+    { "label": "Bushwacker", "value": 1,},
+    { "label": "Sea Breeze", "value": 1,},
+    { "label": "Black Russian", "value": 1,},
+    { "label": "Hand Grenade", "value": 1,},
+    { "label": "U-Boat", "value": 1,},
+    { "label": "Creamsicle", "value": 1,},
+    { "label": "Polar Bear" , "value": 1,},
+    { "label": "Grasshopper", "value": 1,},
+    { "label": "Hummer", "value": 1,},
+    { "label": "Kamikaze" , "value": 1,},
+    { "label": "Cosmopolitan", "value": 1,},
+    { "label": "Lemon Drop Martini", "value": 1,},
+    { "label": "Harvey Wallbanger", "value": 1,},
+    { "label": "Peach Fuzz", "value": 1,},
+    { "label": "Pina Coolada", "value": 1,},
 ];
 
-// Testing the wheel, changes the wheel content into the movie genre array
-data = movieGenres;
+var rumData = [
+    { "label": "Pina Colada" , "value": 1,}, 
+    { "label": "Dark and Stormy", "value": 1,},
+    { "label": "Mojito", "value": 1,},
+    { "label":  "Bahama Mama", "value": 1,},
+    { "label": "Sunset Rum Punch", "value": 1,},
+    { "label": "Blue Motorcycle", "value": 1,},
+    { "label": "Mai Tai", "value": 1,},
+    { "label": "Cherry Bomb", "value": 1,},
+    { "label": "Bikini Martini" , "value": 1,},
+    { "label": "Sex with an Alligator", "value": 1,},
+    { "label": "Hurricane" , "value": 1,},
+    { "label": "Pinapple Breeze", "value": 1,},
+    { "label": "New Orleans Hurricane" , "value": 1 },
+    { "label": "Caribbean Breeze" , "value": 1 },
+    { "label": "Zombie", "value": 1,},
+];
+
+var whiskeyData = [
+    { "label": "Whiskey Sour", "value": 1,}, 
+    { "label": "Manhattan", "value": 1,},
+    { "label": "Rob Roy", "value": 1, },
+    { "label": "Old Fashioned", "value": 1,},
+    { "label": "Hot Toddy", "value": 1, },
+    { "label": "whiskey Sidecar", "value": 1, },
+    { "label": "Irish Coffee" , "value": 1,},
+    { "label": "Rusty Nail", "value": 1, },
+    { "label": "Liquid Valium", "value": 1,},
+    { "label": "Captains Cannonball", "value": 1,},
+    { "label": "Red Snapper", "value": 1,},
+    { "label": "Tennessee Tea", "value": 1,},
+    { "label": "Mint Julep", "value": 1,},
+    { "label": "Irish Whisper", "value": 1,},
+    { "label": "Friday Night Special", "value": 1,},
+];
+
+// Wheel function
+function callWheel(chartDiv, questionDiv, data) {
+    var padding = { top: 20, right: 40, bottom: 0, left: 0 },
+        w = 300 - padding.left - padding.right,
+        h = 300 - padding.top - padding.bottom,
+        r = Math.min(w, h) / 2,
+        rotation = 0,
+        oldrotation = 0,
+        picked = 100000,
+        oldpick = [],
+        color = d3.scale.category20();
+
+    var svg = d3.select(chartDiv)
+        .append("svg")
+        .data([data])
+        .attr("width", w + padding.left + padding.right)
+        .attr("height", h + padding.top + padding.bottom);
+
+    var container = svg.append("g")
+        .attr("class", "chartholder")
+        .attr("transform", "translate(" + (w / 2 + padding.left) + "," + (h / 2 + padding.top) + ")");
+
+    var vis = container
+        .append("g");
+
+    var pie = d3.layout.pie().sort(null).value(function (d) { return 1; });
+
+    // declare an arc generator function
+    var arc = d3.svg.arc().outerRadius(r);
+
+    // select paths, use arc generator to draw
+    var arcs = vis.selectAll("g.slice")
+        .data(pie)
+        .enter()
+        .append("g")
+        .attr("class", "slice");
 
 
-var svg = d3.select(chartDiv)
-    .append("svg")
-    .data([data])
-    .attr("width", w + padding.left + padding.right)
-    .attr("height", h + padding.top + padding.bottom);
+    arcs.append("path")
+        .attr("fill", function (d, i) { return color(i); })
+        .attr("d", function (d) { return arc(d); });
 
-var container = svg.append("g")
-    .attr("class", "chartholder")
-    .attr("transform", "translate(" + (w / 2 + padding.left) + "," + (h / 2 + padding.top) + ")");
-
-var vis = container
-    .append("g");
-
-var pie = d3.layout.pie().sort(null).value(function (d) { return 1; });
-
-// declare an arc generator function
-var arc = d3.svg.arc().outerRadius(r);
-
-// select paths, use arc generator to draw
-var arcs = vis.selectAll("g.slice")
-    .data(pie)
-    .enter()
-    .append("g")
-    .attr("class", "slice");
-
-
-arcs.append("path")
-    .attr("fill", function (d, i) { return color(i); })
-    .attr("d", function (d) { return arc(d); });
-
-// add the text
-arcs.append("text").attr("transform", function (d) {
-    d.innerRadius = 0;
-    d.outerRadius = r;
-    d.angle = (d.startAngle + d.endAngle) / 2;
-    return "rotate(" + (d.angle * 180 / Math.PI - 90) + ")translate(" + (d.outerRadius - 10) + ")";
-})
-    .attr("text-anchor", "end")
-    .text(function (d, i) {
-        return data[i].label;
-    });
-
-container.on("click", spin);
-
-
-function spin(d) {
-
-    container.on("click", null);
-
-    //all slices have been seen, all done
-    console.log("OldPick: " + oldpick.length, "Data length: " + data.length);
-    if (oldpick.length == data.length) {
-        console.log("done");
-        container.on("click", null);
-        return;
-    }
-
-    var ps = 360 / data.length,
-        pieslice = Math.round(1440 / data.length),
-        rng = Math.floor((Math.random() * 1440) + 360);
-
-    rotation = (Math.round(rng / ps) * ps);
-
-    picked = Math.round(data.length - (rotation % 360) / ps);
-    picked = picked >= data.length ? (picked % data.length) : picked;
-
-
-    if (oldpick.indexOf(picked) !== -1) {
-        d3.select(this).call(spin);
-        return;
-    } else {
-        oldpick.push(picked);
-    }
-
-    rotation += 90 - Math.round(ps / 2);
-
-    vis.transition()
-        .duration(3000)
-        .attrTween("transform", rotTween)
-        .each("end", function () {
-
-            //mark question as seen
-            d3.select(".slice:nth-child(" + (picked + 1) + ") path")
-                .attr("fill", "#111");
-
-            //populate question
-            d3.select(questionDiv.children[0])
-                .text(data[picked].question);
-
-            oldrotation = rotation;
-
-            container.on("click", spin);
+    // add the text
+    arcs.append("text").attr("transform", function (d) {
+        d.innerRadius = 0;
+        d.outerRadius = r;
+        d.angle = (d.startAngle + d.endAngle) / 2;
+        return "rotate(" + (d.angle * 180 / Math.PI - 90) + ")translate(" + (d.outerRadius - 10) + ")";
+    })
+        .attr("text-anchor", "end")
+        .text(function (d, i) {
+            return data[i].label;
         });
-}
 
-//make arrow
-svg.append("g")
-    .attr("transform", "translate(" + (w + padding.left + padding.right) + "," + ((h / 2) + padding.top) + ")")
-    .append("path")
-    .attr("d", "M-" + (r * .15) + ",0L0," + (r * .05) + "L0,-" + (r * .05) + "Z")
-    .style({ "fill": "black" });
-
-//draw spin circle
-container.append("circle")
-    .attr("cx", 0)
-    .attr("cy", 0)
-    .attr("r", 60)
-    .style({ "fill": "white", "cursor": "pointer" });
-
-//spin text
-container.append("text")
-    .attr("x", 0)
-    .attr("y", 15)
-    .attr("text-anchor", "middle")
-    .text("SHUFFLE!")
-    .style({ "font-weight": "bold", "font-size": "23px" });
+    container.on("click", spin);
 
 
-function rotTween(to) {
-    var i = d3.interpolate(oldrotation % 360, rotation);
-    return function (t) {
-        return "rotate(" + i(t) + ")";
-    };
-}
+    function spin(d) {
 
+        container.on("click", null);
 
-function getRandomNumbers() {
-    var array = new Uint16Array(1000);
-    var scale = d3.scale.linear().range([360, 1440]).domain([0, 100000]);
-
-    if (window.hasOwnProperty("crypto") && typeof window.crypto.getRandomValues === "function") {
-        window.crypto.getRandomValues(array);
-        console.log("works");
-    } else {
-        //no support for crypto, get crappy random numbers
-        for (var i = 0; i < 1000; i++) {
-            array[i] = Math.floor(Math.random() * 100000) + 1;
+        //all slices have been seen, all done
+        console.log("OldPick: " + oldpick.length, "Data length: " + data.length);
+        if (oldpick.length == data.length) {
+            console.log("done");
+            container.on("click", null);
+            return;
         }
+
+        var ps = 360 / data.length,
+            pieslice = Math.round(1440 / data.length),
+            rng = Math.floor((Math.random() * 1440) + 360);
+
+        rotation = (Math.round(rng / ps) * ps);
+
+        picked = Math.round(data.length - (rotation % 360) / ps);
+        picked = picked >= data.length ? (picked % data.length) : picked;
+
+
+        if (oldpick.indexOf(picked) !== -1) {
+            d3.select(this).call(spin);
+            return;
+        } else {
+            oldpick.push(picked);
+        }
+
+        rotation += 90 - Math.round(ps / 2);
+
+        vis.transition()
+            .duration(3000)
+            .attrTween("transform", rotTween)
+            .each("end", function () {
+
+                //mark question as seen
+                d3.select(".slice:nth-child(" + (picked + 1) + ") path")
+                    .attr("fill", "#111");
+
+                //populate question
+                d3.select(questionDiv.children[0])
+                    .text(data[picked].question);
+
+                oldrotation = rotation;
+
+                container.on("click", spin);
+            });
     }
 
-    return array;
+    //make arrow
+    svg.append("g")
+        .attr("transform", "translate(" + (w + padding.left + padding.right) + "," + ((h / 2) + padding.top) + ")")
+        .append("path")
+        .attr("d", "M-" + (r * .15) + ",0L0," + (r * .05) + "L0,-" + (r * .05) + "Z")
+        .style({ "fill": "black" });
+
+    //draw spin circle
+    container.append("circle")
+        .attr("cx", 0)
+        .attr("cy", 0)
+        .attr("r", 60)
+        .style({ "fill": "white", "cursor": "pointer" });
+
+    //spin text
+    container.append("text")
+        .attr("x", 0)
+        .attr("y", 15)
+        .attr("text-anchor", "middle")
+        .text("SHUFFLE!")
+        .style({ "font-weight": "bold", "font-size": "23px" });
+
+
+    function rotTween(to) {
+        var i = d3.interpolate(oldrotation % 360, rotation);
+        return function (t) {
+            return "rotate(" + i(t) + ")";
+        };
+    }
+
+
+    function getRandomNumbers() {
+        var array = new Uint16Array(1000);
+        var scale = d3.scale.linear().range([360, 1440]).domain([0, 100000]);
+
+        if (window.hasOwnProperty("crypto") && typeof window.crypto.getRandomValues === "function") {
+            window.crypto.getRandomValues(array);
+            console.log("works");
+        } else {
+            //no support for crypto, get crappy random numbers
+            for (var i = 0; i < 1000; i++) {
+                array[i] = Math.floor(Math.random() * 100000) + 1;
+            }
+        }
+
+        return array;
+    }
 }
+
+// Materialze JS- Dropdown functionality
+$('.dropdown-trigger').dropdown();
+
+// Personal Reminder on Javascript functionality -Edward
+// const dynamicPanelBottom = document.querySelector("#dynamicPanelBottom");
+// dynamicPanelBottom.innerHTML = "Change text";
+// $(view5btnWheel).on("click", function () {
+//     $("#view5").addClass("hideMe");
+//     $("#view6").removeClass("hideMe");
+// });
+
+// View 1 Testing
+const view1btnStart1 = document.querySelector("#view1btn1");
+
+$(view1btn1).on("click", function () {
+    $("#view1").addClass("hideMe");
+    $("#view2").removeClass("hideMe");
+});
+
+
+// View 2 Testing
+const view2btnDrink1 = document.querySelector("#view2btnDrink1");
+const view2btnAlcohol1 = document.querySelector("#view2btnAlcohol1");
+const view2btnRandom = document.querySelector("#view2btnRandom")
+
+$(view2btnDrink1).on("click", function () {
+    $("#view2").addClass("hideMe");
+    $("#view1").removeClass("hideMe");
+});
+$(view2btnAlcohol1).on("click", function () {
+    $("#view2").addClass("hideMe");
+    $("#view3").removeClass("hideMe");
+});
+$(view2btnRandom).on("click", function () {
+    $("#view2").addClass("hideMe");
+    $("#view4").removeClass("hideMe");
+    callWheel(view4Chart,view4Question,view4Data);
+});
+
+// View 3 Testing
+const view3btnProvider1 = document.querySelector("#view3btn1");
+const view3btnProvider2 = document.querySelector("#view3btn2");
+const view3btnProvider3 = document.querySelector("#view3btn3");
+const view3btnProvider4 = document.querySelector("#view3btn4")
+const view3btnProvider5 = document.querySelector("#view3btn5")
+const view3btnProvider6 = document.querySelector("#view3btn6")
+
+$(view3btnProvider1).on("click", function () {
+    $("#view3").addClass("hideMe");
+    $("#view4").removeClass("hideMe");
+    callWheel(view4Chart,view4Question,view4Data);
+});
+
+$(view3btnProvider2).on("click", function () {
+    $("#view3").addClass("hideMe");
+    $("#view4").removeClass("hideMe");
+    callWheel(view4Chart,view4Question,view4Data);
+});
+
+$(view3btnProvider3).on("click", function () {
+    $("#view3").addClass("hideMe");
+    $("#view4").removeClass("hideMe");
+    callWheel(view4Chart,view4Question,view4Data);
+});
+
+$(view3btnProvider4).on("click", function () {
+    $("#view3").addClass("hideMe");
+    $("#view4").removeClass("hideMe");
+    callWheel(view4Chart,view4Question,view4Data);
+});
+
+$(view3btnProvider5).on("click", function () {
+    $("#view3").addClass("hideMe");
+    $("#view4").removeClass("hideMe");
+    callWheel(view4Chart,view4Question,view4Data);
+});
+
+$(view3btnProvider6).on("click", function () {
+    $("#view3").addClass("hideMe");
+    $("#view4").removeClass("hideMe");
+    callWheel(view4Chart,view4Question,view4Data);
+});
+
+// View 4 Testing
+const view4btnWheel = document.querySelector("#view4btnWheel");
+
+$(view4btnWheel).on("click", function () {
+    $("#view4").addClass("hideMe");
+    $("#view5").removeClass("hideMe");
+    callWheel(view5Chart,view5Question,view5Data);
+
+});
+
+// View 5 Testing
+const view5btnWheel = document.querySelector("#view5btnWheel");
+
+$(view5btnWheel).on("click", function () {
+    $("#view5").addClass("hideMe");
+    $("#view6").removeClass("hideMe");
+});
+
