@@ -96,6 +96,7 @@ function callWheel(chartDiv, questionDiv, data) {
             console.log("done");
             container.on("click", null);
             return;
+
         }
 
         var ps = 360 / data.length,
@@ -132,6 +133,9 @@ function callWheel(chartDiv, questionDiv, data) {
 
                 oldrotation = rotation;
 
+                // Removing hideMe so users can click on the button to continue to view5    
+                $("#view4btnWheel").removeClass("hideMe");
+
                 container.on("click", spin);
             });
     }
@@ -163,9 +167,12 @@ function callWheel(chartDiv, questionDiv, data) {
         var i = d3.interpolate(oldrotation % 360, rotation);
         return function (t) {
             return "rotate(" + i(t) + ")";
+            
         };
+        
     }
-
+    // Hiding view 4 button so users can't continue without pressing "shuffle" **Laura
+    $("#view4btnWheel").addClass("hideMe");
 
     function getRandomNumbers() {
         var array = new Uint16Array(1000);
@@ -275,8 +282,9 @@ $(view4btnWheel).on("click", function () {
     $("#view4").addClass("hideMe");
     $("#view5").removeClass("hideMe");
     callWheel(view5Chart,view5Question,view5Data);
-
 });
+
+
 
 // View 5 Testing
 const view5btnWheel = document.querySelector("#view5btnWheel");
