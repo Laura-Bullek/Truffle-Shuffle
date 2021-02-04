@@ -1,32 +1,41 @@
 // References to wheel
+const view2aChart = document.querySelector("#view2aChart");
+const view2aQuestion = document.querySelector("#view2aQuestion");
 const view4Chart = document.querySelector("#view4Chart");
 const view4Question = document.querySelector("#view4Question");
 const view5Chart = document.querySelector("#view5Chart");
 const view5Question = document.querySelector("#view5Question");
 
 // Data for the wheel
+var view2aData = [
+    { "label": "Actiona", "value": 1, "question": "Some witty response about Actiona" },
+    { "label": "Action2a", "value": 1, "question": "Some witty response about Action2a" },
+    { "label": "Action3a", "value": 1, "question": "Some witty response about Action3a" },
+    { "label": "Action4a", "value": 1, "question": "Some witty response about Action4a" },
+    { "label": "Romancea", "value": 1, "question": "Some witty response about Romancea" }
+];
     // Genre ("label": "Genre", "value": Genre ID, "question": "Commentary", "filmChoice": "choice" )
 var view4Data = [
-    { "label": "Action", "value": 1, "question": "\"GET TO THE CHOPPA!\", You landed on an action movie!"},
-    { "label": "Adventure", "value": 1, "question": "\"One does not simply walk into Mordor.\" \n You landed on an adventure movie!" },
-    { "label": "Comedy", "value": 1, "question": "\"It's the f*cking Catalina Wine Mixer.\" \n You landed on a comedy movie!" },
-    { "label": "Crime", "value": 1, "question": "\"Leave the gun. Take the cannoli.\" \n You landed on a crime movie!" },
-    { "label": "Drama", "value": 1, "question": "\"Yo, Adrian!\" \n You landed on a drama!" },
-    { "label": "Family", "value": 1, "question": "\"Just keep swimming, just keep swimming.\" \n You landed on a family movie!" },
-    { "label": "Horror", "value": 1, "question": "\"Do you want to play a game?\" \n You landed on a horror movie!" },
-    { "label": "Mystery", "value": 1, "question": "\"YOU CAN'T HANDLE THE TRUTH!\" \n You landed on mystery!" },
-    { "label": "Romance", "value": 1, "question": "\"You had me at hello.\" \n You landed on a romance movie!" },
-    { "label": "SciFi", "value": 1, "question": "\"Leeloo Dallas Multipass.\"  \n You landed on SciFi!" },
-    { "label": "Thriller", "value": 1, "question": "\"HERE'S JOHNNY!\" \n You landed on a thriller movie!" }
+    { "label": "Action", "value": 28, "question": "\"GET TO THE CHOPPA!\", You landed on an action movie!"},
+    { "label": "Adventure", "value": 12, "question": "\"One does not simply walk into Mordor.\" \n You landed on an adventure movie!" },
+    { "label": "Comedy", "value": 35, "question": "\"It's the f*cking Catalina Wine Mixer.\" \n You landed on a comedy movie!" },
+    { "label": "Crime", "value": 80, "question": "\"Leave the gun. Take the cannoli.\" \n You landed on a crime movie!" },
+    { "label": "Drama", "value": 18, "question": "\"Yo, Adrian!\" \n You landed on a drama!" },
+    { "label": "Family", "value": 10751, "question": "\"Just keep swimming, just keep swimming.\" \n You landed on a family movie!" },
+    { "label": "Horror", "value": 27, "question": "\"Do you want to play a game?\" \n You landed on a horror movie!" },
+    { "label": "Mystery", "value": 9648, "question": "\"YOU CAN'T HANDLE THE TRUTH!\" \n You landed on mystery!" },
+    { "label": "Romance", "value": 10749, "question": "\"You had me at hello.\" \n You landed on a romance movie!" },
+    { "label": "SciFi", "value": 878, "question": "\"Leeloo Dallas Multipass.\"  \n You landed on SciFi!" },
+    { "label": "Thriller", "value": 53, "question": "\"HERE'S JOHNNY!\" \n You landed on a thriller movie!" }
 ];
     // Release Year ("label": "ReleaseYear", "value": ReleaseYear, "question": "Commentary" )
 var view5Data = [
-    { "label": "The 1970s", "value": 1, "question": "Ready for the 70s? Oh yes, you know you are." },
-    { "label": "The 1980s", "value": 1, "question": "Ready for the 80s? Oh yes, you know you are." },
-    { "label": "The 1990s", "value": 1, "question": "Ready for the 90s? Oh yes, you know you are." },
-    { "label": "The 2000s", "value": 1, "question": "Ready for the 00s? Oh yes, you know you are." },
-    { "label": "The 2010s", "value": 1, "question": "Ready for the 2010s? Oh yes, you know you are." },
-    { "label": "Most Recent", "value": 1, "question": "Ready for the most recent stuff? Oh yes, you know you are." }
+    { "label": "The 1970s", "value": "1970|1971|1972|1973|1974|1975|1976|1977|1978|1979", "question": "Ready for the 70s? Oh yes, you know you are." },
+    { "label": "The 1980s", "value": "1980|1981|1982|1983|1984|1985|1986|1987|1988|1989", "question": "Ready for the 80s? Oh yes, you know you are." },
+    { "label": "The 1990s", "value": "1990|1991|1992|1993|1994|1995|1996|1997|1998|1999", "question": "Ready for the 90s? Oh yes, you know you are." },
+    { "label": "The 2000s", "value": "2000|2001|2002|2003|2004|2005|2006|2007|2008|2009", "question": "Ready for the 00s? Oh yes, you know you are." },
+    { "label": "The 2010s", "value": "2010|2011|2012|2013|2014|2015|2016|2017|2018|2019", "question": "Ready for the 2010s? Oh yes, you know you are." },
+    { "label": "Most Recent", "value": "2020|2021", "question": "Ready for the most recent stuff? Oh yes, you know you are." }
 ];
 
 var vodkaData = [
@@ -66,7 +75,7 @@ var whiskeyData = [
 ];
 
 // Wheel function
-function callWheel(chartDiv, questionDiv, data) {
+function callWheel(chartDiv, questionDiv, data, view) {
     var padding = { top: 20, right: 40, bottom: 0, left: 0 },
         w = 300 - padding.left - padding.right,
         h = 300 - padding.top - padding.bottom,
@@ -168,10 +177,14 @@ function callWheel(chartDiv, questionDiv, data) {
 
                 oldrotation = rotation;
 
-                // Removing hideMe so users can click on the view4 button to continue to view5    
-                $("#view4btnWheel").removeClass("hideMe");
-                // Removing hideMe so users can click on the view5 button to continue to view6    
-                $("#view5btnWheel").removeClass("hideMe");
+                if (view == 4) {
+                    console.log("Hello, view 4");
+                }
+                console.log(view);
+                // // Removing hideMe so users can click on the view4 button to continue to view5    
+                // $("#view4btnWheel").removeClass("hideMe");
+                // // Removing hideMe so users can click on the view5 button to continue to view6    
+                // $("#view5btnWheel").removeClass("hideMe");
 
 
                 container.on("click", spin);
@@ -209,11 +222,11 @@ function callWheel(chartDiv, questionDiv, data) {
         };
         
     }
-    // Hiding view 4 button so users can't continue without pressing "shuffle" **Laura
-    $("#view4btnWheel").addClass("hideMe");
+    // // Hiding view 4 button so users can't continue without pressing "shuffle" **Laura
+    // $("#view4btnWheel").addClass("hideMe");
 
-    // Hiding view 5 button so users can't continue without pressing "shuffle" **Laura
-    $("#view5btnWheel").addClass("hideMe");
+    // // Hiding view 5 button so users can't continue without pressing "shuffle" **Laura
+    // $("#view5btnWheel").addClass("hideMe");
 
     function getRandomNumbers() {
         var array = new Uint16Array(1000);
@@ -239,87 +252,99 @@ $('.dropdown-trigger').dropdown();
 // Personal Reminder on Javascript functionality -Edward
 // const dynamicPanelBottom = document.querySelector("#dynamicPanelBottom");
 // dynamicPanelBottom.innerHTML = "Change text";
-// $(view5btnWheel).on("click", function () {
+// $(view5BtnWheel).on("click", function () {
 //     $("#view5").addClass("hideMe");
 //     $("#view6").removeClass("hideMe");
 // });
 
 // View 1 Testing
-const view1btnStart1 = document.querySelector("#view1btn1");
+const view1BtnStart = document.querySelector("#view1BtnStart");
 
-$(view1btn1).on("click", function () {
+$(view1BtnStart).on("click", function () {
+    // Hides View 1 and displays View 2
     $("#view1").addClass("hideMe");
     $("#view2").removeClass("hideMe");
 });
 
 
 // View 2 Testing
-const view2btnDrink1 = document.querySelector("#view2btnDrink1");
-const view2btnAlcohol1 = document.querySelector("#view2btnAlcohol1");
-const view2btnRandom = document.querySelector("#view2btnRandom")
+const view2BtnDrinkTropical = document.querySelector("#view2BtnDrinkTropical");
+const view2BtnAlcoholGin = document.querySelector("#view2BtnAlcoholGin");
+const view2BtnRandom = document.querySelector("#view2BtnRandom")
 
-$(view2btnDrink1).on("click", function () {
+$(view2BtnDrinkTropical).on("click", function () {
     $("#view2").addClass("hideMe");
-    $("#view1").removeClass("hideMe");
+    $("#view2a").removeClass("hideMe");
+    callWheel(view2aChart,view2aQuestion,view2aData);
+
 });
-$(view2btnAlcohol1).on("click", function () {
+$(view2BtnAlcoholGin).on("click", function () {
     $("#view2").addClass("hideMe");
     $("#view3").removeClass("hideMe");
 });
-$(view2btnRandom).on("click", function () {
+$(view2BtnRandom).on("click", function () {
     $("#view2").addClass("hideMe");
     $("#view4").removeClass("hideMe");
-    callWheel(view4Chart,view4Question,view4Data);
+    callWheel(view4Chart,view4Question,view4Data, 4);
 });
 
-// View 3 Testing
-const view3btnProvider1 = document.querySelector("#view3btn1");
-const view3btnProvider2 = document.querySelector("#view3btn2");
-const view3btnProvider3 = document.querySelector("#view3btn3");
-const view3btnProvider4 = document.querySelector("#view3btn4")
-const view3btnProvider5 = document.querySelector("#view3btn5")
-const view3btnProvider6 = document.querySelector("#view3btn6")
+// View 2a Testing
+const view2aBtnWheel = document.querySelector("#view2aBtnWheel");
 
-$(view3btnProvider1).on("click", function () {
-    $("#view3").addClass("hideMe");
-    $("#view4").removeClass("hideMe");
-    callWheel(view4Chart,view4Question,view4Data);
+$(view2aBtnWheel).on("click", function () {
+    $("#view2a").addClass("hideMe");
+    $("#view3").removeClass("hideMe");
 });
 
-$(view3btnProvider2).on("click", function () {
+// View 3 Testing 
+// Clean up task- Change the const variable to a single selector pointed towards view3Btn. Then in HTML, add a value tag. Use a switch statement to change what var movieWatchProviderID is.
+const view3BtnProvider1 = document.querySelector("#view3Btn1");
+const view3BtnProvider2 = document.querySelector("#view3Btn2");
+const view3BtnProvider3 = document.querySelector("#view3Btn3");
+const view3BtnProvider4 = document.querySelector("#view3Btn4")
+const view3BtnProvider5 = document.querySelector("#view3Btn5")
+const view3BtnProvider6 = document.querySelector("#view3Btn6")
+
+$(view3BtnProvider1).on("click", function () {
     $("#view3").addClass("hideMe");
     $("#view4").removeClass("hideMe");
-    callWheel(view4Chart,view4Question,view4Data);
+    callWheel(view4Chart,view4Question,view4Data, 4);
 });
 
-$(view3btnProvider3).on("click", function () {
+$(view3BtnProvider2).on("click", function () {
     $("#view3").addClass("hideMe");
     $("#view4").removeClass("hideMe");
-    callWheel(view4Chart,view4Question,view4Data);
+    callWheel(view4Chart,view4Question,view4Data, 4);
 });
 
-$(view3btnProvider4).on("click", function () {
+$(view3BtnProvider3).on("click", function () {
     $("#view3").addClass("hideMe");
     $("#view4").removeClass("hideMe");
-    callWheel(view4Chart,view4Question,view4Data);
+    callWheel(view4Chart,view4Question,view4Data, 4);
 });
 
-$(view3btnProvider5).on("click", function () {
+$(view3BtnProvider4).on("click", function () {
     $("#view3").addClass("hideMe");
     $("#view4").removeClass("hideMe");
-    callWheel(view4Chart,view4Question,view4Data);
+    callWheel(view4Chart,view4Question,view4Data, 4);
 });
 
-$(view3btnProvider6).on("click", function () {
+$(view3BtnProvider5).on("click", function () {
     $("#view3").addClass("hideMe");
     $("#view4").removeClass("hideMe");
-    callWheel(view4Chart,view4Question,view4Data);
+    callWheel(view4Chart,view4Question,view4Data, 4);
+});
+
+$(view3BtnProvider6).on("click", function () {
+    $("#view3").addClass("hideMe");
+    $("#view4").removeClass("hideMe");
+    callWheel(view4Chart,view4Question,view4Data, 4);
 });
 
 // View 4 Testing
-const view4btnWheel = document.querySelector("#view4btnWheel");
+const view4BtnWheel = document.querySelector("#view4BtnWheel");
 
-$(view4btnWheel).on("click", function () {
+$(view4BtnWheel).on("click", function () {
     $("#view4").addClass("hideMe");
     $("#view5").removeClass("hideMe");
     callWheel(view5Chart,view5Question,view5Data);
@@ -328,9 +353,9 @@ $(view4btnWheel).on("click", function () {
 
 
 // View 5 Testing
-const view5btnWheel = document.querySelector("#view5btnWheel");
+const view5BtnWheel = document.querySelector("#view5BtnWheel");
 
-$(view5btnWheel).on("click", function () {
+$(view5BtnWheel).on("click", function () {
     $("#view5").addClass("hideMe");
     $("#view6").removeClass("hideMe");
 });

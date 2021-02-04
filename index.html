@@ -8,8 +8,8 @@
 
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Custom CSS -->
     <!-- Wheel functionality Javascript -->
     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8"></script>
@@ -21,262 +21,274 @@
 <body>
     <!-- Title and Header container -->
     <div class="container centerThisDiv" id="headerContainer">
-        <div class="row">
-            <!-- Logo div -->
-            <div class="col s3">
-                <img id="headerLogo" src="./assets/images/TF_logo.png" alt="">
-            </div>
-            <!-- Title div -->
-            <div class="col s6" id="headerTitle">Truffle Shuffle</div>
-            <!-- Empty div for spacing purposes -->
-            <div class="col s3 empty"></div>
-        </div>
+        <!-- Title -->
+        <img id="headerLogo" src="./assets/images/Tshuffle.gif" alt="Truffle Shuffle Logo">
     </div>
+    <!-- END Title and Header container -->
 
-    <!-- View 1 Container (Introduction)-->
+    <!-- Main Body Container -->
     <div class="container centerThisDiv" id="viewOverall">
-        <!-- Sub-title Panel -->
-        <div class="row hideMe">
-            <!-- Empty div for spacing purposes -->
-            <div class="col s2 empty"></div>
-            <!-- Sub-title Header -->
-            <section class="col s8">
-                <article class="siteMission">Welcome to the Truffle Shuffle!</article>
+
+        <!-- VIEW 0: Return Screen -->
+        <div class="container centerThisDiv hideMe" id="view0">
+            <!-- Panel box 1 (Larger)-->
+            <div class="row">
+                <!-- Panel box 1 text -->
+                <section class="col s8 offset-s2">
+                    <article class="textBox">Welcome back to Truffle Shuffle!</article>
+                </section>
+            </div>
+            <!-- Panel box 2 (Smaller) -->
+            <div class="row">
+                <!-- Panel box 2 -->
+                <section class="col s6 offset-s3">
+                    <article class="textBox" id="returnMessage">How was your *drink*? Did you enjoy *movie*?</article>
+                </section>
+            </div>
+            <!-- Movie and Drink Output Panel -->
+            <div class="row">
+                <!-- Movie Image to be displayed here -->
+                <div class="col m4 offset-m1" id="lastMovie">
+                    <img class="imageBox" src="https://via.placeholder.com/768x1024">
+                </div>
+                <!-- Drink Image to be displayed here -->
+                <div class="col m4 offset-m2" id="lastDrink">
+                    <img class="imageBox" src="https://via.placeholder.com/350">
+                </div>
+            </div>
+            <!-- Re-Start Button -->
+            <section class="buttonBox">
+                <button class="button" id="view0BtnStart">Another Truffle Shuffle!</button>
             </section>
-            <!-- Empty div for spacing purposes -->
-            <div class="col s2 empty"></div>
         </div>
-        <!-- Instructions Panel -->
-        <div class="row hideMe">
-            <!-- Empty div for spacing purposes -->
-            <div class="col s3 empty"></div>
-            <!-- Sub-title Header -->
-            <section class="col s6">
-                <article class="invitation">We invite you to live on the edge. That's right, you heard us. LIVE ON THE EDGE.</article>
-            </section>
-            <!-- Empty div for spacing purposes -->
-            <div class="col s3 empty"></div>
-        </div>
-        <!-- Instructions Panel -->
-        <div class="row hideMe">
-            <!-- Empty div for spacing purposes -->
-            <div class="col s3 empty"></div>
-            <!-- Sub-title Header -->
-            <section class="col s6">
-                <article class="screenInstructions">
+        <!-- END VIEW 0 -->
+
+        <!-- VIEW 1: Start Screen -->
+        <div class="container centerThisDiv" id="view1">
+            <!-- Panel box 1 (Larger)-->
+            <div class="row">
+                <!-- Panel box 1 text -->
+                <section class="col s8 offset-s2">
+                    <article class="textBox">Welcome to the Truffle Shuffle!</article>
+                </section>
+            </div>
+            <!-- Panel box 2 (Smaller) -->
+            <div class="row">
+                <!-- Panel box 2 -->
+                <section class="col s6 offset-s3">
+                    <article class="textBox">We invite you to live on the edge. That's right, you heard us.<br>LIVE ON THE EDGE.</article>
+                </section>
+            </div>
+            <div class="row">
+                <!-- Poem Box -->
+                <section class="textBox">
                     <p>Are you with your family? Or even on a date?<br>
-                    Then it just so happens that is was totally fate!</p>
-                
+                        Then it just so happens that is was totally fate!</p>
+
                     <p>Have you once had a hard time choosing a movie or a drink?<br>
-                    Well sit back and relax, you've got the missing link!</p>
+                        Well sit back and relax, you've got the missing link!</p>
 
                     <p>Click on a box, then maybe a drop down.<br>
-                    We'll choose you a drink, which could be the talk of the town!</p>
+                        We'll choose you a drink, to turn that frown upside down!</p>
 
                     <p>After your drink is chosen, daring to try it or not...<br>
-                    You'll spin a few times to get a movie, and you'll have to watch what you've got!</p>
-                
+                        You'll spin a few times to get a movie, and you'll have to watch what you've got!</p>
+
                     <p>Have fun with now, don't be mad.<br>
-                    Even if the movie sucks, you'll have a drink! Not so bad.</p>
-                    
-                </article>
+                        Even if the movie sucks, you'll have a drink! Not so bad.</p>
+                </section>
+            </div>
+            <!-- Start Button -->
+            <section class="buttonBox">
+                <button class="button" id="view1BtnStart">Begin Here!</button>
             </section>
-            <!-- Empty div for spacing purposes -->
-            <div class="col s3 empty"></div>
         </div>
-        <div class="container centerThisDiv  hideMe" id="footerContainer"><a class="waves-effect waves-light btn-large"><i class="material-icons right"></i>Begin Here!</a></div>
-        
+        <!-- END VIEW 1 -->
 
-        <!-- Wheel Stuff -->
-        <div class="container centerThisDiv hideMe" id="wheelContainer">
+        <!-- VIEW 2: Choose your beverage -->
+        <div class="container centerThisDiv hideMe" id="view2">
+            <!-- Panel box 1 (Larger)-->
             <div class="row">
-                <div class="col l8">
-                    <div id="chart"></div>
+                <!-- Panel box 1 text -->
+                <section class="col s8 offset-s2">
+                    <article class="textBox">
+                        <p>Start with randomizing, a category, or alcohol.<br>
+                            Let's have a ball where it's never last call!</p>
+                    </article>
+                </section>
+            </div>
+            <!-- Panel box 2 (Smaller) -->
+            <div class="row">
+                <!-- Panel box 2 -->
+                <section class="col s6 offset-s3">
+                    <article class="textBox">Pick your poison:</article>
+                </section>
+            </div>
+            <div class="row">
+                <!-- Alcohol Category Dropdown-->
+                <a class='dropdown-trigger button col s6' data-target='alcoholCategory'>By Alcohol</a>
+                <!-- Alcohol Category Items -->
+                <ul id='alcoholCategory' class='dropdown-content'>
+                    <li><a class="drinkCategoryButtonText" id="view2BtnAlcoholGin">Gin (Test: Go to View 3)</a></li>
+                    <li><a class="drinkCategoryButtonText" id="view2BtnAlcoholRum">Rum</a></li>
+                    <li><a class="drinkCategoryButtonText" id="view2BtnAlcoholVodka">Vodka</a></li>
+                    <li><a class="drinkCategoryButtonText" id="view2BtnAlcoholWhiskey">Whiskey</a></li>
+                </ul>
+                <!-- Random Drink Button -->
+                <a class="button col s6" id="view2BtnRandom">Random Drink (Test: Go to View 4)</a>
+            </div>
+        </div>
+        <!-- END VIEW 2 -->
+
+        <!-- VIEW 2a: Spin the Alcohol Category -->
+        <div class="container centerThisDiv hideMe" id="view2a">
+            <!-- Wheel Stuff -->
+            <div class="container" id="wheelContainer">
+                <div id="view2aChart"></div>
+                <div id="view2aQuestion"><h1></h1></div>
+                <!-- Button -->
+                <div class="row">
+                    <button class="button" id="view2aBtnWheel">Lets choose a movie! (Test: Go to view 3)</button>
                 </div>
-                <div class="col l4 chartHeightCopy">
-                    <div id="question">
-                        <h1></h1>
+            </div>
+        </div>
+
+        <!-- VIEW 3 -->
+        <div class="container hideMe" id="view3">
+            <!-- Panel box 1 (Larger)-->
+            <div class="row">
+                <!-- Panel box 1 text -->
+                <section class="col s8 offset-s2">
+                    <article class="textBox">
+                        <p>Did you get a drink? Have you tried it before?<br>
+                            Now let's choose a movie. What are you waiting for?!</p>
+                    </article>
+                </section>
+            </div>
+            <!-- Panel box 2 (Smaller) -->
+            <div class="row">
+                <!-- Panel box 2 -->
+                <section class="col s6 offset-s3">
+                    <article class="textBox">
+                        <p>Choose a streaming service from down below,<br>
+                            then sit back, relax, there's more Truffle Shuffle to go!</p>
+                    </article>
+                </section>
+            </div>
+            <!-- Row of Buttons 1 -->
+            <div class="row">
+                <!-- Button Choice 1 -->
+                <section class="col s4">
+                    <button class="button" id="view3Btn1"><img class="streamingServiceLogos" src="./assets/images/Netflix_logo.png" alt="Netflix Logo"></button>
+                </section>
+                <!-- Button Choice 2 -->
+                <section class="col s4">
+                    <button class="button" id="view3Btn2"><img class="streamingServiceLogos" src="./assets/images/Hulu_logo.png" alt="Hulu Logo"></button>
+                </section>
+                <!-- Button Choice 3 -->
+                <section class="col s4">
+                    <button class="button" id="view3Btn3"><img class="streamingServiceLogos" src="./assets/images/Amazon_logo.png" alt="Amazon Prime Video Logo"></button>
+                </section>
+            </div>
+            <!-- Row of Buttons 2 -->
+            <div class="row">
+                <!-- Button Choice 4 -->
+                <section class="col s4">
+                    <button class="button" id="view3Btn4"><img class="streamingServiceLogos" src="./assets/images/AppleTV_logo.png"alt="Apple TV Logo"></button>
+                </section>
+                <!-- Button Choice 5 -->
+                <section class="col s4">
+                    <button class="button" id="view3Btn5"><img class="streamingServiceLogos" src="./assets/images/HBO_logo.png" alt="HBO Go Logo"></button>
+                </section>
+                <!-- Button Choice 6 -->
+                <section class="col s4">
+                    <button class="button" id="view3Btn6"><img class="streamingServiceLogos" src="./assets/images/Disney_logo.png" alt="Disney Plus Logo"></button>
+                </section>
+            </div>
+        </div>
+        <!--END VIEW 3-->
+
+        <!--VIEW 4-->
+        <div class="container centerThisDiv hideMe" id="view4">
+            <!-- Wheel Stuff -->
+            <div class="container" id="wheelContainer">
+                <div class="row">
+                    <div class="col l8">
+                        <div id="view4Chart"></div>
+                    </div>
+                    <div class="col l4">
+                        <div id="view4Question">
+                            <h1></h1>
+                        </div>
                     </div>
                 </div>
+                <!-- Button -->
+                <div class="row">
+                    <button class="button" id="view4BtnWheel">Let's go select a year! (Test: Go to view 5)</button>
+                </div>
             </div>
         </div>
-    </div>
+        <!--END VIEW 4-->
 
-    <!-- View 2 Buttons -->
-    <div class="container centerThisDiv hideMe" id="view2">
-        <div class="row">
-            <!-- Drink Category Dropdown-->
-            <a class='dropdown-trigger btn col s4' href='#' data-target='drinkCategory'>Choose a drink by category</a>
-            <!-- Drink Category Items -->
-            <ul id='drinkCategory' class='dropdown-content'>
-                <li><a class="drinkCateoryButton" id="view2btnDrink1">Hide view 2 and show view 3</a></li>
-                <li><a href="#!">Drink 2</a></li>
-                <li><a href="#!">Drink 3</a></li>
-            </ul>
-            <!-- Alcohol Category Dropdown-->
-            <a class='dropdown-trigger btn col s4' href='#' data-target='alcoholCategory'>Choose a drink by alcohol</a>
-            <!-- Alcohol Category Items -->
-            <ul id='alcoholCategory' class='dropdown-content'>
-                <li><a href="#!">Gin</a></li>
-                <li><a href="#!">Rum</a></li>
-                <li><a href="#!">Vodka</a></li>
-            </ul>
-            <section class="col s4">
-                <button class="randomBtn" id="view2RandomBtn">Random Drink</button>
-            </section>
-        </div>
-    </div>
-
-    <!-- View 3 Buttons -->
-    <div class="container hideMe" id="view3">
-        <div class="row buttonPanel">
-            <!-- Button Choice 1 -->
-            <section class="col s4">
-                <button class="btn" id="view3btn1">Hide Wheel</button>
-            </section>
-            <!-- Button Choice 2 -->
-            <section class="col s4">
-                <button class="button btnView3" id="view3btn2">Show Wheel</button>
-            </section>
-            <!-- Button Choice 3 -->
-            <section class="col s4">
-                <button class="button btnView3" id="view3btn3">Go to view 2</button>
-            </section>
-        </div>
-        <div class="row buttonPanel">
-            <!-- Button Choice 4 -->
-            <section class="col s4">
-                <button class="button btnView3" id="view3btn4">Streaming Service 4</button>
-            </section>
-            <!-- Button Choice 5 -->
-            <section class="col s4">
-                <button class="button btnView3" id="view3btn5">Streaming Service 5</button>
-            </section>
-            <!-- Button Choice 6 -->
-            <section class="col s4">
-                <button class="button btnView3" id="view3btn6">Streaming Service 6</button>
-            </section>
-        </div>
-    </div>
-    <!--END VIEW 3-->
-
-    <!--VIEW 4-->
-    <div class="container centerThisDiv hideMe" id="view4">
-        <!-- Sub-title Panel -->
-        <div class="row">
-            <!-- Empty div for spacing purposes -->
-            <div class="col s2 empty"></div>
-            <!-- Sub-title Header -->
-            <section class="col s8">
-                <article class="siteMission">Spin the Wheel for a Genre!</article>
-            </section>
-            <!-- Empty div for spacing purposes -->
-            <div class="col s2 empty"></div>
-        </div>
-        <!-- Instructions Panel -->
-        <div class="row">
-            <!-- Empty div for spacing purposes -->
-            <div class="col s3 empty"></div>
-            <!-- Empty div for spacing purposes -->
-            <div class="col s3 empty"></div>
-        </div>
-        
-        <!-- Wheel Stuff -->
-        <div class="container centerThisDiv" id="wheelContainer">
-            <div class="row">
-                <div class="col l8">
-                    <div id="chart"></div>
-                </div>
-                <div class="col l4 chartHeightCopy">
-                    <div id="question">
-                        <h1></h1>
+        <!--VIEW 5-->
+        <div class="container centerThisDiv hideMe" id="view5">
+            <!-- Wheel Stuff -->
+            <div class="container" id="wheelContainer">
+                <div class="row">
+                    <div class="col l8">
+                        <div id="view5Chart"></div>
+                    </div>
+                    <div class="col l4">
+                        <div id="view5Question">
+                            <h1></h1>
+                        </div>
                     </div>
                 </div>
+                <!-- Button -->
+                <div class="row">
+                    <button class="button" id="view5BtnWheel">And the Movie is... (Test: Go to view 6)</button>
+                </div>
             </div>
         </div>
-        
-        <!-- Footer Panel -->
-        <div class="container centerThisDiv" id="footerContainer"><a class="waves-effect waves-light btn-large"><i class="material-icons right"></i>Let's go select a year</a></div>
-    </div>
-    <!--END VIEW 4-->
+        <!--END VIEW 5-->
 
-    <!--VIEW 5-->
-    <div class="container centerThisDiv hideMe" id="view5">
-        <div class="row">
-            <!-- Empty div -->
-            <div class="col s2 empty"></div>
-            <section class="col s8">
-                <article class="siteMission">Spin the Wheel to Pick a Year!</article>
-            </section>
-            <!-- Empty div -->
-            <div class="col s2 empty"></div>
-        </div>
-        <div class="row">
-            <!-- Empty div -->
-            <div class="col s3 empty"></div>
-            <!-- Empty div -->
-            <div class="col s3 empty"></div>
-        </div>
-        
-        <!-- Wheel Stuff -->
-        <div class="container" id="wheelContainer">
+        <!-- VIEW 6 -->
+        <div class="container centerThisDiv hideMe" id="view6">
+            <!-- Panel box 1 (Larger)-->
             <div class="row">
-                <div class="col l8">
-                    <div id="chart"></div>
+                <!-- Panel box 1 text -->
+                <section class="col s8 offset-s2">
+                    <article class="textBox">Movie and a Drink</article>
+                </section>
+            </div>
+            <!-- Movie and Drink Output Panel -->
+            <div class="row">
+                <!-- Movie Image to be displayed here -->
+                <div class="col m4 offset-m1" id="selectedMovie">
+                    <img class="imageBox" src="https://via.placeholder.com/768x1024">
                 </div>
-                <div class="col l4 chartHeightCopy">
-                    <div id="question">
-                        <h1></h1>
-                    </div>
+                <!-- Drink Image to be displayed here -->
+                <div class="col m4 offset-m2" id="selectedDrink">
+                    <img class="imageBox" src="https://via.placeholder.com/350">
                 </div>
             </div>
+            <!-- Panel box 2 (Larger)-->
+            <div class="row">
+                <!-- Panel box 2 -->
+                <section class="col s8 offset-s2">
+                    <article class="textBox">Make your drink and find a seat! Enjoy your Truffle Shuffle!</article>
+                </section>
+            </div>
         </div>
-        <!-- Footer Panel -->
-        <div class="container centerThisDiv" id="footerContainer"><a class="waves-effect waves-light btn-large"><i class="material-icons right"></i>And the Movie is....</a></div>
-    </div>
-    <!--END VIEW 5-->
+        <!-- END VIEW 6 -->
 
-    <!-- VIEW 6 -->
-    <div class="container centerThisDiv" id="view6">
-        <!-- Sub-title Panel -->
-        <div class="row">
-            <!-- Empty div for spacing purposes -->
-            <div class="col s2 empty"></div>
-            <!-- Sub-title Header -->
-            <section class="col s8">
-                <article class="siteMission">Movie and a Drink!</article>
-            </section>
-            <!-- Empty div for spacing purposes -->
-            <div class="col s2 empty"></div>
-        </div>
-        <!-- Movie and Drink Output Panel -->
-        <div class="row" style="justify-content: space-evenly;">
-            <!-- Empty div for spacing purposes -->
-            <div class="col m2"></div>
-            <!-- Movie Image to be displayed here -->
-            <div class="col m4" id="selectedMovie" style="border: 1px solid gold;">
-                <img src="https://via.placeholder.com/350">
-            </div>
-            <!-- Drink Image to be displayed here -->
-            <div class="col m4" id="selectedDrink" style="border: 1px solid gold;">
-                <img src="https://via.placeholder.com/350">
-            </div>
-            <!-- Empty div for spacing purposes -->
-            <div class="col m2"></div>
-        </div>
-        <div class="row">
-            <!-- Empty div for spacing purposes -->
-            <div class="col s2 empty"></div>
-            <!-- Sub-title Header -->
-            <section class="col s8">
-                <article class="siteMission">Make your drink and find a seat! Enjoy your Truffle Shuffle!</article>
-            </section>
-            <!-- Empty div for spacing purposes -->
-            <div class="col s2 empty"></div>
-        </div>
     </div>
-    <!-- END VIEW 6 -->
-    
+    <!-- END Main Body Container -->
+
+    <!-- Footer -->
+    <div class="centerThisDiv" id="footer">Made by Group 1: Truffle Shuffle.</div>
+    <!-- END Footer Container -->
+
 </body>
 
 <!-- Materialize Javascript -->
