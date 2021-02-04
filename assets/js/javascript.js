@@ -238,15 +238,26 @@ $(document).ready(function () {
         $(view5).addClass("hideMe");
         $(view6).removeClass("hideMe");
     });
+
+    // Clear Button functionality
+    const clearBtn = document.querySelector("#clearBtn");
+    $(clearBtn).on("click",function() {
+        // Sets storage to empty.
+        localStorage.setItem("lastDrink", "");
+        localStorage.setItem("lastMovie", "");
+        // Refresh the page
+        window.location.reload();
+    })
+
     
 // Functions
     // Check for save data and load appropriate page
     function loadSaveData(){
         // Grab the local storage data
-        var storedMovie = JSON.parse(localStorage.getItem("lastMovie"));
-        var storedDrink = JSON.parse(localStorage.getItem("lastDrink"));
+        var storedMovie = localStorage.getItem("lastMovie");
+        var storedDrink = localStorage.getItem("lastDrink");
         // Check if stored data is empty or non-existent
-        if (!storedMovie || !storedDrink || storedMovie == "" || storedDrink == "") {
+        if (!storedMovie || !storedDrink || storedMovie.length == 0 || storedDrink.length == 0) {
             return;
         }
         else {
@@ -371,7 +382,7 @@ $(document).ready(function () {
         // Store variable based on which view wheel was spun
         switch (view) {
             case '2':
-                localStorage.setItem("lastDrink", JSON.stringify(data.value));
+                localStorage.setItem("lastDrink", data.value);
                 break;
             case '4':
                 movieGenreID = data.value;
@@ -459,7 +470,6 @@ $(document).ready(function () {
 
 
         function spin(d) {
-
             container.on("click", null);
 
             //all slices have been seen, all done
