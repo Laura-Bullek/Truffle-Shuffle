@@ -6,13 +6,13 @@ $(document).ready(function () {
     var view2aData = [
         { "label": "Pina Colada", "value": 17207, "question": "" },
         { "label": "Dark and Stormy", "value": 17211, "question": "" },
-        // { "label": "Mojito", "value": 1, "question": "" },
-        // { "label": "Bahama Mama", "value": 1, "question": "" },
-        // { "label": "Rum Punch", "value": 1, "question": "" },
-        // { "label": "Mai Tai", "value": 1, "question": "" },
-        // { "label": "Hurricane", "value": 1, "question": "" },
-        // { "label": "Zombie", "value": 1, "question": "" },
-        // { "label": "Daiquiri", "value": 1, "question": "" },
+        { "label": "Mojito", "value": 11000, "question": "" },
+        { "label": "Bahama Mama", "value": 17267, "question": "" },
+        { "label": "Rum Punch", "value": 14978, "question": "" },
+        { "label": "Mai Tai", "value": 11690, "question": "" },
+        { "label": "Hurricane", "value": 17268, "question": "" },
+        { "label": "Zombie", "value": 17241, "question": "" },
+        { "label": "Daiquiri", "value": 11006, "question": "" },
     ];
     // View 2B: Vodka Wheel
     const view2bChart = document.querySelector("#view2bChart");
@@ -21,12 +21,12 @@ $(document).ready(function () {
         { "label": "Bloody Mary", "value": 11113, "question": "" },
         { "label": "Bushwacker", "value": 14588, "question": "" },
         { "label": "Sea Breeze", "value": 13377, "question": "" },
-        // { "label": "Black Russian", "value": 1, "question": "" },
-        // { "label": "Grasshopper", "value": 1, "question": "" },
-        // { "label": "Kamikaze", "value": 1, "question": "" },
-        // { "label": "Cosmopolitan", "value": 1,  "question": "" },
-        // { "label": "Lemon Drop", "value": 1, "question": "" },
-        // { "label": "Harvey Wallbanger", "value": 1, "question": "" },
+        { "label": "Black Russian", "value": 11102, "question": "" },
+        { "label": "Grasshopper", "value": 17200, "question": "" },
+        { "label": "Kamikaze", "value": 11600, "question": "" },
+        { "label": "Cosmopolitan", "value": 17196,  "question": "" },
+        { "label": "Lemon Drop", "value": 14366, "question": "" },
+        { "label": "Harvey Wallbanger", "value": 11462, "question": "" },
     ];
     // View 2C: Whiskey Wheel
     const view2cChart = document.querySelector("#view2cChart");
@@ -34,13 +34,13 @@ $(document).ready(function () {
     var view2cData = [
         { "label": "Whiskey Sour", "value": 11004, "question": "" },
         { "label": "Manhattan", "value": 11008, "question": "" },
-        // { "label": "Rob Roy", "value": 1, "question": "" },
-        // { "label": "Old Fashioned", "value": 1, "question": "" },
-        // { "label": "Irish Coffee", "value": 1, "question": "" },
-        // { "label": "Rusty Nail", "value": 1, "question": "" },
-        // { "label": "Red Snapper", "value": 1, "question": "" },
-        // { "label": "Mint Julep", "value": 1, "question": "" },
-        // { "label": "Sazerac", "value": 1, "question": "" },
+        { "label": "Rob Roy", "value": 11324, "question": "" },
+        { "label": "Old Fashioned", "value": 11001, "question": "" },
+        { "label": "Irish Coffee", "value": 13971, "question": "" },
+        { "label": "Rusty Nail", "value": 12101, "question": "" },
+        { "label": "Red Snapper", "value": 14807, "question": "" },
+        { "label": "Mint Julep", "value": 17206, "question": "" },
+        { "label": "Sazerac", "value": 12127, "question": "" },
     ];
     // View 4: Movie Genre Wheel
     const view4Chart = document.querySelector("#view4Chart");
