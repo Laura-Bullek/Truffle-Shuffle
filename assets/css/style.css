@@ -134,8 +134,9 @@ body {
 #view4Question, h1{
     font-size: 30px;
     padding: 25px;
-    width: 200px;
+    width: 300px;
     float: left;
+    border-color:  rgb(240, 199, 96);
 }
 
 #selectedMovie,
