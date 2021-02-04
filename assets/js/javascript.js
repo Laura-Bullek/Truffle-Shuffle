@@ -133,8 +133,11 @@ function callWheel(chartDiv, questionDiv, data) {
 
                 oldrotation = rotation;
 
-                // Removing hideMe so users can click on the button to continue to view5    
+                // Removing hideMe so users can click on the view4 button to continue to view5    
                 $("#view4btnWheel").removeClass("hideMe");
+                // Removing hideMe so users can click on the view5 button to continue to view6    
+                $("#view5btnWheel").removeClass("hideMe");
+
 
                 container.on("click", spin);
             });
@@ -173,6 +176,9 @@ function callWheel(chartDiv, questionDiv, data) {
     }
     // Hiding view 4 button so users can't continue without pressing "shuffle" **Laura
     $("#view4btnWheel").addClass("hideMe");
+
+    // Hiding view 5 button so users can't continue without pressing "shuffle" **Laura
+    $("#view5btnWheel").addClass("hideMe");
 
     function getRandomNumbers() {
         var array = new Uint16Array(1000);
