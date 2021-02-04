@@ -8,8 +8,8 @@
 
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Custom CSS -->
     <!-- Wheel functionality Javascript -->
     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8"></script>
@@ -24,6 +24,7 @@
         <!-- Title -->
         <img id="headerLogo" src="./assets/images/Tshuffle.gif" alt="Truffle Shuffle Logo">
     </div>
+    <!-- END Title and Header container -->
 
     <!-- Main Body Container -->
     <div class="container centerThisDiv" id="viewOverall">
@@ -51,7 +52,7 @@
                     <img class="imageBox" src="https://via.placeholder.com/768x1024">
                 </div>
                 <!-- Drink Image to be displayed here -->
-                <div class="col m4 offset-m2" id=lastDrink">
+                <div class="col m4 offset-m2" id="lastDrink">
                     <img class="imageBox" src="https://via.placeholder.com/350">
                 </div>
             </div>
@@ -82,13 +83,13 @@
                 <!-- Poem Box -->
                 <section class="textBox">
                     <p>Are you with your family? Or even on a date?<br>
-                    Then it just so happens that is was totally fate!</p>
-                
+                        Then it just so happens that is was totally fate!</p>
+
                     <p>Have you once had a hard time choosing a movie or a drink?<br>
-                    Well sit back and relax, you've got the missing link!</p>
+                        Well sit back and relax, you've got the missing link!</p>
 
                     <p>Click on a box, then maybe a drop down.<br>
-                    We'll choose you a drink, which could be the talk of the town!</p>
+                        We'll choose you a drink, to turn that frown upside down!</p>
 
                     <p>After your drink is chosen, daring to try it or not...<br>
                         You'll spin a few times to get a movie, and you'll have to watch what you've got!</p>
@@ -102,8 +103,7 @@
                 <button class="button" id="view1BtnStart">Begin Here!</button>
             </section>
         </div>
-        <div class="container centerThisDiv  hideMe" id="footerContainer"><a class="waves-effect waves-light btn-large"><i class="material-icons right"></i>Begin Here!</a></div>
-        
+        <!-- END VIEW 1 -->
 
         <!-- VIEW 2: Choose your beverage -->
         <div class="container centerThisDiv hideMe" id="view2">
@@ -138,7 +138,7 @@
                 <a class="button col s6" id="view2BtnRandom">Random Drink (Test: Go to View 4)</a>
             </div>
         </div>
-    </div>
+        <!-- END VIEW 2 -->
 
         <!-- VIEW 2a: Spin the Alcohol Category -->
         <div class="container centerThisDiv hideMe" id="view2a">
@@ -206,7 +206,7 @@
                 </section>
             </div>
         </div>
-    </div>
+        <!--END VIEW 3-->
 
         <!--VIEW 4-->
         <div class="container centerThisDiv hideMe" id="view4">
@@ -228,22 +228,7 @@
                 </div>
             </div>
         </div>
-        <div class="row buttonPanel">
-            <!-- Button Choice 4 -->
-            <section class="col s4">
-                <button class="button btnView3" id="view3btn4">Streaming Service 4</button>
-            </section>
-            <!-- Button Choice 5 -->
-            <section class="col s4">
-                <button class="button btnView3" id="view3btn5">Streaming Service 5</button>
-            </section>
-            <!-- Button Choice 6 -->
-            <section class="col s4">
-                <button class="button btnView3" id="view3btn6">Streaming Service 6</button>
-            </section>
-        </div>
-    </div>
-    <!--END VIEW 3-->
+        <!--END VIEW 4-->
 
         <!--VIEW 5-->
         <div class="container centerThisDiv hideMe" id="view5">
@@ -265,32 +250,11 @@
                 </div>
             </div>
         </div>
-        
-        <!-- Footer Panel -->
-        <div class="container centerThisDiv" id="footerContainer"><a class="waves-effect waves-light btn-large"><i class="material-icons right"></i>Let's go select a year</a></div>
-    </div>
-    <!--END VIEW 4-->
+        <!--END VIEW 5-->
 
-    <!--VIEW 5-->
-    <div class="container centerThisDiv hideMe" id="view5">
-        <div class="row">
-            <!-- Empty div -->
-            <div class="col s2 empty"></div>
-            <section class="col s8">
-                <article class="siteMission">Spin the Wheel to Pick a Year!</article>
-            </section>
-            <!-- Empty div -->
-            <div class="col s2 empty"></div>
-        </div>
-        <div class="row">
-            <!-- Empty div -->
-            <div class="col s3 empty"></div>
-            <!-- Empty div -->
-            <div class="col s3 empty"></div>
-        </div>
-        
-        <!-- Wheel Stuff -->
-        <div class="container" id="wheelContainer">
+        <!-- VIEW 6 -->
+        <div class="container centerThisDiv hideMe" id="view6">
+            <!-- Panel box 1 (Larger)-->
             <div class="row">
                 <!-- Panel box 1 text -->
                 <section class="col s8 offset-s2">
@@ -308,11 +272,18 @@
                     <img class="imageBox" src="https://via.placeholder.com/350">
                 </div>
             </div>
+            <!-- Panel box 2 (Larger)-->
+            <div class="row">
+                <!-- Panel box 2 -->
+                <section class="col s8 offset-s2">
+                    <article class="textBox">Make your drink and find a seat! Enjoy your Truffle Shuffle!</article>
+                </section>
+            </div>
         </div>
-        <!-- Footer Panel -->
-        <div class="container centerThisDiv" id="footerContainer"><a class="waves-effect waves-light btn-large"><i class="material-icons right"></i>And the Movie is....</a></div>
+        <!-- END VIEW 6 -->
+
     </div>
-    <!--END VIEW 5-->
+    <!-- END Main Body Container -->
 
     <!-- Footer -->
     <div class="centerThisDiv" id="footer">Made by Group 1: Truffle Shuffle.</div>
