@@ -46,19 +46,19 @@ text {
 /* Materialize Overwrite */ 
 /* Changes the styling of the dropdown menu after being opened */
 .dropdown-content{
-    background-color: rgb(54, 8, 8); 
+    background-color: rgb(82, 12, 12); 
 }
 /* Changes the text within the dropdown menu */
 .dropdown-content li>span,
 .dropdown-content li>a {
-    color: rgb(240, 183, 38);
+    color: rgb(240, 199, 96);
 }
 /* Changes the default button styling */
 .btn {
     border: 2px dotted rgb(240, 199, 96);
     border-radius: 5px;
     color: rgb(240, 199, 96);
-    background-color: darkred;
+    background-color: rgb(82, 12, 12);
     padding: 10px 5px;
     margin: auto;
 }
@@ -70,8 +70,8 @@ text {
 
 /* View 3 CSS stuff */
 body {
-    background-color: rgb(54, 8, 8);  
-    color:rgb(240, 183, 38);
+    background-color: rgb(82, 12, 12);  
+    color:rgb(240, 199, 96);
 
 
 }
@@ -88,15 +88,15 @@ body {
 }
 
 #viewOverall {
-    background-color: rgb(73, 7, 7);
-    border: 2px solid gold;
+    background-color: rgb(82, 12, 12);
+    border: 2px solid rgb(240, 199, 96);
     padding: 10px 0px;
     margin: 10px auto;
 }
 
 .textBox {
-    border: dashed 2px rgb(240, 183, 38);
-    background-color: rgb(54, 8, 8);
+    border: dashed 2px rgb(240, 199, 96);
+    background-color: rgb(82, 12, 12);
     padding: .5rem;
 }
 
@@ -116,7 +116,7 @@ body {
     border: 2px dotted rgb(240, 199, 96);
     border-radius: 5px;
     color: rgb(240, 199, 96);
-    background-color: darkred;
+    background-color: rgb(82, 12, 12);
     padding: 10px 5px;
     margin: auto;
 }
