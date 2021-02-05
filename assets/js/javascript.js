@@ -336,7 +336,7 @@ $(document).ready(function () {
             instructionsList = `${instructionsList}<li>${cocktailMeasureArray[i]} ${cocktailIngredientArray[i]}</li>`;
         }
         // Populates the question field of the object with the HTML containing the necessary information
-        data.question = `<div class="row header">${cocktailDrink.strDrink}</div><div class="row questionsBody"><img src="${cocktailDrink.strDrinkThumb}" alt="Image of ${cocktailDrink.strDrink}" class="cocktailImage"><article id="drinkInstructions"><li>Grab your ${cocktailDrink.strGlass}!</li>${instructionsList}</article></div>`;
+        data.question = `<div class="row header">${cocktailDrink.strDrink}</div><div class="row questionsBody"><img src="${cocktailDrink.strDrinkThumb}" alt="Image of ${cocktailDrink.strDrink}" class="cocktailImage"><article id="drinkInstructions"><li>Grab your ${cocktailDrink.strGlass}!</li>${instructionsList}<li>${cocktailDrink.strInstructions}</li></article></div>`;
         // Saves the cocktail image url
         cocktailImageURL = cocktailDrink.strDrinkThumb;
         // Saves the cocktail alt information
@@ -358,6 +358,8 @@ $(document).ready(function () {
             var chosenMovie = movieResponse.results[randomIndex];
             // Store the movie ID into local storage
             localStorage.setItem("lastMovie", chosenMovie.id);
+            // Store the drink ID into local storage now that the data is finalized
+            localStorage.setItem("lastDrink", chosenDrink);
             // Saves the movie image url
             movieImageURL = "https://www.themoviedb.org/t/p/w600_and_h900_bestv2" + chosenMovie.poster_path;
             // Saves the movie alt information
@@ -382,7 +384,7 @@ $(document).ready(function () {
         // Store variable based on which view wheel was spun
         switch (view) {
             case '2':
-                localStorage.setItem("lastDrink", data.value);
+                chosenDrink = data.value;
                 break;
             case '4':
                 movieGenreID = data.value;
