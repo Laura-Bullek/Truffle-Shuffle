@@ -16,6 +16,10 @@ My web development bootcamp program is offered through the Unniversity of New Ha
 - TA - Michael Fearnley [GitHub](https://michaelfearnley.com/)
 - API - CocktailDB [Website](https://www.thecocktaildb.com/)
 - API - The MovieDB [Webiste](https://www.themoviedb.org/)
+- Laura Bullek [GitHub](https://github.com/Laura-Bullek)
+- Brian Jenkins [GitHub](https://github.com/bjenkins63)
+- Matt Romano [GitHub](https://github.com/MRomano84)
+- Edward Huang [GitHub](https://github.com/Ejhuang2015)
 
 # Usage
 Links to this project: 
