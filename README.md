@@ -2,7 +2,7 @@
 This is the first collaborative project in the UNH bootcamp course. 
 
 # Description
-The **Truffle-Shuffle** project is...
+The **Truffle-Shuffle** project is a lightweight application that helps the user generate ideas on what movie and cocktail...
 
 --- Description ---
 

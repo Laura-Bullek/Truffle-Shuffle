@@ -226,6 +226,7 @@ $(document).ready(function () {
     const view5BtnConfirm = document.querySelector("#view5BtnConfirm");
     const selectedDrink = document.querySelector("#selectedDrink");
     const selectedMovie = document.querySelector("#selectedMovie");
+    const drinkFinalDiv = document.querySelector("#drinkFinalDiv");
     // View 5's button click handler
     $(view5BtnConfirm).on("click", function() {
         // Updates Movie image in view 6
@@ -234,6 +235,7 @@ $(document).ready(function () {
         // Updates Cockatail image in view 6
         selectedDrink.src = cocktailImageURL;
         selectedDrink.alt = cocktailImageAlt;
+        $(drinkFinalDiv).append(drinkInformationHTML);
         // Hides view 5 and goes to view 6
         $(view5).addClass("hideMe");
         $(view6).removeClass("hideMe");
@@ -337,6 +339,7 @@ $(document).ready(function () {
         }
         // Populates the question field of the object with the HTML containing the necessary information
         data.question = `<div class="row header">${cocktailDrink.strDrink}</div><div class="row questionsBody"><img src="${cocktailDrink.strDrinkThumb}" alt="Image of ${cocktailDrink.strDrink}" class="cocktailImage"><article id="drinkInstructions"><li>Grab your ${cocktailDrink.strGlass}!</li>${instructionsList}<li>${cocktailDrink.strInstructions}</li></article></div>`;
+        drinkInformationHTML = `<div class="row header">${cocktailDrink.strDrink}</div><div class="row questionsBody"><article><li>Grab your ${cocktailDrink.strGlass}!</li>${instructionsList}<li>${cocktailDrink.strInstructions}</li></article></div>`;
         // Saves the cocktail image url
         cocktailImageURL = cocktailDrink.strDrinkThumb;
         // Saves the cocktail alt information
