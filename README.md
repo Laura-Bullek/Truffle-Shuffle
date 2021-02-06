@@ -18,7 +18,8 @@ My web development bootcamp program is offered through the Unniversity of New Ha
 - API - The MovieDB [Webiste](https://www.themoviedb.org/)
 
 # Usage
-Link to this project: 
-https://laura-bullek.github.io/Truffle-Shuffle/
+Links to this project: 
+* [GitHub Repository](https://github.com/Laura-Bullek/Truffle-Shuffle)
+* [Main Application](https://laura-bullek.github.io/Truffle-Shuffle/)
 
 The end. 
