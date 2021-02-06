@@ -38,7 +38,7 @@ $(document).ready(function () {
         { "label": "Old Fashioned", "value": 11001, "question": "" },
         { "label": "Irish Coffee", "value": 13971, "question": "" },
         { "label": "Rusty Nail", "value": 12101, "question": "" },
-        { "label": "Red Snapper", "value": 14807, "question": "" },
+        { "label": "Red Snapper", "value": 14087, "question": "" },
         { "label": "Mint Julep", "value": 17206, "question": "" },
         { "label": "Sazerac", "value": 12127, "question": "" },
     ];
